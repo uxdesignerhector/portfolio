@@ -1,4 +1,4 @@
-@charset "ISO-8859-1";
+@charset "utf-8";
 
 /* reset css */
 html, body, div, span, applet, object, iframe,
@@ -1816,7 +1816,7 @@ footer {
 
 
 
-/* Configuración del formulario de contacto*/
+/* ConfiguraciÃ³n del formulario de contacto*/
 
 
 .contact_form {
