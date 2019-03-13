@@ -86,10 +86,10 @@ h3 {
     font-weight: 700;
     color: #3a3a3a;
 }
-.h2-section-title {
+.section-title__title {
     display:inline-block;
 }
-@media (max-width:440px) { .h2-section-title
+@media (max-width:440px) { .section-title__title
      {
          display: block;
      }
@@ -160,7 +160,7 @@ section {
     margin-bottom:40px;
 }
 
-.cabecera {
+.main-header {
     margin-top: 0;
 }
 
@@ -182,46 +182,191 @@ img{white-space:pre}
 */
 
                  
+/* There are two types of cards: 
+   - sd-cards: are used to display short info, preferably a list.
+   - Projects-cards: are used to display info about projects (Portfolio) and trajectory (places where I've worked)*/
 
 
-
-/* configuration blue cards, orange cards and info cards
-     _______________
-    | .card_ header |<---------------- h2 mod, width: 70%;
-    | . . . . . . . |_________
+/* SD cards (looks like this):
+     _________________
+    | .sd-card__header|<---------------- h2 mod, width: 70%;
+    | . . . . . . .   |________
     |                         |
-    |     .card_body          |<----- Responsive
-    |                         |        padding: 5%;
-    |_________________________|        box-sizing: border-box;
-                                       border-radius: 0px 10px 10px 10px;
-
-   scale-up when hover
-
+    |     .sd-card__body      | 
+    |                         |
+    |                         |
+    |                         |
+    |                         |
+    |                         |
+    |   ____________________  |
+    |  |____________________| |<-----At the bottom they have a decoration svg to simulate pins, absolute position.
+    |_________________________|
+                                 
  */
 
-
-/* blue, info general config and header/body config*/
-
-
-
-.flex_card_container {
+.flex-card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
-#about_me .flex_card_container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-basis: 400px;
+
+.sd-card {
+    margin: 30px 10px 10px 30px;
+    width: 100%;
+    flex-basis: 250px;
+    flex-grow: 1;
+    transition: 0.5s ease-in-out;
 }
-#about_me .info_card {
-    flex-basis: 400px;
-    height: auto;
+
+.sd-card__header--black{
+    background-color: #000011;
+    background-image: url(img/blue_card_background.png);
+    background-size:200px 200px;
+    border-radius: 10px 10px 0px 0px;
+    width: 70%;
+    min-width: 200.5px;
     padding: 10px;
+    box-sizing: border-box;
 }
+
+.sd-card__header--green{
+    background-color: #4da27a;
+    background-image: url(img/green_card_background.png);
+    background-size:200px 200px;
+    border-radius: 10px 10px 0px 0px;
+    width: 70%;
+    min-width: 200.5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.sd-card__header--white {
+    background-color: #fffffa;
+    border: #000000 1px dashed;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    width: 70%;
+    min-width: 200.5px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+.sd-card__header-title--black {
+    color: #000;
+}
+
+.sd-card__header-title--white {
+     color: #fffffa;
+}
+
+
+.sd-card__body--black {
+    background-color: #000011;
+    background-image: url(img/blue_card_background.png);
+    background-size:200px 200px;
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 0px 10px 10px 10px;
+    min-height: 400px;
+}
+
+.sd-card__body--green {
+    background-color: #4da27a;
+    background-image: url(img/green_card_background.png);
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 0px 10px 10px 10px;
+    min-height: 400px;
+}
+
+.sd-card__body--white {
+    background-color: #fffffa;
+    border: #000000 1px dashed;
+    color: #000000;
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 0px 10px 10px 10px;
+    min-height: 400px;
+}
+
+
+
+
+
+.sd-card__body-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sd-card__body-img {
+    height: 150px;
+    border-radius: 50%;
+}
+
+.sd-card__body-text {
+    margin-bottom: 40px;
+}
+
+.sd-card__body-text--white {
+    margin-bottom: 40px;
+    color: #fff
+}
+
+.sd-card__body-text-anchor--black{
+    color: #000;
+    text-decoration-line: underline
+}
+
+
+
+
+.sd-card__bottom-flex-container-svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 0px;
+    height: 30px;
+    width: auto;
+    top:-35px;
+}
+
+.sd-card__bottom-flex-container-svg-decoration--black {
+
+    background-color: #000011;
+    background-image: url("svg/sd_decoration.svg");
+    background-size:30px 32px;
+    background-repeat: repeat-x;
+    height: 95%;
+    width: 90%;
+}
+
+.sd-card__bottom-flex-container-svg-decoration--green{
+    background-color: #122619;
+    background-image: url("svg/sd_decoration_green.svg");
+    background-size:30px 32px;
+    background-repeat: repeat-x;
+    height: 95%;
+    width: 90%;
+}
+
+
+.sd-card:hover .sd-card__header--black, .sd-card:hover .sd-card__body--black {
+    box-shadow: 0px 7px 7px #8c8ca0;  
+}
+  
+
+.sd-card:hover .sd-card__header--green, .sd-card:hover .sd-card__body--green {
+    box-shadow: 0px 5px 7px #4da27a; 
+}
+
+
+/* _______________________________ */
 .item_container {
     margin: 10px 20px;
     display: flex;
@@ -260,160 +405,20 @@ padding-left: 30px;
 #useful_table_flex_container li {
     margin-left: 0px;
     }
+/* Section__title 
+   It has got a breadcrumbs next to it.
+   
+   It looks like this --------->    SectionTitle |  / Previous section
+                                                 |   Next section /   
+*/
 
-
-
-
-
-
-.foto_wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+.section-title {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;   
 }
 
-.foto_wrap > img {
-    height: 150px;
-
-}
-
-
-.blue_card, .orange_card, .info_card {
-    margin: 30px 10px 10px 30px;
-    width: 100%;
-    flex-basis: 250px;
-    flex-grow: 1;
-    transition: 0.5s ease-in-out;
-}
-
-.blue_card:hover > div > .card_header, .info_card:hover > div > .card_header {
-    box-shadow: 0px 7px 7px #8c8ca0;  
-}
-
-.blue_card:hover > .card_body, .info_card:hover > .card_body {
-    box-shadow: 0px 7px 7px #8c8ca0;  
-}
-
-.card_header {
-    border-radius: 10px 10px 0px 0px;
-    width: 70%;
-    min-width: 200.5px;
-    padding: 10px;
-    box-sizing: border-box;
- }
-      .card_header h2, .card_header h3 {
-         margin-bottom: 0px;
-          color: #fffffa;
-      }
-
-      .info_card > .card_header > h2 {
-         color: #000000;
-      }
-    
-    
-.card_body {
-    color: #fffffa;
-    padding: 5%;
-    box-sizing: border-box;
-    border-radius: 0px 10px 10px 10px;
-    min-height: 400px;
-}
-
-
-
-
-
-
-/* ------blue card: background colors--------------- */
-/* .blue_card .card_header > h2, .blue_card .card_body {
-/*     color: rgb(200, 200, 200); 
-} */
-.blue_card .card_header {
-    background-color: #000011;
-    background-image: url(img/blue_card_background.png);
-    background-size:200px 200px;
-}
-.blue_card .card_body {
-    background-color: #000011;
-    background-image: url(img/blue_card_background.png);
-    background-size:200px 200px;
-}
-
-/* ------Orange card: background colors --------------- */
-.orange_card .card_header {
-    background-color: #000011;
-}
-.orange_card .card_body {
-    background-color: #ff9800;
-}
-
-/* --------info card: baclground colors --------------- */
-.info_card .card_header {
-    background-color: #fffffa;
-    border: #000000 1px dashed;
-    border-bottom: none;
-}
-.info_card .card_header > h2 {
- color: #000000;
-}
-
-.info_card .card_body {
-    background-color: #fffffa;
-    border: #000000 1px dashed;
-    color: #000000;
-}
-
-.block_of_text {
-    margin-bottom: 40px;
-}
-.decoration_sd_wrapp {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    position: relative;
-    top: 0px;
-    height: 30px;
-    width: auto;
-    top:-35px;
-}
-
-#about_me_card > .decoration_sd_wrapp >.decoration_sd {
-
-    background-color: #000011;
-    background-image: url("svg/sd_decoration.svg");
-    background-size:30px 32px;
-    background-repeat: repeat-x;
-    height: 95%;
-    width: 90%;
-}
-
-#trajectory_card > .decoration_sd_wrapp >.decoration_sd, #education_card > .decoration_sd_wrapp >.decoration_sd {
-    background-color: #122619;
-    background-image: url("svg/sd_decoration_green.svg");
-    background-size:30px 32px;
-    background-repeat: repeat-x;
-    height: 95%;
-    width: 90%;
-}
-
-#trajectory_card a {
-    color: #fff;
-    text-decoration-line: underline
-}
-
-#trajectory_card a:hover {
-    color: #b3001b;
-    text-decoration-line: underline
-}
-
-#trajectory_card .card_body, #education_card h2 {
-    color: #fff;
-}
-
-
-
-.div_next-return_after_h2_section {
+.section-title__breadcrumbs {
     display: flex;
     flex-direction:column;
     flex-wrap: nowrap;
@@ -421,24 +426,16 @@ padding-left: 30px;
     margin-left: 5px;
 }
 
-.h2_section_flex_container {
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    
-}
-
-.div_next-return_after_h2_section a {
+.section-title__breadcrumbs-anchor {
     color: #999999;
     text-decoration-line: none;
-    
 }
 
-.div_next-return_after_h2_section a:hover {
-    color: #b3001b;
-    
+.section-title__breadcrumbs-anchor:hover {
+    color: #b3001b;  
 }
 
+/* ---------------------------------------------------------------------------------------- */
 
 .button_absolute{
     display: none; /* Hidden by default */
@@ -799,11 +796,11 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 */
 
 /* 
- _____.cabecera_flex_container_______________________________________________________________________
+ _____.main-header-flex-container_______________________________________________________________________
 |                                                 |                            |                    |
-|       .Cabecera_left_div                        |   .cabecera_center_div     |.cabecera_right_div |
+|       .Cabecera_left_div                        |   .main-header-center-div     |.main-header-right-div |
 |                                                 |                            |                    |
-|    -.cabecera_left_div_child_child-introtext--  |                            |                    |
+|    -.main-header-flex-container-left-div-child_child-introtext--  |                            |                    |
 |    |                                         |  |                            |                    |
 |    |   H1-> UX DESIGNER PORTFOLIO            |  |                            |                    |
 |    |    p-> Hi! I expect that if you are     |  |      has a background      |                    |
@@ -817,15 +814,15 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 |                                                 |           *>>              |      at bottom     |
 |___________________________________________________________________________________________________|
 |                                                                                                   |                       
-|            .cabecera_bottom_div_icon  has a  svg *>> icon, animation; position absolute;          |
+|            .main-header_bottom_div_icon  has a  svg *>> icon, animation; position absolute;          |
 |___________________________________________________________________________________________________|
 
  */
-.cabecera {
+.main-header {
     height: 430px;
     background-color: #e48698;
     }
-        .cabecera_flex_container {
+        .main-header-flex-container {
              display: flex;
              flex-direction: row;
         }
@@ -840,7 +837,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
              888  888    .o  888      888 .             888   888   888     `888'    
             o888o `Y8bod8P' o888o     "888" ooooooooooo `Y8bod88P" o888o     `8'   */
 
-            .cabecera_left_div {
+            .main-header-flex-container-left-div {
                  flex: 1;
                  display: flex;
                  justify-content: center;
@@ -850,7 +847,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                  box-sizing: border-box;
                 }
 
-                    .cabecera_left_div_child  {
+                    .main-header-flex-container-left-div-child-textbox  {
                        border: #b3001b 3px inset;
                        background-color:  #00000010;
                        border-radius: 10px;
@@ -858,20 +855,21 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                        box-sizing: border-box;
                     }
 
-                         .cabecera_left_div_child_child-introtext > h1 {
+                         .main-header-flex-container-left-div-child__text-title {
                              color: #b3001b;
                              letter-spacing: 1px;
                              line-height: 1.4;
                             }
 
-                         .cabecera_left_div_child_child-introtext > p {
+                         .main-header-flex-container-left-div-child__text-body {
                              font-size: 15px;
                              line-height: 1.4;
                              color: #fffffa;
                             }
-                        .cabecera_left_div_child_child-introtext > a {
+                        .main-header-flex-container-left-div-child__text-anchor {
                             color: #b3001b;
                             line-height: 1.4;
+                            font-size:12px;
                            }
 
                 
@@ -884,7 +882,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
              888   .o8 888    .o  888   888    888 . 888    .o  888                 888   888   888     `888'    
              `Y8bod8P' `Y8bod8P' o888o o888o   "888" `Y8bod8P' d888b    ooooooooooo `Y8bod88P" o888o     `8'  */
                                                                                              
-           .cabecera_center_div {
+           .main-header-center-div {
               background-image: url("img/home_header_background.jpg");
               background-color: #e48698;
               background-size: cover;
@@ -903,17 +901,17 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                              "Y88888P'                                                               
                                            */                                      
              
-            .cabecera_right_div {
+            .main-header-right-div {
                  display: flex;
                  justify-content: center;
                  align-items: flex-end;
                  height: 430px;
                  width: auto;
                 }
-                     .cabecera_right_div_child-svg-logo-kschool {
+                     .main-header-right-div-child-logo-container {
                          z-index: 1;
                         }
-                     .cabecera_right_div_child-svg-logo-kschool > svg {
+                     .main-header-right-div-child-logo-container__svg-logo {
                           max-width: 100px;
                           margin: auto;
                           margin-bottom: 10px;
@@ -934,15 +932,15 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
       
        /*__________________________________________________________________________________________________
       |                                                                                                   |                       
-      |            .cabecera_bottom_div-icon  has a  svg *>> icon, animation; position absolute;          |
+      |            .main-header-bottom-div  has a  svg *>> icon, animation; position absolute;          |
       |___________________________________________________________________________________________________| */
 
-      .cabecera_bottom_div-icon {
+      .main-header-bottom-div {
          display: flex;
          justify-content: center;
       }
       
-            .cabecera_bottom_div-icon > span {
+            .main-header-bottom-div-arrow-icon-container {
                position: absolute;
                margin-top: -40px;
                animation: bounce 1s;
@@ -966,31 +964,27 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
            Y.  YoP"b'   888   888   888  888ooo888 888   888   888   .oP"888  
             8.      .8  888   888   888  888    .o 888   888   888  d8(  888  
              YooooooP  o888o o888o o888o `Y8bod8P' `Y8bod88P" o888o `Y888""8o  */
-
-             /* SCREEN MEDIA QUERY */
-             @media (max-width:649px) { .cabecera
+            
+            
+            
+             /*.main-header-left-div*/ 
+             @media (max-width:649px) { .main-header
                 {
                   padding:0;
                 }
             }
 
-             /*.cabecera_left_div*/
-             @media (max-width:670px) { .cabecera_left_div
+             @media (max-width:670px) { .main-header-flex-container-left-div
                  {
                      background-image: url("img/home_header_background.jpg");
                      background-size: cover;
                      background-repeat: no-repeat;
+                     background-color: transparent;
                  }
              }
              
-             
-             @media (max-width:670px) { .cabecera_left_div
-                 {      
-                   background-color: transparent;
-                 }
-             }
-             
-             @media (max-width: 670px) { .cabecera_left_div_child 
+
+             @media (max-width: 670px) { .main-header-flex-container-left-div-child-textbox 
                  {
                     
                      background-color: #0000009b;
@@ -998,46 +992,40 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
              
                  }
              }
-             @media (max-width: 670px) { .cabecera_left_div_child_child-introtext > h1
+             @media (max-width: 670px) { .main-header-flex-container-left-div-child__text-title, .main-header-flex-container-left-div-child__text-anchor
                  {
                      color: #fffffa;             
                  }
              }
 
 
-            /*.cabecera_center_div*/  
-             @media (max-width:670px) { .cabecera_center_div
+            /*.main-header-center-div*/  
+             @media (max-width:670px) { .main-header-center-div
                  {
                    display:none;
                  }
              }
              
              
-             @media (max-width: 670px) { .cabecera_left_div_child_child-introtext > a
-                 {
-                   color: #ffffff;
-                 }
-             
-                }
+
                 
-            /*.cabecera_right_div*/
-            @media (max-width:842px) { .cabecera_right_div
+            /*.main-header-right-div*/
+            @media (max-width:842px) { .main-header-right-div
                {
                  width: auto;
                 }
             }
 
-            @media (max-width:842px) { .cabecera_right_div >  .cabecera_right_div_child-svg-logo-kschool
+            @media (max-width:842px) { .main-header-right-div-child-logo-container
                 {
                  display:none;
                 }
             }
             
 
-          /*.cabecera_bottom_div-icon*/
-         /*changes the color to red when the >> icon hover at the neck*/
+          /*.main-header-bottom-div*/
 
-           @media (max-width: 670px) { .cabecera_bottom_div-icon > span> a > svg > path
+           @media (max-width: 670px) { .main-header-bottom-div-arrow-icon--red-mobile-device
                {
                  fill: #b3001b;
                }
@@ -1058,58 +1046,23 @@ o888o        o888o  o888o o888ooooood8 8""88888P'  o888ooooood8 o8o        `8   
 */
 /* Configuracion seccion presentacion */
 
-#trajectory_card  .card_header, #trajectory_card  .card_body, #education_card  .card_header, #education_card  .card_body {
-    background-color: #4da27a;
-    background-image: url(img/green_card_background.png);
-}
 
-/*  */
 
-#trajectory_card:hover .card_header, #trajectory_card:hover .card_body, #education_card:hover .card_header, #education_card:hover .card_body {
-    box-shadow: 0px 5px 7px #4da27a;
-}
 
-#about_me_card {
-    order: 1;
-}
-#trajectory_card {
-    order: 3;
-}
-#education_card {
-    order: 2;
-}
-#this_site_card {
-    order: 4;
-}
-.p_link_inside_sdcard_trajectory {
-    color:black;
-}
-.p_link_inside_sdcard_trajectory:hover {
-    color:#b3001b;
-}
-
-@media (max-width: 801px) { .card_body
+@media (max-width: 801px) { .sd-card__body
     { 
       min-height: 323px !important;
     }
 }
 
-@media (min-width: 967px) and (max-width: 1290px) { #this_site_card >.card_body
+@media (min-width: 967px) and (max-width: 1290px) { #this_site_card >.sd-card__body
     {
         min-height:0px;
         padding:2%;
     }
 }
 
-#photo-bio {
-    border-radius: 50%;
-}
 
-
-
-/* ___A_new_section_starts_____________________________________________________________________________________ */
-/* ___________________________________________________________________________________________________________ */
-/* __________________________________________________________________________________________________________ */
 
 
 /* 
@@ -1122,13 +1075,13 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     o888o     o888ooooood8 8""88888P'      o888o     o888o o8o        o888o  `Y8bood8P' 
 */
 
-/* Configuracion testimoniales*/
+/* Testimonials*/
 
 .main-gallery {
 height: auto;
 }
 
-.carousel-cell {
+.testimonial {
     width: 300px;
     min-height: 300px;
     margin: 15px 10px;
@@ -1139,14 +1092,23 @@ height: auto;
     display: inline-block;
   }
   
-  @media (max-width:500px) { .carousel-cell {
+  @media (max-width:500px) { .testimonial {
     width: 80%;
     min-height: 370px;
   }
     
 }
+  .testimonial-header-container{
+    display:flex;
+    align-items: center;
+    padding-bottom: 5px;
+    background-color: #4da27a;
+    max-height: 93px;  
+    border-radius: 10px 10px 0px 0px;
+    color:#000;
+}
 
-.testimonial_gradient_background {
+.testimonial-header-container__gradient-background {
     position: absolute;
     z-index: 1;
     height: 93px;
@@ -1165,83 +1127,13 @@ height: auto;
     
 }
 
-@media (max-width:400px) {.testimonial_gradient_background 
+@media (max-width:400px) {.testimonial-header-container__gradient-background 
     {
       display: none;
     }
 }
 
-.testimonial_img_subtitle{
-    z-index: 2;
-}
-
-
-  .testimonial_img_block{
-    display:flex;
-    align-items: center;
-    padding-bottom: 5px;
-    background-color: #4da27a;
-    max-height: 93px;  
-    border-radius: 10px 10px 0px 0px;
-    color:#000;
-}
-
-.testimonial_position, .testimonial_company {
-    color: #fffffa;
-}
-
-.testimonial_fix_for_prev_next_button_on_small_screen {
-    height: 9vh;
-    display: none;
-}
-
-@media (max-width:500px) {.testimonial_fix_for_prev_next_button_on_small_screen 
-    {
-        display: block;
-    }
-  }
-  @media (max-width:350px) {.testimonial_text_fix_350
-    {
-        display: none;
-    }
-  }
-
-.testimonial_text_fix_short_surnames {
-      display: none;
-  }
-
-  @media (max-width:290px) {.testimonial_text_fix_short_surnames
-    {
-        display: block;
-    }
-  }
-
-
-.testimonial_text_block{
-    font-size: 15pt;
-    padding: 5px 20px 15px 20px;
-    display: block;
-    clear: both;
-    font-style: italic;
-    box-sizing: border-box;
-}
-.testimonial_img_subtitle > p {
-    text-shadow: #000 0px 2px 1px;
-}
-
-
-
-.testimonial_arrow-down_flex_container {
-    display: flex;
-    justify-content: center;
-}
-.testimonial_arrow-down_flex_container{
-    position:relative;
-    margin-top: -1px;
-}
-
-
-.testimonial_img {
+.testimonial-header-container__img {
     border: #fffffa 4px solid;
     background-color: rgb(73, 73, 73);
     margin: 10px;
@@ -1250,13 +1142,66 @@ height: auto;
     border-radius: 50%;    
 }
 
-.testimonial_img_subtitle {
+.testimonial-header-container__text {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
-
+    z-index: 2;
 }
 
+.testimonial-header-container__text-name {
+    font-size: 20px;
+    color: #3a3a3a;
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.testimonial-header-container__text-job-position {
+    color: #fffffa;
+    text-shadow: #000 0px 2px 1px;
+}
+
+
+.testimonial-header-container__flex-container-arrow-down {
+    display: flex;
+    justify-content: center;
+    position:relative;
+    margin-top: -1px;
+}
+
+
+.testimonial-quote{
+    font-size: 15pt;
+    padding: 5px 20px 15px 20px;
+    display: block;
+    clear: both;
+    font-style: italic;
+    box-sizing: border-box;
+}
+
+.testimonial-fix-for-prev-next-button-on-small-screen {
+    height: 9vh;
+    display: none;
+}
+
+
+@media (max-width:500px) {.testimonial-fix-for-prev-next-button-on-small-screen 
+    {
+        display: block;
+    }
+  }
+  @media (max-width:350px) {.testimonial-text-fix-350
+    {
+        display: none;
+    }
+  }
+  @media (max-width:290px) {.testimonial-text-fix-short-surnames
+    {
+        display: block;
+    }
+  }
 
 
 /* ___A_new_section_starts_____________________________________________________________________________________ */
@@ -1359,17 +1304,7 @@ border-radius:20px 188px 188px 190px;
     height:100%;
     position:absolute;
     z-index: -1;
-/* red too agresive, looks like SUPERMARKET DIA*/   
-/*     background: rgba(0,0,17,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(139,0,0,1) 12%, rgba(0,0,17,1) 24%, rgba(139,0,0,1) 35%, rgba(0,0,17,1) 54%, rgba(139,0,0,1) 65%, rgba(0,0,17,1) 68%, rgba(139,0,0,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,17,1)), color-stop(12%, rgba(139,0,0,1)), color-stop(24%, rgba(0,0,17,1)), color-stop(35%, rgba(139,0,0,1)), color-stop(54%, rgba(0,0,17,1)), color-stop(65%, rgba(139,0,0,1)), color-stop(68%, rgba(0,0,17,1)), color-stop(87%, rgba(139,0,0,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(139,0,0,1) 12%, rgba(0,0,17,1) 24%, rgba(139,0,0,1) 35%, rgba(0,0,17,1) 54%, rgba(139,0,0,1) 65%, rgba(0,0,17,1) 68%, rgba(139,0,0,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(139,0,0,1) 12%, rgba(0,0,17,1) 24%, rgba(139,0,0,1) 35%, rgba(0,0,17,1) 54%, rgba(139,0,0,1) 65%, rgba(0,0,17,1) 68%, rgba(139,0,0,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(139,0,0,1) 12%, rgba(0,0,17,1) 24%, rgba(139,0,0,1) 35%, rgba(0,0,17,1) 54%, rgba(139,0,0,1) 65%, rgba(0,0,17,1) 68%, rgba(139,0,0,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(0,0,17,1) 0%, rgba(139,0,0,1) 12%, rgba(0,0,17,1) 24%, rgba(139,0,0,1) 35%, rgba(0,0,17,1) 54%, rgba(139,0,0,1) 65%, rgba(0,0,17,1) 68%, rgba(139,0,0,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000011', endColorstr='#000011', GradientType=1 );
-    border-radius:20px 70px 0px 70px; */
-/* pink */    
+
 background: rgba(0,0,17,1);
 background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,17,1)), color-stop(12%, rgba(228,134,151,1)), color-stop(24%, rgba(0,0,17,1)), color-stop(35%, rgba(228,134,151,1)), color-stop(54%, rgba(0,0,17,1)), color-stop(65%, rgba(228,134,151,1)), color-stop(68%, rgba(0,0,17,1)), color-stop(87%, rgba(228,134,151,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
