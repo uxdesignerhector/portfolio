@@ -2,9 +2,9 @@
 var customPixel = 120;
 window.onscroll = function() {
   if (prevScrollpos < customPixel) {
-    document.getElementById("navbar").style.display = "static";
+    document.getElementById("main-nav").style.display = "static";
   } else {
-    document.getElementById("navbar").style.display = "absolute";
+    document.getElementById("main-nav").style.display = "absolute";
   }
 }
  */

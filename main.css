@@ -62,17 +62,7 @@ a:hover {
     color: #b3001b;
 }
 
-.presentacion ul {
-    padding: 0;
-    margin:0;
-}
 
-.presentacion li {
-    padding-left: 4px;
-    margin-left: 20px;
-    font-size: 15px;
-    line-height: 1.4;
-}
 
 h2 {
     font-size: 36px;
@@ -165,6 +155,12 @@ section {
 }
 
 img{white-space:pre}
+
+
+body {
+    background-color: #fffffa;
+}
+
 
 
 
@@ -316,6 +312,18 @@ img{white-space:pre}
     color: #fff
 }
 
+.sd-card__body-text ul {
+    padding: 0;
+    margin:0;
+}
+
+.sd-card__body-text li {
+    padding-left: 4px;
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
 .sd-card__body-text-anchor--black{
     color: #000;
     text-decoration-line: underline
@@ -359,11 +367,16 @@ img{white-space:pre}
 .sd-card:hover .sd-card__header--black, .sd-card:hover .sd-card__body--black {
     box-shadow: 0px 7px 7px #8c8ca0;  
 }
-  
 
 .sd-card:hover .sd-card__header--green, .sd-card:hover .sd-card__body--green {
     box-shadow: 0px 5px 7px #4da27a; 
 }
+
+
+
+
+
+
 
 
 /* _______________________________ */
@@ -404,7 +417,14 @@ padding-left: 30px;
 
 #useful_table_flex_container li {
     margin-left: 0px;
-    }
+}
+
+
+
+
+
+
+
 /* Section__title 
    It has got a breadcrumbs next to it.
    
@@ -434,6 +454,9 @@ padding-left: 30px;
 .section-title__breadcrumbs-anchor:hover {
     color: #b3001b;  
 }
+
+
+
 
 /* ---------------------------------------------------------------------------------------- */
 
@@ -485,27 +508,25 @@ small {
          o8o        `8  o88o     o8888o       `8'  
 
  */
-body {
-    background-color: #fffffa;
+nav li {
+    list-style: none;
 }
 
+nav ul ul {
+    padding: 0;
+    margin:0;
+}
+
+nav a {
+        text-decoration: none;  
+        color: #000000;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
          
-.nav_bar_fix {
-    height: 90px;
-    background-color: #e48698;
-    grid-column: 1 / 13;
-    
-}
-
-.logo:hover circle {
-    stroke: #ff9800;
-}
-
-.logo:hover g path {
-    fill: #ff9800;
-}
-
-nav {
+.main-nav {
     width: 100%;
     height: 90px;
     background-color: #fffffa;
@@ -523,43 +544,28 @@ nav {
     transition: 1s;
     z-index: 9999;
 }
-nav a {
-        text-decoration: none;  
-        color: #000000;
-}
-nav a:hover {
-    color: #ff9800;
-}
-
-nav ul, nav li {
-    margin:0;
-    padding:0;
-}
-
-nav > div > ul > li > a {
-    letter-spacing: 1px;
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
-    transition: color 0.3s ease-out;
-}
-
-.logo {
+ .main-nav-logo-flex-container {
     display: flex;
     align-items: center;
 }
 
-#Logo {
+.main-nav-logo-flex-container:hover circle {
+    stroke: #ff9800;
+}
+
+.main-nav-logo-flex-container:hover path {
+    fill: #ff9800;
+}
+.main-nav-logo__icon-container {
     display:inline-block;
 }
 
-#Logo svg {
+.main-nav-logo__icon-svg{
     width: 50px;
     height:50px;
-    
 }
 
-#texto_firma {
+.main-nav-logo__text-container {
     display: inline-block;
     height: 52.5px;
     margin-left: 5px;
@@ -567,92 +573,114 @@ nav > div > ul > li > a {
 
 }
 
-#texto_firma > p {
+.main-nav-logo__text-p {
     font-size: 12px;
 }
 
-#nav_contact_icon {
+
+
+
+
+.main-nav-menu__level-1-contact-icon-svg {
     display: none;
 }
 
-#nav_contact_icon:hover > path {
+.main-nav-menu__level-1-contact-icon-svg:hover > path {
  fill: #ff9800;
 }
 
 
-@media (max-width: 642px) {#texto_firma > p
+
+@media (max-width: 642px) { .main-nav-logo__text-p
     {
         display: none;
     }
 }
 
 
-@media (max-width: 325px) {#navbar #Logo svg 
+@media (max-width: 325px) {.main-nav-logo__icon-svg
     {
-        width: 32px;
+        width: 47px;
     }
 }
 
-@media (max-width: 550px) {#navbar a
-    {
-        font-size: 12px;
-    }
-}
-@media (max-width: 550px) {#nav_contact_icon {
+
+@media (max-width: 550px) {.main-nav-menu__level-1-contact-icon-svg {
     display: block;
 }
 }
-@media (max-width: 550px) {#nav_contact {
+@media (max-width: 550px) { .main-nav-menu__level-1-contact-anchor {
     display: none;
 }
 }
 
 
-.menu > li:hover > a {
-    color: #ff9800;
-
-}
-
-.current_menu {
-    color: #ff9800;
-}
 
 
-#projects > div {
+
+/* Arrow icon below anchor text projects */
+.main-nav-menu__level-1-li-icon-below-projects {
     position: absolute;
     z-index: 99999;  
     bottom: 10px;
     left: 35px;
 }
 
-
-.menu_container > ul > li:hover > a > div > div > svg > path {
-    fill: #ff9800
-}
-
-li:hover > #projects > div {
-    transition: 0.3s ease-in;
+.main-nav-menu__level-1-li:hover .main-nav-menu__level-1-li-icon-below-projects {
+    transition: 250ms ease-in;
     bottom: 5px;
 }
 
-
-
-nav li {
-    list-style: none;
+.main-nav-menu__level-1-li:hover .main-nav-menu__level-1-li-icon-below-projects-svg-path {
+    fill: #ff9800;
 }
 
-nav ul ul {
-    padding: 0;
+
+
+
+
+.main-nav-menu__level-1-ul {
+    display: flex;
+    flex-basis: 390px;
+    flex-direction: row;
+    position: relative;
+    
+}
+
+/* Needed to display correctly the icon >> below projects anchor   */
+.main-nav-menu__level-1-ul {
     margin:0;
+    padding:0;
 }
 
-nav > div > ul {
-    width: auto;
+.main-nav-menu__level-1-li:hover > a {
+    color: #ff9800;
+}
+
+
+.main-nav-menu__level-1-li-anchor {
+    letter-spacing: 1px;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+.main-nav-menu__level-1-li-anchor--current-page{
+    color: #ff9800;
+}
+
+
+/* Da una altura de 90px y centra todo el contenido */
+.main-nav-menu__level-1-ul { 
+    width: 150;
     height: 90px;
     align-items: center;
     align-content: center;
 }
-nav > div > ul > li {
+
+/* Gives to first levels li a hig of 100% and center them*/
+.main-nav-menu__level-1-li {
     height: 100%;
     display: flex;
     align-content: center;
@@ -662,121 +690,127 @@ nav > div > ul > li {
     box-sizing: border-box;
 
 }
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    flex-basis: 320px;
-}
-menu > ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-.point {
-    position: relative;
-    left: 6px;
-}
-
-
-.menu_nivel_1 > ul {
-    display: none;
-    position: absolute;
-}
-
-.menu_nivel_2 > ul {
+ /* Hides level-2-ul  */
+.main-nav-menu__level-2-ul {
    display:none;
    position: absolute;
    
 }
+/* Hides level-2-submenu-ul */
+.main-nav-menu__level-2-sub-menu-ul {
+    display: none;
+    position: absolute;
+}
 
-.menu > li:hover > ul {
+/* Mouse hover level-1-li shows level-2-ul */
+.main-nav-menu__level-1-li:hover > ul { 
     display:flex;
     flex-direction: column;
     bottom:-60px;
     margin-left: -24px;
-    width: 130px;
     border: #ff9800 1px solid;
     border-top-color: white; 
     box-shadow: 0px 7px 10px -3px;
 }
-@media (max-width: 550px) {.menu > li:hover > ul{
-    width: 100px;
-}
-}
 
 
 
-.menu > li:hover > ul > li {
-    width: 100px;
-    clear: both; 
-}
-
-.menu > li:hover > ul > li > a {
+/* Cuando se posiciona el mouse encima de un level-1-li otorga una altura y un ancho a los anchor */
+.main-nav-menu__level-1-li:hover > ul > li > a{
     float:left;
     width: 130px;
     height: 30px;
     line-height: 1.4;
     box-sizing: border-box;
     padding: 5px;
-    background: #ffffff;    
-}
-@media (max-width: 550px) {.menu > li:hover > ul > li > a{
-    width: 100px;
-}
+    background: #ffffff; 
+      
 }
 
 
-.menu > li > ul > li:hover > a {
-    background-color: #ff9800;
-    color: #ffffff;
-}
-
-
-
-.menu > li > ul > li:hover > a > span {
-   left: 20px;
-   transition: left 0.3s ease-in;
-}
-
-@media (max-width: 550px) {.menu > li > ul > li:hover > a > span{
-    left: 6px;
-    transition: none;
-}
-}
-
-
-.menu > li > ul > li:hover > ul {
+/* Cuando se posiciona el mouse encima de un level-2-li se muestra el sub-menu-ul */
+.main-nav-menu__level-2-li:hover> ul { 
     display: inline-block;
     box-sizing: border-box;
     border: #ff9800 3px solid;
     
 }
 
-.menu > li > ul > li:hover > ul > li > a {
+
+/* Cuando se posiciona el mouse encima de un level-2-li se muestra el sub-menu-ul y se le otorga a los anchor apariencia */
+.main-nav-menu__level-2-li:hover > ul > li > a { 
     display: block;
     width: 150px;
     height: auto;
     line-height: 1.4;
     box-sizing: border-box;
     padding: 5px;
+    background-color: #ff9800;   
+}
+
+.main-nav-menu__level-1-li:hover > ul > li:hover > a {
     background-color: #ff9800;
-    
+    color: #ffffff;
 }
 
-@media (max-width: 550px) {.menu > li > ul > li:hover > ul > li > a{
-    width: 120px;
-}
-}
-
-.menu > li > ul > li > ul > li:hover > a {
+.main-nav-menu__level-2-sub-menu-li:hover > a {
     color: #ffffff;
 }
 
 
+.main-nav-menu__level-2-li-animated-arrow {
+    position: relative;
+    left: 6px;
+}
+
+.main-nav-menu__level-2-li:hover .main-nav-menu__level-2-li-animated-arrow {
+   left: 20px;
+   transition: left 250ms ease-in;
+}
 
 
+
+
+/* Funciona correctamente */
+/* Restos */
+
+
+/* .main-nav-menu__level-1-ul {
+    list-style: none;
+    margin-left: 0;
+} */
+
+/* .main-nav-menu__level-1-li:hover > ul > li {
+    width: 1200px;
+    clear: both; 
+} */
+
+
+@media (max-width: 550px) {.main-nav-menu__level-1-li:hover > ul{
+    width: 100px;
+}
+}
+
+@media (max-width: 550px) {.main-nav-menu__level-1-li:hover > ul > li > a{
+    width: 100px;
+}
+}
+
+@media (max-width: 550px) {.main-nav-menu__level-2-li> a > span{
+    left: 6px;
+    transition: none;
+}
+}
+
+@media (max-width: 550px) {.main-nav-menu__level-2-li:hover > ul > li > a{
+    width: 100px;
+}
+}
+
+@media (max-width: 550px) {.main-nav-menu__container a {
+    font-size: 12px;
+}
+}
 
 
 /* ___A_new_section_starts_____________________________________________________________________________________ */
@@ -785,7 +819,7 @@ menu > ul {
 
 
 
-/* 
+/* MAIN
 ooooo   ooooo oooooooooooo       .o.       oooooooooo.   oooooooooooo ooooooooo.  
 `888'   `888' `888'     `8      .888.      `888'   `Y8b  `888'     `8 `888   `Y88.
  888     888   888             .8"888.      888      888  888          888   .d88'
@@ -796,11 +830,11 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 */
 
 /* 
- _____.main-header-flex-container_______________________________________________________________________
+ _____.main-header-flex-container____________________________________________________________________
 |                                                 |                            |                    |
-|       .Cabecera_left_div                        |   .main-header-center-div     |.main-header-right-div |
+|       .main_header_left_div                        |  .main-header-center-div   |.main-header-right-div 
 |                                                 |                            |                    |
-|    -.main-header-flex-container-left-div-child_child-introtext--  |                            |                    |
+|    -.main-header-flex-container-left-div-child_child-introtext--             |                    |
 |    |                                         |  |                            |                    |
 |    |   H1-> UX DESIGNER PORTFOLIO            |  |                            |                    |
 |    |    p-> Hi! I expect that if you are     |  |      has a background      |                    |
@@ -814,7 +848,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 |                                                 |           *>>              |      at bottom     |
 |___________________________________________________________________________________________________|
 |                                                                                                   |                       
-|            .main-header_bottom_div_icon  has a  svg *>> icon, animation; position absolute;          |
+|            .main-header_bottom_div_icon  has a  svg *>> icon, animation; position absolute;       |
 |___________________________________________________________________________________________________|
 
  */
