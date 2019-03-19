@@ -215,81 +215,70 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.sd-card__header--black{
-    background-color: #000011;
-    background-image: url(img/blue_card_background.png);
-    background-size:200px 200px;
+.sd-card--two-sd-cards-inside {
+    flex-basis: 400px;
+}
+
+
+.sd-card__header {
     border-radius: 10px 10px 0px 0px;
     width: 70%;
     min-width: 200.5px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+
+.sd-card__header--grey{
+    background-color: #343e3d;
+    background-image: url(img/blue_card_background.png);
 }
 
 .sd-card__header--green{
     background-color: #4da27a;
     background-image: url(img/green_card_background.png);
-    background-size:200px 200px;
-    border-radius: 10px 10px 0px 0px;
-    width: 70%;
-    min-width: 200.5px;
-    padding: 10px;
-    box-sizing: border-box;
 }
-
 
 .sd-card__header--white {
     background-color: #fffffa;
     border: #000000 1px dashed;
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
-    width: 70%;
-    min-width: 200.5px;
-    padding: 10px;
-    box-sizing: border-box;
-    
+}
+
+.sd-card__header-title {
+     color: #fffffa;
 }
 
 .sd-card__header-title--black {
     color: #000;
 }
 
-.sd-card__header-title--white {
-     color: #fffffa;
-}
 
 
-.sd-card__body--black {
-    background-color: #000011;
-    background-image: url(img/blue_card_background.png);
-    background-size:200px 200px;
+.sd-card__body {
     padding: 5%;
     box-sizing: border-box;
     border-radius: 0px 10px 10px 10px;
     min-height: 400px;
+}
+
+
+.sd-card__body--grey {
+    background-color: #343e3d;
+    background-image: url(img/blue_card_background.png);
 }
 
 .sd-card__body--green {
     background-color: #4da27a;
     background-image: url(img/green_card_background.png);
-    padding: 5%;
-    box-sizing: border-box;
-    border-radius: 0px 10px 10px 10px;
-    min-height: 400px;
 }
 
 .sd-card__body--white {
     background-color: #fffffa;
     border: #000000 1px dashed;
     color: #000000;
-    padding: 5%;
-    box-sizing: border-box;
-    border-radius: 0px 10px 10px 10px;
-    min-height: 400px;
 }
-
-
-
 
 
 .sd-card__body-img-container {
@@ -308,7 +297,6 @@ body {
 }
 
 .sd-card__body-text--white {
-    margin-bottom: 40px;
     color: #fff
 }
 
@@ -330,8 +318,6 @@ body {
 }
 
 
-
-
 .sd-card__bottom-flex-container-svg {
     display: flex;
     flex-direction: row;
@@ -344,39 +330,33 @@ body {
     top:-35px;
 }
 
-.sd-card__bottom-flex-container-svg-decoration--black {
 
+
+.sd-card__bottom-svg-decoration {
+    background-size:30px 32px;
+    background-repeat: repeat-x;
+    height: 95%;
+    width: 90%;
+}
+
+.sd-card__bottom-svg-decoration--black {
     background-color: #000011;
     background-image: url("svg/sd_decoration.svg");
-    background-size:30px 32px;
-    background-repeat: repeat-x;
-    height: 95%;
-    width: 90%;
 }
 
-.sd-card__bottom-flex-container-svg-decoration--green{
+.sd-card__bottom-svg-decoration--green{
     background-color: #122619;
     background-image: url("svg/sd_decoration_green.svg");
-    background-size:30px 32px;
-    background-repeat: repeat-x;
-    height: 95%;
-    width: 90%;
 }
 
 
-.sd-card:hover .sd-card__header--black, .sd-card:hover .sd-card__body--black {
+.sd-card:hover .sd-card__header--grey, .sd-card:hover .sd-card__body--grey {
     box-shadow: 0px 7px 7px #8c8ca0;  
 }
 
 .sd-card:hover .sd-card__header--green, .sd-card:hover .sd-card__body--green {
     box-shadow: 0px 5px 7px #4da27a; 
 }
-
-
-
-
-
-
 
 
 /* _______________________________ */
@@ -438,6 +418,10 @@ padding-left: 30px;
     flex-wrap: wrap;   
 }
 
+.section-title__title::after {
+    content: " ///"
+}
+
 .section-title__breadcrumbs {
     display: flex;
     flex-direction:column;
@@ -456,20 +440,18 @@ padding-left: 30px;
 }
 
 
-
-
 /* ---------------------------------------------------------------------------------------- */
 
 .button_absolute{
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
+    display: none; 
+    position: fixed; 
     right: 10px;
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 6px; /* Some padding */
-    border-radius: 50px; /* Rounded corners */
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    padding: 6px; 
+    border-radius: 50px; 
   }
   
   #gototop {
@@ -490,13 +472,6 @@ padding-left: 30px;
 small {
    color:#fffffa;
 }
-
-
-
-
-/* ___A_new_section_starts_____________________________________________________________________________________ */
-/* ___________________________________________________________________________________________________________ */
-/* __________________________________________________________________________________________________________ */
 
 
 /*       ooooo      ooo       .o.       oooooo     oooo
@@ -580,17 +555,6 @@ nav a:hover {
 
 
 
-
-.main-nav-menu__level-1-contact-icon-svg {
-    display: none;
-}
-
-.main-nav-menu__level-1-contact-icon-svg:hover > path {
- fill: #ff9800;
-}
-
-
-
 @media (max-width: 642px) { .main-nav-logo__text-p
     {
         display: none;
@@ -604,26 +568,14 @@ nav a:hover {
     }
 }
 
-
-@media (max-width: 550px) {.main-nav-menu__level-1-contact-icon-svg {
-    display: block;
-}
-}
-@media (max-width: 550px) { .main-nav-menu__level-1-contact-anchor {
-    display: none;
-}
-}
-
-
-
-
+/* Main nav menu*/
 
 /* Arrow icon below anchor text projects */
 .main-nav-menu__level-1-li-icon-below-projects {
     position: absolute;
     z-index: 99999;  
     bottom: 10px;
-    left: 35px;
+    left: 20px;
 }
 
 .main-nav-menu__level-1-li:hover .main-nav-menu__level-1-li-icon-below-projects {
@@ -635,10 +587,6 @@ nav a:hover {
     fill: #ff9800;
 }
 
-
-
-
-
 .main-nav-menu__level-1-ul {
     display: flex;
     flex-basis: 390px;
@@ -647,23 +595,14 @@ nav a:hover {
     
 }
 
-/* Needed to display correctly the icon >> below projects anchor   */
+/* Needed to display correctly the icon >> below projects anchor*/
 .main-nav-menu__level-1-ul {
     margin:0;
     padding:0;
 }
 
-.main-nav-menu__level-1-li:hover > a {
+.main-nav-menu__level-1-li-anchor:hover{
     color: #ff9800;
-}
-
-
-.main-nav-menu__level-1-li-anchor {
-    letter-spacing: 1px;
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
-    transition: color 0.3s ease-out;
 }
 
 .main-nav-menu__level-1-li-anchor--current-page{
@@ -707,12 +646,11 @@ nav a:hover {
     display:flex;
     flex-direction: column;
     bottom:-60px;
-    margin-left: -24px;
+    margin-left: -40px;
     border: #ff9800 1px solid;
     border-top-color: white; 
     box-shadow: 0px 7px 10px -3px;
 }
-
 
 
 /* Cuando se posiciona el mouse encima de un level-1-li otorga una altura y un ancho a los anchor */
@@ -769,21 +707,38 @@ nav a:hover {
 }
 
 
+/* Contact icon displayed on small screen */
+.main-nav-menu__level-1-contact-icon-svg {
+    display: none;
+}
+
+.main-nav-menu__level-1-contact-icon-svg:hover > path {
+ fill: #ff9800;
+}
+
+@media (max-width: 550px) {.main-nav-menu__level-1-contact-icon-svg {
+    display: block;
+}
+}
+@media (max-width: 550px) { .main-nav-menu__level-1-contact-anchor {
+    display: none;
+}
+}
 
 
-/* Funciona correctamente */
-/* Restos */
+
+/* _________________________________________________________________________________ */
 
 
-/* .main-nav-menu__level-1-ul {
-    list-style: none;
-    margin-left: 0;
-} */
-
-/* .main-nav-menu__level-1-li:hover > ul > li {
-    width: 1200px;
-    clear: both; 
-} */
+          /* .oooooo.                                    .o8   o8o              
+            d'     `b                                   "888   `"'            
+           d' .d"bd  8 ooo. .oo.  .oo.    .ooooo.   .oooo888  oooo   .oooo.   
+           8  8. 8  .d `888P"Y88bP"Y88b  d88' `88b d88' `888  `888  `P  )88b  
+           Y.  YoP"b'   888   888   888  888ooo888 888   888   888   .oP"888  
+            8.      .8  888   888   888  888    .o 888   888   888  d8(  888  
+             YooooooP  o888o o888o o888o `Y8bod8P' `Y8bod88P" o888o `Y888""8o  */
+            
+            
 
 
 @media (max-width: 550px) {.main-nav-menu__level-1-li:hover > ul{
@@ -832,7 +787,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 /* 
  _____.main-header-flex-container____________________________________________________________________
 |                                                 |                            |                    |
-|       .main_header_left_div                        |  .main-header-center-div   |.main-header-right-div 
+|       .main_header_left_div                     |  .main-header-center-div   |.main-header-right-div 
 |                                                 |                            |                    |
 |    -.main-header-flex-container-left-div-child_child-introtext--             |                    |
 |    |                                         |  |                            |                    |
@@ -862,14 +817,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
         }
             /* ________________________________ */
 
-        
-/*          oooo             .o88o.     .                     .o8   o8o              
-            `888             888 `"   .o8                    "888   `"'              
-             888   .ooooo.  o888oo  .o888oo              .oooo888  oooo  oooo    ooo 
-             888  d88' `88b  888      888               d88' `888  `888   `88.  .8'  
-             888  888ooo888  888      888               888   888   888    `88..8'   
-             888  888    .o  888      888 .             888   888   888     `888'    
-            o888o `Y8bod8P' o888o     "888" ooooooooooo `Y8bod88P" o888o     `8'   */
+
 
             .main-header-flex-container-left-div {
                  flex: 1;
@@ -906,15 +854,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                             font-size:12px;
                            }
 
-                
-
-           /*                                    .                                        .o8   o8o              
-                                               .o8                                       "888   `"'              
-             .ooooo.   .ooooo.  ooo. .oo.   .o888oo  .ooooo.  oooo d8b              .oooo888  oooo  oooo    ooo 
-             d88' `"Y8 d88' `88b `888P"Y88b    888   d88' `88b `888""8P             d88' `888  `888   `88.  .8'  
-             888       888ooo888  888   888    888   888ooo888  888                 888   888   888    `88..8'   
-             888   .o8 888    .o  888   888    888 . 888    .o  888                 888   888   888     `888'    
-             `Y8bod8P' `Y8bod8P' o888o o888o   "888" `Y8bod8P' d888b    ooooooooooo `Y8bod88P" o888o     `8'  */
                                                                                              
            .main-header-center-div {
               background-image: url("img/home_header_background.jpg");
@@ -922,20 +861,9 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
               background-size: cover;
               height: 430px;
               width: 408px;
-            }
-
-             /*         o8o             oooo            .                     .o8   o8o              
-                        `"'             `888          .o8                    "888   `"'              
-              oooo d8b oooo   .oooooooo  888 .oo.   .o888oo              .oooo888  oooo  oooo    ooo 
-              `888""8P `888  888' `88b   888P"Y88b    888               d88' `888  `888   `88.  .8'  
-               888      888  888   888   888   888    888               888   888   888    `88..8'   
-               888      888  `88bod8P'   888   888    888 .             888   888   888     `888'    
-              d888b    o888o `8oooooo.  o888o o888o   "888" ooooooooooo `Y8bod88P" o888o     `8'     
-                             d"     YD                                                               
-                             "Y88888P'                                                               
-                                           */                                      
+            }                  
              
-            .main-header-right-div {
+           .main-header-right-div {
                  display: flex;
                  justify-content: center;
                  align-items: flex-end;
@@ -951,28 +879,13 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                           margin-bottom: 10px;
                           border-radius: 10px 10px 10px 10px;
                         }
-      /* ________________________________________________________________________*/
 
 
 
-      /* 8                     .       .                                                 .o8   o8o              
-      "888                   .o8     .o8                                                "888   `"'              
-       888oooo.   .ooooo.  .o888oo .o888oo  .ooooo.  ooo. .oo.  .oo.                .oooo888  oooo  oooo    ooo 
-       d88' `88b d88' `88b   888     888   d88' `88b `888P"Y88bP"Y88b              d88' `888  `888   `88.  .8'  
-       888   888 888   888   888     888   888   888  888   888   888              888   888   888    `88..8'   
-       888   888 888   888   888 .   888 . 888   888  888   888   888              888   888   888     `888'    
-       `Y8bod8P' `Y8bod8P'   "888"   "888" `Y8bod8P' o888o o888o o888o ooooooooooo `Y8bod88P" o888o     `8'       */         
-      
-      
-       /*__________________________________________________________________________________________________
-      |                                                                                                   |                       
-      |            .main-header-bottom-div  has a  svg *>> icon, animation; position absolute;          |
-      |___________________________________________________________________________________________________| */
-
-      .main-header-bottom-div {
-         display: flex;
-         justify-content: center;
-      }
+           .main-header-bottom-div {
+               display: flex;
+               justify-content: center;
+            }
       
             .main-header-bottom-div-arrow-icon-container {
                position: absolute;
@@ -1078,25 +991,37 @@ ooooooooo.   ooooooooo.   oooooooooooo  .oooooo..o oooooooooooo ooooo      ooo o
  888          888  `88b.   888       o oo     .d8P  888       o  8       `888       888     
 o888o        o888o  o888o o888ooooood8 8""88888P'  o888ooooood8 o8o        `8      o888o    
 */
-/* Configuracion seccion presentacion */
+/* Intro section */
 
 
 
 
-@media (max-width: 801px) { .sd-card__body
+@media (max-width: 644px) { .sd-card__body--black, .sd-card__body--green, .sd-card__body--white
     { 
-      min-height: 323px !important;
+      min-height: 0;
     }
-}
+} 
 
-@media (min-width: 967px) and (max-width: 1290px) { #this_site_card >.sd-card__body
+
+@media (min-width: 967px) and (max-width: 1290px) { #info-sd-card .sd-card__body
     {
         min-height:0px;
         padding:2%;
     }
 }
 
+@media (max-width: 994px) { #about_me .sd-card__body
+    {
+        min-height:0px;
+        padding:2%;
+    }
+}
 
+@media (min-width: 995px) { #about_me .sd-card__body
+    {
+        min-height:445px;
+    }
+}
 
 
 /* 
@@ -1243,15 +1168,9 @@ height: auto;
 /* __________________________________________________________________________________________________________ */
 
 
-.ux_project_img {
-
-    flex:1;
-    height: 50px;
-}
-
 /* UX PROJECTS */
 
-.flex_cards_container_project {
+.project-cards-flex-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1261,28 +1180,26 @@ height: auto;
     flex-basis: 50px;
 }
 
-#ux_projects .project_card_container {
+.project-card-container {
     display:flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px;
-    box-shadow: 0px 5px 7px /* #b3001b; */ #f05d5e;
-    border-radius:20px 70px 20px 20px;
     border-bottom: none;
 }
-#trajectory_projects .project_card_container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
+
+.project-card-container--pink {
+    box-shadow: 0px 5px 7px #f05d5e;
+    border-radius:20px 70px 20px 20px;
+}
+.project-card-container--green {
     box-shadow: 0px 5px 7px #38e4a3;
     border-radius:20px 70px 20px 20px;
-    border-bottom: none;
+
 }
 /* _____________________________________________________ */
-@media (max-width:1035px) and (min-width:645px) { #ux_projects .project_card_container, #trajectory_projects .project_card_container
+@media (max-width:1035px) and (min-width:645px) {.project-card-container--pink, .project-card-container--green
     {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1292,70 +1209,63 @@ height: auto;
 }
 }
 
-@media (max-width:644px) { #ux_projects .project_card_container, #trajectory_projects .project_card_container
+@media (max-width:644px) {.project-card-container--pink, .project-card-container--green
     {
      margin: 20px 10%;
     }
 }
 
-#ux_projects .project_card-circle_div {
-position:relative;
-min-width:250px;
-min-height:240px;
-width: 100%;
-height: 240px;
-background-color:/* #b3001b */ #e48698;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius:20px 188px 188px 190px;
-}
-
-#trajectory_projects .project_card-circle_div {
+.project-card__header {
     position:relative;
     min-width:250px;
     min-height:240px;
     width: 100%;
     height: 240px;
-    background-color:#4da27a;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius:20px 188px 188px 190px;
+}
+
+.project-card__header--pink {
+    background-color: #e48698;
+}
+
+.project-card__header--green {
+    background-color:#4da27a;
     }
 
-
-
-
-.project_card-circle_div > div > img {
+.project-card__header-img {
     border-radius:50%;
     border: #fffffa 10px solid;
     background-color: #fffffa;
 }
 
-#ux_projects .project_background-gradient_div {
+
+.project-card__header-background-gradient {
+    position:absolute;
     width:100%;
     height:100%;
-    position:absolute;
     z-index: -1;
-
-background: rgba(0,0,17,1);
-background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,17,1)), color-stop(12%, rgba(228,134,151,1)), color-stop(24%, rgba(0,0,17,1)), color-stop(35%, rgba(228,134,151,1)), color-stop(54%, rgba(0,0,17,1)), color-stop(65%, rgba(228,134,151,1)), color-stop(68%, rgba(0,0,17,1)), color-stop(87%, rgba(228,134,151,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
-background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-background: radial-gradient(ellipse at center, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000011', endColorstr='#000011', GradientType=1 );
-border-radius:20px 70px 0px 70px;
+    border-radius:20px 70px 0px 70px;
 }
 
-#trajectory_projects .project_background-gradient_div  {
-    width:100%;
-    height:100%;
-    position:absolute;
-    z-index: -1;
-    background: rgba(0,0,17,1);
+
+.project-card__header-background-gradient--pink {
+
+    background: #e48698;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,17,1)), color-stop(12%, rgba(228,134,151,1)), color-stop(24%, rgba(0,0,17,1)), color-stop(35%, rgba(228,134,151,1)), color-stop(54%, rgba(0,0,17,1)), color-stop(65%, rgba(228,134,151,1)), color-stop(68%, rgba(0,0,17,1)), color-stop(87%, rgba(228,134,151,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000011', endColorstr='#000011', GradientType=1 );
+    
+}
+
+.project-card__header-background-gradient--green  {
+    background: #4da27a;
     background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(77,162,122,1) 12%, rgba(0,0,17,1) 24%, rgba(77,162,122,1) 35%, rgba(0,0,17,1) 54%, rgba(77,162,122,1) 65%, rgba(0,0,17,1) 68%, rgba(77,162,122,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,17,1)), color-stop(12%, rgba(77,162,122,1)), color-stop(24%, rgba(0,0,17,1)), color-stop(35%, rgba(77,162,122,1)), color-stop(54%, rgba(0,0,17,1)), color-stop(65%, rgba(77,162,122,1)), color-stop(68%, rgba(0,0,17,1)), color-stop(87%, rgba(77,162,122,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
     background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(77,162,122,1) 12%, rgba(0,0,17,1) 24%, rgba(77,162,122,1) 35%, rgba(0,0,17,1) 54%, rgba(77,162,122,1) 65%, rgba(0,0,17,1) 68%, rgba(77,162,122,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
@@ -1363,11 +1273,10 @@ border-radius:20px 70px 0px 70px;
     background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(77,162,122,1) 12%, rgba(0,0,17,1) 24%, rgba(77,162,122,1) 35%, rgba(0,0,17,1) 54%, rgba(77,162,122,1) 65%, rgba(0,0,17,1) 68%, rgba(77,162,122,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
     background: radial-gradient(ellipse at center, rgba(0,0,17,1) 0%, rgba(77,162,122,1) 12%, rgba(0,0,17,1) 24%, rgba(77,162,122,1) 35%, rgba(0,0,17,1) 54%, rgba(77,162,122,1) 65%, rgba(0,0,17,1) 68%, rgba(77,162,122,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000011', endColorstr='#000011', GradientType=1 );
-    border-radius:20px 70px 0px 70px;
 }
 
 
-.curved-text {
+.project-card__header-curved-text {
     width: 210px;
     height: 210px;
     position: absolute;
@@ -1382,7 +1291,7 @@ textPath {
     font-family: 'Roboto', sans-serif;
 }
 
-.project_text
+.project-card__body-text
  {
     max-width: 250px;
     margin-top: 0px;
@@ -1392,7 +1301,7 @@ textPath {
 }
 
 
-@media (max-width:1035px) { .project_text
+@media (max-width:1035px) { .project-card__body-text
  
     {
     margin-top: 0px;
@@ -1403,7 +1312,7 @@ textPath {
 }
 
 
-.project_arrow-down-container
+.project-card__arrow-down-container /* Remember that arrow down container has a svg with a polygon fill property at the html code */
  {
     display: flex;
     justify-content: center;
@@ -1412,13 +1321,7 @@ textPath {
 
 }
 
-#ux_projects .project_arrow-down-container polygon {
-    fill: #e48698;
-}
-#trajectory_projects .project_arrow-down-container polygon {
-    fill: #4da27a;
-}
-@media (max-width:1035px) and (min-width:645px) { .project_card_container .project_arrow-down-container
+@media (max-width:1035px) and (min-width:645px) { .project-card__arrow-down-container
 
     {
     height: 100%;
@@ -1428,7 +1331,7 @@ textPath {
 }
 }
 
-@media (max-width:1035px) and (min-width:645px) { .project_card_container .project_arrow-down-container_div-to-rotate
+@media (max-width:1035px) and (min-width:645px) { .project-card__arrow-down-container-for-rotation
  
     {
         transform: rotate(-90deg);
@@ -1436,7 +1339,7 @@ textPath {
     }
 }
 
-.project_text_flex_container
+.project-card__body-flex-container
  {
     display: flex;
     flex-direction: column;
@@ -1447,62 +1350,56 @@ textPath {
     height: 100%;
 }
 
-.project_text_header_div {
+.project-card__body-text-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 0px 10px 0px;
 }
 
-#ux_projects .project_button_card  {
+
+.project-card__button-card {
     margin-bottom: 10px;
     padding: 5%;
     width: 100px;
-
     border-radius: 10px;
-
     display: flex;
     align-content: center;
     justify-content: center;
-
     background-color:#fffffa;
+}
+
+
+
+.project-card__button-card--pink  {
     border: #e48698 2px solid;
     color: #b3001b;
 }
 
-#ux_projects .project_button_card:hover {
+.project-card__button-card--pink:hover {
     color: #fffffa;
     background-color:#e48698;
     border: #e48698 2px solid;
 }
-#trajectory_projects .project_button_card {
-    margin-bottom: 10px;
-    padding: 5%;
-    width: 100px;
 
-    border-radius: 10px;
 
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-    background-color:#fffffa;
+.project-card__button-card--green {
     border: #4da27a 2px solid;
     color: #343e3d;
 }
 
-#trajectory_projects .project_button_card:hover {
+.project-card__button-card--green:hover {
     color: #fffffa;
     background-color:#4da27a;
     border: #4da27a 2px solid;
 }
 
-.project_card_container a{
+.project-card__body-text-url{
     text-decoration: none;
-    color: black;
+
 }
 
-.project_url:hover h3, .project_url:hover p {
+.project-card__body-text-title:hover h3 {
  color: #b3001b;
 }
 

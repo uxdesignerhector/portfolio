@@ -1,14 +1,3 @@
-/* var prevScrollpos = window.pageYOffset;
-var customPixel = 120;
-window.onscroll = function() {
-  if (prevScrollpos < customPixel) {
-    document.getElementById("main-nav").style.display = "static";
-  } else {
-    document.getElementById("main-nav").style.display = "absolute";
-  }
-}
- */
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -24,3 +13,5 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+
