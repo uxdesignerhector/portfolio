@@ -64,12 +64,18 @@ a:hover {
 
 
 
-h2 {
+h2, .section-title__title {
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     color: #999999;
 }
+
+.section-title__title--white{
+    color: #fffffa
+}
+
+
 h3 {
     font-size: 30px;
     font-style: normal;
@@ -1636,35 +1642,24 @@ oooooooooooo   .oooooo.     .oooooo.   ooooooooooooo oooooooooooo ooooooooo.
 o888o         `Y8bood8P'   `Y8bood8P'      o888o     o888ooooood8 o888o  o888o
 */
 
-/* Flexbox footer*/
-footer label {
-    color: #fffffa;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
 footer {
     background-color: #2e4052;
     min-height: 400px;
     padding: 50px;        
 }
 
-.footer_div_h2 > h2 {
-    color: #fffffa;
-}
-
-
-.footer_flex_container {
+.footer-flex-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
-.footer_div_left {
+
+.footer-flex-container__left-div {
     height: 100%;
 }
-.footer_div_right {
+
+.footer-flex-container__right-div {
     width: auto;
     height: auto;
     margin-left: auto;
@@ -1675,25 +1670,16 @@ footer {
     align-items: flex-end;
     margin-right: 10px;
 }
-.legal {
-    margin-top:auto;
-}
-.footer_div_right > div > p {
+
+.footer__body-text {
     padding: 5px 0px 0px 0px;
-    text-align: right;
     color: #ffffff;
-
 }
-
-.footer_div_right > div > img {
-    margin-top: 5px;
-
+.footer__body-text--right-align {
+    
+    text-align: right;
+    
 }
-
-
-
-/* Configuración del formulario de contacto*/
-
 
 .contact_form {
     display: flex;
