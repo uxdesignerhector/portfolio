@@ -1421,7 +1421,7 @@ textPath {
 
 
 
-
+/* Post column section */
 
 
 
@@ -1435,7 +1435,6 @@ textPath {
     margin: 10px 20px;
     flex:1;
     flex-basis: 400px;
-/*     min-width: 500px; */
 }
 
 .post_text_column p {
@@ -1454,6 +1453,7 @@ textPath {
 
 .post_text_column img {
     width: 100%;
+    border-radius: 10px;
     }
 
 @media (min-width:700px) and (max-width:995px) { .post_text_column img {
