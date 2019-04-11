@@ -448,7 +448,7 @@ padding-left: 30px;
 
 /* ---------------------------------------------------------------------------------------- */
 
-.button_absolute{
+.button-absolute{
     display: none; 
     position: fixed; 
     right: 10px;
@@ -463,15 +463,15 @@ padding-left: 30px;
   #gototop {
     bottom: 60px; 
   }
-  #email__absolute__button{
-    display: block;
+  #gotobottom{
+    
     bottom: 15px;
 }
 
   #contac_me_button {
     bottom: 40px; 
   }
-.button_absolute:active {
+.button-absolute:hover, .button-absolute:active {
     background-color: #ff9800;
   }
 
