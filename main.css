@@ -214,7 +214,7 @@ body {
 }
 
 .sd-card {
-    margin: 30px 10px 10px 30px;
+    margin: 30px 30px 30px 10px;
     width: 100%;
     flex-basis: 250px;
     flex-grow: 1;
@@ -387,7 +387,6 @@ body {
 #useful_table_flex_container {
     margin-top: 20px;
     margin-bottom: 40px;
-/*     background-color: #4da27a; */
     color: #000;
     display: flex;
     flex-direction: row;
