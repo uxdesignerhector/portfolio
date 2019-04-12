@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* reset css */
 html, body, div, span, applet, object, iframe,
@@ -23,7 +23,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure, g
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
