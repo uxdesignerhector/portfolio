@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /* reset css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,7 +28,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
 }
 
 blockquote, q {
@@ -45,7 +47,7 @@ table {
 
 /*final reset css*/
 h1, h2, h3, h4, p, li, label, figcaption {
-    font-family: 'Roboto', sans-serif;
+
     line-height: 1.4;
 }
 h1 {
@@ -1118,7 +1120,6 @@ height: auto;
     color: #3a3a3a;
     font-style: normal;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
     line-height: 1.4;
 }
 
@@ -1293,7 +1294,6 @@ textPath {
     fill: #fffffa;
     font-style: normal;
     font-weight: 200px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .project-card__body-text
