@@ -1,10 +1,9 @@
 @charset "UTF-8";
 @font-face {
     font-family: 'Roboto';
-    src: url('fonts/Roboto-Regular.woff2') format('woff2'),
-     url('fonts/Roboto-Regular.woff') format('woff'),
-     url('fonts/Roboto-Regular.ttf') format('ttf');
-     unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.woff2') format('woff2'),
+     url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.woff') format('woff'),
+     url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.ttf') format('ttf');
      font-style: normal;
      font-weight: 400;
 }
