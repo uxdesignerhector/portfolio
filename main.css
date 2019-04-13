@@ -3,7 +3,7 @@
     font-family: 'Roboto';
     src: url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.woff2') format('woff2'),
      url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.woff') format('woff'),
-     url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.ttf') format('ttf');
+     url('https://github.com/uxdesignerhector/portfolio/blob/gh-pages/fonts/Roboto-Regular.ttf') format('truetype');
      font-style: normal;
      font-weight: 400;
 }
