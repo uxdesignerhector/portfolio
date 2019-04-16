@@ -1303,8 +1303,43 @@ textPath {
     font-weight: 200px;
 }
 
-.project-card__body-text
- {
+
+.project-card__header-cover--active{
+position: absolute;
+height: 150px;width: 150px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.project-card__header-cover--no-active{
+display:none
+}
+
+
+.project-card__header-cover--active--green{
+background-color: #4da27acc;
+border: solid #4da27a 1px;
+}
+
+.project-card__header-cover--active--pink{
+background-color: #e48697cc;
+border: solid #e48698 1px;
+}
+
+
+.project-card__header-cover-text{
+font-size: 17px;
+color: white;
+}
+
+
+
+
+
+.project-card__body-text {
     max-width: 250px;
     margin-top: 0px;
     padding: 0% 10% 5% 10%;
