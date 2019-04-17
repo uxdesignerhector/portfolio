@@ -1311,7 +1311,10 @@ border-radius: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
+<<<<<<< HEAD
 top:43px;
+=======
+>>>>>>> 13e40487b0199286da141c3297f26c1fb1e84c0e
 
 }
 
@@ -1322,13 +1325,21 @@ display:none
 
 .project-card__header-cover--active--green{
 background-color: #4da27acc;
+<<<<<<< HEAD
 border: solid #fffffa 1px;
+=======
+border: solid #4da27a 1px;
+>>>>>>> 13e40487b0199286da141c3297f26c1fb1e84c0e
 }
 
 .project-card__header-cover--active--pink{
 background-color: #e48697cc;
+<<<<<<< HEAD
 border: solid #fffffa 1px;
 
+=======
+border: solid #e48698 1px;
+>>>>>>> 13e40487b0199286da141c3297f26c1fb1e84c0e
 }
 
 
