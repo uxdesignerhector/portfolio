@@ -1320,6 +1320,7 @@ display:none
 }
 
 
+
 .project-card__header-cover--active--green{
 background-color: #4da27acc;
 border: solid #fffffa 1px;
@@ -1330,6 +1331,57 @@ background-color: #e48697cc;
 border: solid #fffffa 1px;
 
 }
+
+.project-card__header-cover-wave--no-active {
+display: none;
+}
+.project-card__header-cover-wave--active {
+    background-color: #fffffa80;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+	-webkit-animation: pulse 3s infinite both;
+	animation: pulse 3s infinite both;
+}
+
+
+
+ @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.0);
+              transform: scale(0.0);
+      opacity: 0.4;
+    }
+    80% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(2.2);
+              transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.0);
+              transform: scale(0.0);
+      opacity: 0.4;
+    }
+    80% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(2.2);
+              transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+  
 
 
 .project-card__header-cover-text{
@@ -1425,6 +1477,14 @@ color: white;
     color: #b3001b;
 }
 
+
+
+
+.project-card__button-card--pink  {
+    border: #e48698 2px solid;
+    color: #b3001b;
+}
+
 .project-card__button-card--pink:hover {
     color: #fffffa;
     background-color:#e48698;
@@ -1447,9 +1507,27 @@ color: white;
     text-decoration: none;
 
 }
+.project-card__body-text-url--no-active:hover{
+    color: #000;
+}
+
+.project-card__button-card--no-active{
+    cursor: not-allowed;
+}
+
+.project-card__button-card--no-active:hover, .project-card__button-card--no-active:active {
+    background-color:#7a7a7a;
+}
+
 
 .project-card__body-text-title:hover h3 {
  color: #b3001b;
+}
+
+
+
+.project-card__body-text-title--no-active:hover h3{
+    color: #3a3a3a;
 }
 
 

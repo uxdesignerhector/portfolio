@@ -1,6 +1,6 @@
 window.onscroll = function() {scrollFunction()};
 document.addEventListener("DOMContentLoaded",function(){
-  projectCardCoverActivateTool.consola();
+  projectCardCoverActivateTool.checker();
 });
 
 function topFunction() {
@@ -24,19 +24,34 @@ var urlProjectCard = document.getElementsByClassName("project-card__body-text-ur
 
 
 var projectCardCoverActivateTool = {
-   consola: function() {
+   checker: function() {
      for (i=0; i < urlProjectCard.length; i++){
        if( fileName == urlProjectCard[i].getAttribute("href")){
          var projectCardHeaderCoverDiv = urlProjectCard[i].parentElement.parentElement.parentElement.children[0].children[0];
+         var projectCArdHeaderCoverWave = urlProjectCard[i].parentElement.parentElement.parentElement.firstElementChild.children[1];
          var idAttributeSection = urlProjectCard[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
-         if (idAttributeSection=="ux_projects"){
-           projectCardHeaderCoverDiv.className = "project-card__header-cover--active project-card__header-cover--active--pink";
+         if (idAttributeSection == "ux_projects"){
+          projectCArdHeaderCoverWave.className = "project-card__header-cover-wave--active";
+          projectCardHeaderCoverDiv.className = "project-card__header-cover--active project-card__header-cover--active--pink";
+           this.changeClassesAndUrl(i);
            break;
           } else {
+            projectCArdHeaderCoverWave.className = "project-card__header-cover-wave--active";
             projectCardHeaderCoverDiv.className = "project-card__header-cover--active project-card__header-cover--active--green";
+            this.changeClassesAndUrl(i);
           break;
         }
       }
     }
   },
+
+
+  changeClassesAndUrl: function(i){
+    urlProjectCard[i].classList.add("project-card__body-text-url--no-active");
+    urlProjectCard[i].firstElementChild.classList.add("project-card__body-text-title--no-active");
+    urlProjectCard[i].removeAttribute("href");
+    urlProjectCard[i+1].removeAttribute("href");
+    urlProjectCard[i+1].firstElementChild.firstElementChild.innerHTML="<p>You are here!</p>";
+    urlProjectCard[i+1].firstElementChild.classList.add("project-card__button-card--no-active");
+  }
 }
