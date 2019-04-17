@@ -27,10 +27,6 @@ var projectCardCoverActivateTool = {
    consola: function() {
      for (i=0; i < urlProjectCard.length; i++){
        if( fileName == urlProjectCard[i].getAttribute("href")){
-<<<<<<< HEAD
-=======
-         console.log ("es igual");
->>>>>>> 13e40487b0199286da141c3297f26c1fb1e84c0e
          var projectCardHeaderCoverDiv = urlProjectCard[i].parentElement.parentElement.parentElement.children[0].children[0];
          var idAttributeSection = urlProjectCard[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
          if (idAttributeSection=="ux_projects"){
