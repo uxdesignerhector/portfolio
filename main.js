@@ -1,6 +1,7 @@
 window.onscroll = function() {scrollFunction()};
 document.addEventListener("DOMContentLoaded",function(){
   projectCardCoverActivateTool.checker();
+  contactForm.setUpEventListener();
 });
 
 function topFunction() {
@@ -20,7 +21,6 @@ function scrollFunction() {
 
 var fileName = location.pathname.split("/").slice(-1);
 var urlProjectCard = document.getElementsByClassName("project-card__body-text-url");
-//debugger
 
 
 var projectCardCoverActivateTool = {
@@ -55,3 +55,30 @@ var projectCardCoverActivateTool = {
     urlProjectCard[i+1].firstElementChild.classList.add("project-card__button-card--no-active");
   }
 }
+
+
+
+
+var contactForm = {
+  clearMesagge: function(){
+    contactFormTextArea.value="";
+  },
+
+  setUpEventListener: function(){
+    var clearTextAreaButton = document.getElementById("contactFormButtonClearText");
+    var contactFormTextArea = document.getElementById("contactFormTextArea");
+    inputField = document.getElementsByClassName("contactFormInput");
+    clearTextAreaButton.addEventListener("click", this.clearMesagge)
+  },
+   
+  activateLabel: function(position){
+
+    inputField[position].previousElementSibling.classList.add('contact-form__label--active');
+    console.log("HI");
+  },
+  deactivateLabel: function(position){
+    inputField[position].previousElementSibling.classList.remove('contact-form__label--active');
+    console.log("HI");
+  },
+}
+
