@@ -1873,9 +1873,26 @@ cursor: pointer;
     }
 }
 
+#contact {
+    font-size: 30px;
+}
+@media (max-width:550px) { #contact {
+    font-size: 25px;
+}
+}
 
 .contact_form_text-area-div, .submit_button {
     padding: 5px;
 }
 
+.footer-flex-container__right-div_wrapper{
+    min-width: 200px;
+}
 
+.linkedin{
+    margin-top: 30px;
+}
+
+.legal{
+    margin-left: 20px;
+}
