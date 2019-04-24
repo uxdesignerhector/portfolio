@@ -1802,31 +1802,97 @@ footer {
 .contact_form {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
       
 }
 
-.contact_form_first_flex_container_row {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+
+.contact-form__label{
+ display: block;
+ color: white;
+margin-top: 10px;
 }
-.contact_form_text-area-div > textarea {
+.contact-form__label--active{
+    color: #ff9800;
+}
+
+.contact-form__input{
+    width: 50%;
+    box-sizing: border-box;
+    border: #ffffff00 3px solid;
+}
+
+.contact-form__textarea {
     width: 100%;
     resize: none;
-    height:auto;
+    border: #ffffff00 3px solid;
 }
 
-.contact_form_first_flex_container_row > div:first-child {
-    margin-left:0px;
+.contact-form__input, .contact-form__textarea {
+transition: border-radius ease-in 100ms;
 }
 
-.contact_form_first_flex_container_row > div {
-    padding: 5px;
+.contact-form__input:focus, .contact-form__textarea:focus {
+    border: #ff9800 3px solid;
+    border-radius: 5px;
+}
+
+.contact-form__button{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    border: 4px #ffffff00 solid;
+cursor: pointer;
+}
+
+.contact-form__button--send{
+  background-color: #fffffa;
+  border: 3px #ff9800 solid;
+  
+}
+
+.contact-form__button--send:hover, .contact-form__button--send:focus{
+    background-color: #ff9800;
+    color: #fffffa;
+    
+  }
+
+
+.contact-form__button--clear:hover, .contact-form__button--clear:focus{
+    background-color: #ff9800;
+    color: #fffffa;
+    
+  }
+
+@media (max-width:550px) { .contact-form__input
+    {
+        width: 100%;
+    }
+}
+
+#contact {
+    font-size: 30px;
+}
+@media (max-width:550px) { #contact {
+    font-size: 25px;
+}
 }
 
 .contact_form_text-area-div, .submit_button {
     padding: 5px;
 }
 
+.footer-flex-container__right-div_wrapper{
+    min-width: 200px;
+}
 
+.linkedin{
+    margin-top: 30px;
+}
+
+.legal{
+    margin-left: 20px;
+}

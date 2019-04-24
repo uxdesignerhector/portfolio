@@ -710,25 +710,16 @@
 		<div class="footer-flex-container">
 			<div class="footer-flex-container__left-div">
 				<div class="contact_form" >
-					<form action="mailto:uxdesignerhector@gmail.com" enctype="text/plain" method="post">
-						<div class="contact_form_first_flex_container_row">
-							<div id="contact_form_field">
-								<input name="name" placeholder="Name" type="text">
-							</div>
-							<div id="contact_form_field">
-								<input name="email" placeholder="Mail" type="email">
-							</div>
-							<div id="contact_form_field">
-								<input name="subject" placeholder="Subject*" type="text">
-							</div>
-						</div>
-						<div class="contact_form_text-area-div">
-							<textarea cols="70" name="message" placeholder="your message" rows="10"></textarea>
-						</div>
-						<div class="submit_button">
-							<span id="contact_form_button"><input type="submit" value="Send"></span>
-						</div>
-					</form><p class="footer__body-text"><b>my mail:</b> uxdesignerhector@gmail.com</p>
+					<form accept-charset="UTF-8" action="https://usebasin.com/f/117193f636dc" method="POST">
+						<label class="contact-form__label">E-Mail: *</label>
+						<input class="contact-form__input contactFormInput" name="email" id="email" type="email" required onfocus="contactForm.activateLabel(0)" onfocusout="contactForm.deactivateLabel(0)"> 
+						<label class="contact-form__label" >Subject: *</label>
+						<input class="contact-form__input contactFormInput" type="text" name="subject" required onfocus="contactForm.activateLabel(1)" onfocusout="contactForm.deactivateLabel(1)">
+							<label class="contact-form__label">Your message: *</label>
+							<textarea id="contactFormTextArea" name="message" class="contact-form__textarea contactFormInput" cols="50" rows="10" required onfocus="contactForm.activateLabel(2);" onfocusout="contactForm.deactivateLabel(2)"></textarea>
+							<input id="contactFormButtonClearText" class="contact-form__button contact-form__button--clear" type="button" value="Clear">
+							<input class="contact-form__button contact-form__button--send" type="submit" value="Send e-mail">
+					</form>
 				</div>
 			</div>
 			<div class="footer-flex-container__right-div">
@@ -748,7 +739,7 @@
 					</div>
 
 					<div class="legal">
-						<p class="footer__body-text footer__body-text--right-align "><small >Copyright 2019 Héctor Herradura @ All Rights Reserved</small></p>
+						<p class="footer__body-text footer__body-text--right-align"><small>Copyright 2019 Héctor Herradura © All Rights Reserved</small></p>
 					</div>
 				</div>
 			</div>
