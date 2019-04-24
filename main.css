@@ -1448,7 +1448,7 @@ color: white;
     justify-content: space-between;
     align-items: center;
     flex:1;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .project-card__body-text-title {
@@ -1829,13 +1829,9 @@ margin-top: 10px;
     border: #ffffff00 3px solid;
 }
 
-.contact-form__input, .contact-form__textarea {
-transition: border-radius ease-in 100ms;
-}
 
 .contact-form__input:focus, .contact-form__textarea:focus {
     border: #ff9800 3px solid;
-    border-radius: 5px;
 }
 
 .contact-form__button{
@@ -1845,7 +1841,7 @@ transition: border-radius ease-in 100ms;
     font-size: 17px;
     font-family: 'Roboto', sans-serif;
     border: 4px #ffffff00 solid;
-cursor: pointer;
+    cursor: pointer;
 }
 
 .contact-form__button--send{
