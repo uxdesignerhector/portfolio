@@ -75,14 +75,11 @@ var contactForm = {
   },
 
   activateLabel: function(position){
-
     inputField[position].previousElementSibling.classList.add('contact-form__label--active');
-    console.log("HI");
   },
 
   deactivateLabel: function(position){
     inputField[position].previousElementSibling.classList.remove('contact-form__label--active');
-    console.log("HI");
   },
 }
 
