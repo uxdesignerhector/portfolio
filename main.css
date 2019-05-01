@@ -1845,7 +1845,7 @@ margin-top: 10px;
 }
 
 .contact-form__button--send{
-  background-color: #fffffa;
+  /* background-color: #fffffa; */
   border: 3px #ff9800 solid;
   
 }

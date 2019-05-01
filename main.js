@@ -57,25 +57,29 @@ var projectCardCoverActivateTool = {
 }
 
 
-
-
 var contactForm = {
+  
+  setUpEventListener: function(){
+    var clearTextAreaButton = document.getElementById("contactFormButtonClearText");
+    var contactFormTextArea = document.getElementById("contactFormTextArea");
+    inputField = document.querySelectorAll(".contactFormInput");
+    clearTextAreaButton.addEventListener("click", this.clearMesagge);
+    inputField.forEach(function (element, index){
+      element.onfocus = function(){contactForm.activateLabel(index)};
+      element.onblur = function(){contactForm.deactivateLabel(index)};
+    });
+  },
+  
   clearMesagge: function(){
     contactFormTextArea.value="";
   },
 
-  setUpEventListener: function(){
-    var clearTextAreaButton = document.getElementById("contactFormButtonClearText");
-    var contactFormTextArea = document.getElementById("contactFormTextArea");
-    inputField = document.getElementsByClassName("contactFormInput");
-    clearTextAreaButton.addEventListener("click", this.clearMesagge)
-  },
-   
   activateLabel: function(position){
 
     inputField[position].previousElementSibling.classList.add('contact-form__label--active');
     console.log("HI");
   },
+
   deactivateLabel: function(position){
     inputField[position].previousElementSibling.classList.remove('contact-form__label--active');
     console.log("HI");
