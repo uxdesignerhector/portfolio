@@ -17,6 +17,8 @@ function scrollFunction() {
     document.getElementById("gototop").style.display = "none";
     document.getElementById("gotobottom").style.display= "none";
   }
+
+
 }
 
 var fileName = location.pathname.split("/").slice(-1);

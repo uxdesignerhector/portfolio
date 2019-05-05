@@ -864,8 +864,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                             }
                         .main-header-flex-container-left-div-child__text-anchor {
                             color: #b3001b;
-                            line-height: 1.4;
-                            font-size:12px;
                            }
 
                                                                                              
@@ -1448,7 +1446,7 @@ color: white;
     justify-content: space-between;
     align-items: center;
     flex:1;
-    /* height: 100%; */
+    padding-bottom: 10px;
 }
 
 .project-card__body-text-title {
@@ -1460,7 +1458,6 @@ color: white;
 
 
 .project-card__button-card {
-    margin-bottom: 10px;
     padding: 5%;
     width: 100px;
     border-radius: 10px;
@@ -1793,10 +1790,9 @@ footer {
     padding: 5px 0px 0px 0px;
     color: #ffffff;
 }
-.footer__body-text--right-align {
-    
-    text-align: right;
-    
+
+.footer__body-text--right-align {  
+    text-align: right; 
 }
 
 .contact_form {
@@ -1852,15 +1848,13 @@ margin-top: 10px;
 .contact-form__button--send:hover, .contact-form__button--send:focus{
     background-color: #ff9800;
     color: #fffffa;
-    
-  }
+}
 
 
 .contact-form__button--clear:hover, .contact-form__button--clear:focus{
     background-color: #ff9800;
     color: #fffffa;
-    
-  }
+}
 
 @media (max-width:550px) { .contact-form__input
     {
