@@ -465,14 +465,11 @@ padding-left: 30px;
   #gototop {
     bottom: 60px; 
   }
-  #gotobottom{
+  #contactButton{
     
     bottom: 15px;
 }
 
-  #contac_me_button {
-    bottom: 40px; 
-  }
 .button-absolute:hover, .button-absolute:active {
     background-color: #ff9800;
   }

@@ -12,10 +12,10 @@ function topFunction() {
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("gototop").style.display = "block";
-    document.getElementById("gotobottom").style.display= "block";
+    document.getElementById("contactButton").style.display= "block";
   } else {
     document.getElementById("gototop").style.display = "none";
-    document.getElementById("gotobottom").style.display= "none";
+    document.getElementById("contactButton").style.display= "none";
   }
 
 
@@ -63,9 +63,18 @@ var contactForm = {
   
   setUpEventListener: function(){
     var clearTextAreaButton = document.getElementById("contactFormButtonClearText");
-    var contactFormTextArea = document.getElementById("contactFormTextArea");
-    inputField = document.querySelectorAll(".contactFormInput");
     clearTextAreaButton.addEventListener("click", this.clearMesagge);
+
+    var contactButton = document.getElementById('contactButton');
+    var contactMenu = document.getElementById('contactMenuLink');
+    contactButton.addEventListener("click", function(){
+      contactForm.setFocusOnInputEmail()
+    });
+    contactMenu.addEventListener("click", function(){
+      contactForm.setFocusOnInputEmail()
+    });
+    
+    inputField = document.querySelectorAll(".contactFormInput");
     inputField.forEach(function (element, index){
       element.onfocus = function(){contactForm.activateLabel(index)};
       element.onblur = function(){contactForm.deactivateLabel(index)};
@@ -73,6 +82,7 @@ var contactForm = {
   },
   
   clearMesagge: function(){
+    var contactFormTextArea = document.getElementById("contactFormTextArea");
     contactFormTextArea.value="";
   },
 
@@ -83,5 +93,14 @@ var contactForm = {
   deactivateLabel: function(position){
     inputField[position].previousElementSibling.classList.remove('contact-form__label--active');
   },
+
+  setFocusOnInputEmail: function (){
+    window.setTimeout(function ()
+    {
+        document.getElementById('email').focus();
+    }, 1);
+    return false;
+  }
+
 }
 
