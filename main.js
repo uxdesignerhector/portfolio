@@ -98,7 +98,7 @@ var contactForm = {
     window.setTimeout(function ()
     {
         document.getElementById('email').focus();
-    }, 1);
+    }, 10);
     return false;
   }
 
