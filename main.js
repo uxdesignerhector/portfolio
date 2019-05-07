@@ -1,4 +1,5 @@
 window.onscroll = function() {scrollFunction()};
+
 document.addEventListener("DOMContentLoaded",function(){
   projectCardCoverActivateTool.checker();
   contactForm.setUpEventListener();
@@ -9,8 +10,16 @@ function topFunction() {
   document.documentElement.scrollTop = 0; 
 }
 
+window.onresize = scrollFunction();
+
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  scrollBarLowerPosition = window.pageYOffset+window.innerHeight-70;
+  footerTopPosition = document.getElementById("footer").offsetTop;
+
+  if (scrollBarLowerPosition > footerTopPosition) {
+    document.getElementById("gototop").style.display = "block";
+    document.getElementById("contactButton").style.display= "none";
+  } else if (window.pageYOffset > 100 ){
     document.getElementById("gototop").style.display = "block";
     document.getElementById("contactButton").style.display= "block";
   } else {
@@ -67,10 +76,15 @@ var contactForm = {
 
     var contactButton = document.getElementById('contactButton');
     var contactMenu = document.getElementById('contactMenuLink');
+    var contactMenuIcon = document.getElementById('contactButtonMenuIcon');
+
     contactButton.addEventListener("click", function(){
       contactForm.setFocusOnInputEmail()
     });
     contactMenu.addEventListener("click", function(){
+      contactForm.setFocusOnInputEmail()
+    });
+    contactMenuIcon.addEventListener("click", function(){
       contactForm.setFocusOnInputEmail()
     });
     
