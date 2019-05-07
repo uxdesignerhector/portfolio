@@ -1,4 +1,14 @@
-window.onscroll = function() {scrollFunction()};
+
+
+
+window.onscroll = function() {
+  scrollFunction()
+};
+
+window.onresize = function(){
+  scrollFunction();
+}
+
 
 document.addEventListener("DOMContentLoaded",function(){
   projectCardCoverActivateTool.checker();
@@ -10,7 +20,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; 
 }
 
-window.onresize = scrollFunction();
 
 function scrollFunction() {
   scrollBarLowerPosition = window.pageYOffset+window.innerHeight-70;
@@ -26,13 +35,11 @@ function scrollFunction() {
     document.getElementById("gototop").style.display = "none";
     document.getElementById("contactButton").style.display= "none";
   }
-
-
 }
+
 
 var fileName = location.pathname.split("/").slice(-1);
 var urlProjectCard = document.getElementsByClassName("project-card__body-text-url");
-
 
 var projectCardCoverActivateTool = {
    checker: function() {
