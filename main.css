@@ -1022,13 +1022,12 @@ o888o        o888o  o888o o888ooooood8 8""88888P'  o888ooooood8 o8o        `8   
 @media (max-width: 994px) { #about_me .sd-card__body
     {
         min-height:0px;
-        padding:2%;
     }
 }
 
 @media (min-width: 995px) { #about_me .sd-card__body
     {
-        min-height:445px;
+        min-height:330px;
     }
 }
 
