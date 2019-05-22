@@ -134,7 +134,9 @@ figcaption {
     height: 100%;
 }
 
-
+html {
+    scroll-behavior: smooth;
+  }
 
 
 nav, section, footer {

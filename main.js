@@ -86,13 +86,13 @@ var contactForm = {
     var contactMenuIcon = document.getElementById('contactButtonMenuIcon');
 
     contactButton.addEventListener("click", function(){
-      contactForm.setFocusOnInputEmail()
+      contactForm.setupScrollTemporaryListener();
     });
     contactMenu.addEventListener("click", function(){
-      contactForm.setFocusOnInputEmail()
+      contactForm.setupScrollTemporaryListener();
     });
     contactMenuIcon.addEventListener("click", function(){
-      contactForm.setFocusOnInputEmail()
+      contactForm.setupScrollTemporaryListener()
     });
     
     inputField = document.querySelectorAll(".contactFormInput");
@@ -115,13 +115,39 @@ var contactForm = {
     inputField[position].previousElementSibling.classList.remove('contact-form__label--active');
   },
 
-  setFocusOnInputEmail: function (){
-    window.setTimeout(function ()
-    {
+  setupScrollTemporaryListener: function (){
+  window.addEventListener('scroll', this.contactScrollingfunction(),false)
+  window.removeEventListener('scroll', this.contactScrollingfunction, false);
+
+  },
+
+  contactScrollingfunction: function(){
+    var isScrolling;
+    window.clearTimeout( isScrolling );
+    isScrolling = contactForm.setFocusCallback();
+  },
+
+  setFocusCallback: function() {  
+    setTimeout(function() {
+      contactForm.setFocusOnInputEmail();
+      console.log("stop")
+    }, 0);
+    false;
+  },
+
+  setFocusOnInputEmail: function(){
+    window.setTimeout(function (){
         document.getElementById('email').focus();
-    }, 10);
+    }, 350);
     return false;
   }
+  
+
 
 }
+
+
+
+
+
 
