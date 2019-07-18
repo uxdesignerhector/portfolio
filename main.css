@@ -1466,7 +1466,6 @@ color: white;
 }
 
 
-
 .project-card__button-card--pink  {
     border: #e48698 2px solid;
     color: #b3001b;
@@ -1498,6 +1497,13 @@ color: white;
     border: #4da27a 2px solid;
 }
 
+.project-card__button-card--test {
+    flex-direction: row;
+    width: 170px;
+    padding: 5px;
+    border: #4da27a 2px solid;
+    color: #343e3d;
+}
 .project-card__body-text-url{
     text-decoration: none;
 

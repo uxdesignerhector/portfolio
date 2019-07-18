@@ -13,6 +13,11 @@ window.onresize = function(){
 document.addEventListener("DOMContentLoaded",function(){
   projectCardCoverActivateTool.checker();
   contactForm.setUpEventListener();
+  
+
+  testimonialLang.getTestimonialText();
+  
+
 });
 
 function topFunction() {
@@ -147,7 +152,55 @@ var contactForm = {
 }
 
 
+var testimonialLang = {
+
+  langChecker: function(){
+  if(testimonialButtonText.innerText==='Switch to Spanish'){
+    testimonialButton.onclick = function(){testimonialLang.setupSpanish()};
+  } else {
+    testimonialButton.onclick = function(){testimonialLang.setupEnglish()};
+  }
+  },
 
 
 
+  getTestimonialText: function(){
+
+
+    testimonialButton = document.getElementById('testiButton');
+    testimonialButtonText = document.getElementById('testiButtonText');
+    ruth = document.getElementById('testiRuth');
+    alvaro = document.getElementById('testiAlvaro');
+    analia = document.getElementById('testiAnalia');
+    mauri = document.getElementById('testiMauri');
+    nuria = document.getElementById('testiNuria');
+    this.langChecker();
+  },
+
+  setupEnglish: function(){
+/*     testimonialButton.removeEventListener('click',function(){testimonialLang.setupEnglish()}); */
+    testimonialButtonText.innerText = 'Switch to Spanish';
+    ruth.innerText = '"He faces projects with a lot of energy, creativity and searching for solutions, as well as, risky bets that makes proposals more attractive. He always faces work with a smile and a big effectiveness"';
+    alvaro.innerText = '“Héctor anticipates himself to possible errors and problems and knows how to put a solution to them, he gets involved in projects and gives you a different point of view that you don’t expect, making you to face the project from other perspective”';
+    mauri.innerText = '“I met Héctor at KSchool’s Master. The first day each one of us went up to the blackboard to introduce ourselves. Héctor was the first, and in 10 minutes of presentation he conquered us all. Without doubt he looks at things through a different lens.”' ;
+    analia.innerText = '“I would like to highlight also his way of being, always gentle and with a smile, which makes the work team more pleasing and easy. Anyone that have the chance to know him will realise that Héctor always leaves a trace wherever he goes.”';
+    nuria.innerText = '"I value positively his maturity, his know how to behave, his curiosity to learn and his culture, that it is above from the average of his generation. In addition, Héctor, has a keen sense of humour which makes coexistence with him very pleasant”';
+    this.langChecker();
+  },
+
+
+
+  setupSpanish: function(){
+/*     testimonialButton.removeEventListener('click',function(){testimonialLang.setupEnglish()}); */
+
+    testimonialButtonText.innerText = 'Switch to English';
+    ruth.innerText = '"Afronta los proyectos con gran energía, creatividad y buscando soluciones, así como, apuestas arriesgadas que hacen más atractivas las propuestas. Siempre se enfrenta al trabajo con una sonrisa y gran efectividad."';
+    alvaro.innerText = '"Héctor se anticipa a posibles errores y problemas y sabe ponerles una solución, se implica en los proyectos y te da un punto de vista diferente que no esperas, haciéndote abordar el proyecto desde otra perspectiva"';
+    mauri.innerText = '"Conocí a Héctor en el Máster de KSchool. El primer día cada uno de nosotros salió a la pizarra a presentarse. Héctor fue el primero, y con sus 10 minutos de presentación nos tuvo a todos conquistados. Sin duda ve las cosas de forma diferente al resto."' ;
+    analia.innerText = '"Me gustaría destacar también su forma de ser, siempre amable y sonriente, lo cual hace mucho más agradable y fácil el trabajo en equipo. Cualquiera que tenga la oportunidad de conocerlo se dará cuenta que Héctor siempre deja huella allí donde vaya."';
+    nuria.innerText = '"Valoro muy positivamente su madurez, su saber estar, su inquietud por aprender y su cultura, que está muy por encima de la media de su generación. Además, Héctor, tiene un fino sentido del humor que hacen muy agradable la convivencia con él"';
+    this.langChecker();
+  }
+
+}
 
