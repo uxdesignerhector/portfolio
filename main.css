@@ -1503,6 +1503,7 @@ color: white;
     padding: 5px;
     border: #4da27a 2px solid;
     color: #343e3d;
+    cursor: pointer;
 }
 .project-card__body-text-url{
     text-decoration: none;

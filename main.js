@@ -178,7 +178,7 @@ var testimonialLang = {
   },
 
   setupEnglish: function(){
-/*     testimonialButton.removeEventListener('click',function(){testimonialLang.setupEnglish()}); */
+
     testimonialButtonText.innerText = 'Switch to Spanish';
     ruth.innerText = '"He faces projects with a lot of energy, creativity and searching for solutions, as well as, risky bets that makes proposals more attractive. He always faces work with a smile and a big effectiveness"';
     alvaro.innerText = '“Héctor anticipates himself to possible errors and problems and knows how to put a solution to them, he gets involved in projects and gives you a different point of view that you don’t expect, making you to face the project from other perspective”';
@@ -191,7 +191,7 @@ var testimonialLang = {
 
 
   setupSpanish: function(){
-/*     testimonialButton.removeEventListener('click',function(){testimonialLang.setupEnglish()}); */
+
 
     testimonialButtonText.innerText = 'Switch to English';
     ruth.innerText = '"Afronta los proyectos con gran energía, creatividad y buscando soluciones, así como, apuestas arriesgadas que hacen más atractivas las propuestas. Siempre se enfrenta al trabajo con una sonrisa y gran efectividad."';
