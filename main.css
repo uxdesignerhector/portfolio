@@ -803,6 +803,9 @@ nav a:hover {
     display: none;
 }
 
+.main-nav-menu__level-1-contact-icon-svg > path {
+ fill: var(--main-icon-color);
+}
 .main-nav-menu__level-1-contact-icon-svg:hover > path {
  fill: #ff9800;
 }
