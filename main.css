@@ -10,39 +10,49 @@
 
 :root{
     --main-bg-color: #fffffa;
-    --main-bg-color: #100e17;
+/*     --main-bg-color: #100e17; */
     --main-txt-color: black;
-    --main-txt-color: #fffffa;
+/*     --main-txt-color: #fffffa; */
  
     --main-icon-color: black;
-    --main-icon-color: #fffffa;
+/*     --main-icon-color: #fffffa; */
 
 
     --main-footer-bg-color: #2e4052;
-    --main-footer-bg-color: #020105;
+/*     --main-footer-bg-color: #09080d; */
 
     --main-footer-txt-color: #fffffa;
 
     --main-section-title-color: #999999;
 
-    --main-project-card-bg-color:#17141d;
+    --main-project-card-bg-color:#fffffa;
+/*     --main-project-card-bg-color:#17141d; */
 
-    --main-project-button-bg-color:#281d25;
+    --main-project-button-bg-color:#fffffa;
+/*     --main-project-button-bg-color:#281d25; */
+
     --project-button-color--pink: #b3001b;
-    --project-button-color--pink: #e48698;
+/*     --project-button-color--pink: #e48698; */
 
     --project-button-color--green: #343e3d;
-    --project-button-color--green: #4da27a;
+/*     --project-button-color--green: #4da27a; */
+
 
 
     --main-a-color: black;
     --main-a-color--hover: #b3001b;
 
     --main-a-outside-color: #ff9800;
+
+    --h3-main-color:#3a3a3a;
+ /*    --h3-main-color:#7c7c7c; */
+
+    --submenu-anchor-color: white;
+
+
     
-    --project-card-tittle-color--green:#3a3a3a;
     --project-card-tittle-color--green:#64b194;
-    --project-card-tittle-color--pink:#3a3a3a;
+
     --project-card-tittle-color--pink:#f58e8f;
 
 
@@ -115,6 +125,9 @@ a:hover {
     color: var(--main-a-color--hover);
 }
 
+.outside-anchor:hover{
+    color: var(--main-a-outside-color);
+}
 
 
 h2, .section-title__title {
@@ -130,10 +143,10 @@ h2, .section-title__title {
 
 
 h3 {
-    font-size: 30px;
+
     font-style: normal;
     font-weight: 700;
-    color: #3a3a3a;
+    color: var(--h3-main-color);
 }
 .section-title__title {
     display:inline-block;
@@ -215,7 +228,9 @@ body {
     background-color: var(--main-bg-color);
 }
 
-
+.post_text_section_two_column {
+    color: var(--main-txt-color);
+}
 
 
 .very-important-anchor{
@@ -440,7 +455,7 @@ body {
 #useful_table_flex_container {
     margin-top: 20px;
     margin-bottom: 40px;
-    color: #000;
+    color: var(--main-txt-color);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -507,6 +522,10 @@ padding-left: 30px;
     cursor: pointer; 
     padding: 6px; 
     border-radius: 50px; 
+  }
+
+  #theme {
+      bottom: 105px;
   }
   
   #gototop {
@@ -705,7 +724,9 @@ nav a:hover {
 .main-nav-menu__level-2-sub-menu-ul {
     display: none;
     position: absolute;
+    
 }
+
 
 /* Mouse hover level-1-li shows level-2-ul */
 .main-nav-menu__level-1-li:hover > ul { 
@@ -716,6 +737,7 @@ nav a:hover {
     border: #ff9800 1px solid;
     border-top-color: var(--main-bg-color); 
     box-shadow: 0px 7px 10px -3px;
+    
 }
 
 
@@ -737,6 +759,7 @@ nav a:hover {
     display: inline-block;
     box-sizing: border-box;
     border: #ff9800 3px solid;
+
     
 }
 
@@ -750,6 +773,7 @@ nav a:hover {
     box-sizing: border-box;
     padding: 5px;
     background-color: #ff9800;   
+    color: black;
 }
 
 .main-nav-menu__level-1-li:hover > ul > li:hover > a {
@@ -757,8 +781,9 @@ nav a:hover {
     color: #ffffff;
 }
 
-.main-nav-menu__level-2-sub-menu-li:hover > a {
-    color: #ffffff;
+
+.main-nav-menu__level-2-sub-menu-li:hover > a:hover {
+    color: var(--submenu-anchor-color);
 }
 
 
@@ -966,6 +991,9 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
                animation-iteration-count: infinite;
                         
             }
+            .main-header-bottom-div-arrow-icon-container:hover .main-header-bottom-div-arrow-icon--red-mobile-device{
+                fill: var(--main-a-color--hover);
+            }
 
             @keyframes bounce {
                 from { transform: translate3d(0, -35px, 0);     }
@@ -1164,7 +1192,7 @@ height: auto;
 }
 
 .testimonial-header-container__img {
-    border: #fffffa 4px solid;
+    border: #306c50 4px solid;
     background-color: rgb(73, 73, 73);
     margin: 10px;
     height: 60px;
@@ -1363,7 +1391,7 @@ height: auto;
 }
 
 textPath {
-    font-size: 10px;
+    font-size: 12px;
     fill: #fffffa;
     font-style: normal;
     font-weight: 200px;
@@ -1709,6 +1737,7 @@ width: 80%;
 
 .title_h1_post {
     display: inline-block;
+    color: var(--main-txt-color);
 }
 
 .project_post_card_container_green {

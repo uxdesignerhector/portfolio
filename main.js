@@ -10,12 +10,16 @@ window.onresize = function(){
 }
 
 
+
+
 document.addEventListener("DOMContentLoaded",function(){
   projectCardCoverActivateTool.checker();
   contactForm.setUpEventListener();
   
 
   testimonialLang.getTestimonialText();
+  
+  
   
 
 });
@@ -31,14 +35,15 @@ function scrollFunction() {
   footerTopPosition = document.getElementById("footer").offsetTop;
 
   if (scrollBarLowerPosition > footerTopPosition) {
-    document.getElementById("gototop").style.display = "block";
     document.getElementById("contactButton").style.display= "none";
   } else if (window.pageYOffset > 100 ){
     document.getElementById("gototop").style.display = "block";
     document.getElementById("contactButton").style.display= "block";
+    document.getElementById("theme").style.display="block";
   } else {
     document.getElementById("gototop").style.display = "none";
     document.getElementById("contactButton").style.display= "none";
+    document.getElementById("theme").style.display="none";
   }
 }
 
@@ -181,7 +186,7 @@ var testimonialLang = {
 
     testimonialButtonText.innerText = 'Switch to Spanish';
     ruth.innerText = '"He faces projects with a lot of energy, creativity and searching for solutions, as well as, risky bets that makes proposals more attractive. He always faces work with a smile and a big effectiveness"';
-    alvaro.innerText = '“Héctor anticipates himself to possible errors and problems and knows how to put a solution to them, he gets involved in projects and gives you a different point of view that you don’t expect, making you to face the project from other perspective”';
+    alvaro.innerText = '“Héctor anticipates himself to possible errors and problems and knows how to put a solution to , he gets involved in projects and gives you a different point of view that you don’t expect, making you to face the project from other perspective”';
     mauri.innerText = '“I met Héctor at KSchool’s Master. The first day each one of us went up to the blackboard to introduce ourselves. Héctor was the first, and in 10 minutes of presentation he conquered us all. Without doubt he looks at things through a different lens.”' ;
     analia.innerText = '“I would like to highlight also his way of being, always gentle and with a smile, which makes the work team more pleasing and easy. Anyone that have the chance to know him will realise that Héctor always leaves a trace wherever he goes.”';
     nuria.innerText = '"I value positively his maturity, his know how to behave, his curiosity to learn and his culture, that it is above from the average of his generation. In addition, Héctor, has a keen sense of humour which makes coexistence with him very pleasant”';
@@ -204,3 +209,78 @@ var testimonialLang = {
 
 }
 
+
+var theme ={
+   
+  prepareButton: function(){
+ themebutton=document.getElementById("theme");
+var theme = document.cookie.split("=")
+if (theme[1]==""){
+  this.setDark();
+} else if (theme[1]=="dark"){
+  this.setLight();
+} else {
+  this.setDark();
+}
+
+  },
+
+
+  setDark: function(){
+    document.cookie="theme=dark; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+    this.setUpInterface();
+
+
+  },
+
+  setLight: function(){
+    document.cookie="theme=light; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+    this.setUpInterface();
+
+  },
+
+  setUpInterface: function(){
+    var theme = document.cookie.split("=")
+    if (theme[1]=='dark'){
+      this.darkMode();
+      themebutton=document.getElementById("theme");
+       themebutton.value="light";
+       themebutton.title="Changes theme to Light mode";
+    }
+    else{
+      this.lightMode();
+      themebutton=document.getElementById("theme");
+       themebutton.value="dark";
+       themebutton.title="Changes theme to Dark mode";
+
+    }
+    }, 
+
+    darkMode: function(){
+      document.documentElement.style.setProperty('--main-bg-color', '#100e17');
+      document.documentElement.style.setProperty('--main-txt-color', '#fffffa');
+      document.documentElement.style.setProperty('--main-footer-bg-color', '#09080d');
+      document.documentElement.style.setProperty('--main-project-card-bg-color', '#17141d');
+      document.documentElement.style.setProperty('--main-project-button-bg-color', '#281d25');
+      document.documentElement.style.setProperty('--project-button-color--pink', '#e48698');
+      document.documentElement.style.setProperty('--project-button-color--green', '#4da27a');
+      document.documentElement.style.setProperty('--h3-main-color', '#7c7c7c');
+      document.documentElement.style.setProperty('--main-icon-color', '#fffffa');
+    },
+
+    lightMode: function(){
+      document.documentElement.style.setProperty('--main-bg-color', '#fffffa');
+      document.documentElement.style.setProperty('--main-txt-color', 'black');
+      document.documentElement.style.setProperty('--main-footer-bg-color', '#2e4052');
+      document.documentElement.style.setProperty('--main-project-card-bg-color', '#fffffa');
+      document.documentElement.style.setProperty('--main-project-button-bg-color', '#fffffa');
+      document.documentElement.style.setProperty('--project-button-color--pink', '#b3001b');
+      document.documentElement.style.setProperty('--project-button-color--green', '#343e3d');
+      document.documentElement.style.setProperty('--h3-main-color', '#3a3a3a');
+      document.documentElement.style.setProperty('--main-icon-color', 'black');
+    }
+  }
+
+
+  theme.setUpInterface();
+  console.log(document.cookie);
