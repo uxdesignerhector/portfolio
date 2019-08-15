@@ -959,6 +959,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
               background-size: cover;
               height: 430px;
               width: 408px;
+              transition: 5s;
             }                  
              
            .main-header-right-div {

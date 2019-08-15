@@ -15,11 +15,9 @@ window.onresize = function(){
 document.addEventListener("DOMContentLoaded",function(){
   projectCardCoverActivateTool.checker();
   contactForm.setUpEventListener();
-  
-
   testimonialLang.getTestimonialText();
-  
-  
+  browser();
+  theme.setUpInterface();
   
 
 });
@@ -156,6 +154,35 @@ var contactForm = {
 
 }
 
+function callBack(){
+  bannerBackground.changer();
+}
+
+var imgSet = ['url("img/home_header_background.jpg")','url("img/home_header_background1.jpg")'];
+
+var bannerBackground= {
+
+  prepare:function(){
+    background = document.getElementById('img-banner-div').style;
+    background.backgroundImage=imgSet[0];
+    this.changer();
+  },
+
+  changer:function (){
+   
+    if (background.backgroundImage==imgSet[0]){
+      background.backgroundImage=imgSet[1];
+      setTimeout(callBack, 15000);
+    } else {
+      background.backgroundImage=imgSet[0];
+      setTimeout(callBack, 15000);
+    }
+  }
+
+}
+
+
+
 
 var testimonialLang = {
 
@@ -249,6 +276,7 @@ if (theme[1]==""){
     }
     else{
       this.lightMode();
+      
       themebutton=document.getElementById("theme");
        themebutton.value="dark";
        themebutton.title="Changes theme to Dark mode";
@@ -282,5 +310,14 @@ if (theme[1]==""){
   }
 
 
-  theme.setUpInterface();
-  console.log(document.cookie);
+  
+function browser(){
+  var navBrowser = window.navigator.vendor;
+
+  if (navBrowser=="Google Inc."){
+    bannerBackground.prepare();
+  } else {
+    console.log("this not chrome");
+  }
+}
+
