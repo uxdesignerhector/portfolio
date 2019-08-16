@@ -1753,7 +1753,7 @@ width: 80%;
     flex-wrap: wrap;
     margin: 20px;
     box-shadow: 0px 5px 7px #38e4a3;
-    border-radius:20px 70px 0px 70px;
+    border-radius:20px 70px 70px 70px;
     border-bottom: none;
     z-index: -1;
 }
@@ -1787,7 +1787,7 @@ width: 80%;
         flex-wrap: wrap;
         margin: 20px;
         box-shadow: 0px 5px 7px #f05d5e;
-        border-radius:20px 70px 0px 70px;
+        border-radius:20px 70px 70px 70px;
         border-bottom: none;
         z-index: -1;
     }
@@ -1822,7 +1822,7 @@ width: 80%;
         background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(77,162,122,1) 12%, rgba(0,0,17,1) 24%, rgba(77,162,122,1) 35%, rgba(0,0,17,1) 54%, rgba(77,162,122,1) 65%, rgba(0,0,17,1) 68%, rgba(77,162,122,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
         background: radial-gradient(ellipse at center, rgba(0,0,17,1) 0%, rgba(77,162,122,1) 12%, rgba(0,0,17,1) 24%, rgba(77,162,122,1) 35%, rgba(0,0,17,1) 54%, rgba(77,162,122,1) 65%, rgba(0,0,17,1) 68%, rgba(77,162,122,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000011', endColorstr='#000011', GradientType=1 );
-        border-radius:20px 70px 0px 70px;
+        border-radius:20px 70px 70px 70px;
     }
  .project_post_background-gradient_red_div  {
         width:100%;
@@ -1837,7 +1837,7 @@ width: 80%;
         background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
         background: radial-gradient(ellipse at center, rgba(0,0,17,1) 0%, rgba(228,134,151,1) 12%, rgba(0,0,17,1) 24%, rgba(228,134,151,1) 35%, rgba(0,0,17,1) 54%, rgba(228,134,151,1) 65%, rgba(0,0,17,1) 68%, rgba(228,134,151,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000011', endColorstr='#000011', GradientType=1 );
-        border-radius:20px 70px 0px 70px;
+        border-radius:20px 70px 70px 70px;
     }
 
     .project_post_arrow-down-container
