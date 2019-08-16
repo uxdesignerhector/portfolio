@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded",function(){
   contactForm.setUpEventListener();
   testimonialLang.getTestimonialText();
   browser();
-  theme.setUpInterface();
+  
   
 
 });
@@ -316,8 +316,7 @@ function browser(){
 
   if (navBrowser=="Google Inc."){
     bannerBackground.prepare();
-  } else {
-    console.log("this not chrome");
   }
 }
 
+theme.setUpInterface();
