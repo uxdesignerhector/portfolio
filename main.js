@@ -315,8 +315,13 @@ function browser(){
   var navBrowser = window.navigator.vendor;
 
   if (navBrowser=="Google Inc."){
-    bannerBackground.prepare();
+    setTimeout(callbackBannerBackground,15000);
   }
+}
+
+function callbackBannerBackground(){
+  bannerBackground.prepare();
+
 }
 
 theme.setUpInterface();
