@@ -305,6 +305,9 @@ var theme = {
     document.documentElement.style.setProperty('--project-button-color--green', '#4da27a');
     document.documentElement.style.setProperty('--h3-main-color', '#7c7c7c');
     document.documentElement.style.setProperty('--main-icon-color', '#fffffa');
+    document.documentElement.style.setProperty('--main-nav-border-transprarent', '#fffffa');
+    document.documentElement.style.setProperty('--main-wraper-color', 'none');
+
   },
 
   lightMode: function () {
@@ -317,6 +320,8 @@ var theme = {
     document.documentElement.style.setProperty('--project-button-color--green', '#343e3d');
     document.documentElement.style.setProperty('--h3-main-color', '#3a3a3a');
     document.documentElement.style.setProperty('--main-icon-color', 'black');
+    document.documentElement.style.setProperty('--main-nav-border-transprarent', '#00000000');
+    document.documentElement.style.setProperty('--main-wraper-color', 'black');
   }
 }
 
@@ -335,7 +340,7 @@ var menu2 = {
     menuUX.addEventListener("mouseenter", function () {
       menuProjects.style.left = ('calc(100% - 200px)');
     })
-    
+
     menuUX.addEventListener("mouseleave", function () {
       menuProjects.style.left = projectsLeftOriginValue;
       reset();
