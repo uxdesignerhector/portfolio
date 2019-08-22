@@ -751,7 +751,8 @@ nav a:hover {
 
 .appendice {
     background-color: var(--main-bg-color);
-    /*     border-radius: 0px 0px 0px 111px; */
+    border-bottom: 1px solid var(--main-txt-color);
+    border-left: 1px solid var(--main-txt-color);
 
     height: 25px;
     width: 100%;
@@ -759,7 +760,6 @@ nav a:hover {
 
 .appendice:hover {
     height: 105px;
-    border-bottom: none;
     transition: ease-in 0.1s;
     border-radius: 0px 0px 0px 10px;
 }
@@ -775,6 +775,13 @@ nav a:hover {
 
 }
 
+.fix-color {
+    height: 25px;
+    width: 3px;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    left: 26px
+}
 
 .hidden-ul {
     display: none;
@@ -834,10 +841,6 @@ nav a:hover {
     transition: ease-in 0.25s;
 }
 
-.appendice-2 {
-    border-bottom: 1px solid var(--main-txt-color);
-
-}
 
 @media (max-width: 642px) {
     .main-nav-logo__text-p {
@@ -857,6 +860,7 @@ nav a:hover {
     .angle-wraper {
         left: calc(100% - 350px);
     }
+
     .angle-wraper-2 {
         left: calc(100% - 230px)
     }
