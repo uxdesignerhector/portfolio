@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded",function(){
   contactForm.setUpEventListener();
   testimonialLang.getTestimonialText();
   browser();
+
+  menu2.handler();
   
   
 
@@ -310,6 +312,35 @@ if (theme[1]==""){
   }
 
 
+
+  var menu2 = {
+    handler: function(){
+      var menuUX = document.getElementById('menuUX');
+      var menuProjects = document.getElementById('menuProjects');
+      var projectsLeftOriginValue= window.getComputedStyle(menuProjects).left;
+      var reset = function(){
+        menuProjects.removeAttribute('style');
+        console.log(menuProjects.style);
+      }
+
+      window.onresize=reset;
+  
+
+
+
+      menuUX.addEventListener("mouseenter", function(){
+        
+        menuProjects.style.left=('calc(100% - 200px)');
+
+      })
+      menuUX.addEventListener("mouseleave", function(){
+
+        menuProjects.style.left=projectsLeftOriginValue;
+        reset();
+
+      })
+    }
+  }
   
 function browser(){
   var navBrowser = window.navigator.vendor;
