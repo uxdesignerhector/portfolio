@@ -1103,18 +1103,6 @@ margin-top: 0px;
     }
 }
 
-@media (max-width: 550px) {
-    .main-nav-menu__container a {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 550px) {
-    .main-nav-menu__level-1-li-icon-below-projects svg {
-        height: 90px;
-        width: 100px;
-    }
-}
 
 
 /* ___A_new_section_starts_____________________________________________________________________________________ */
