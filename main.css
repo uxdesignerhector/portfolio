@@ -38,7 +38,7 @@
     --project-button-color--green: #343e3d;
     /*     --project-button-color--green: #4da27a; */
 
-    --main-nav-border-transprarent:#00000000;
+    --main-nav-border-transprarent: #00000000;
 
     --main-a-color: black;
     --main-a-color--hover: #b3001b;
@@ -750,13 +750,20 @@ nav a:hover {
     justify-content: flex-end;
     background-color: #e48698;
 }
+.menu-2 + section {
+margin-top: 50px;
+}
+.menu-2 + .main-header {
+margin-top: 0px;
+}
+
 
 .appendice {
     background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--main-txt-color);
     border-left: 1px solid var(--main-txt-color);
 
-    height: 25px;
+    height: 30px;
     width: 100%;
 }
 
@@ -771,18 +778,19 @@ nav a:hover {
 }
 
 .special-ul {
-    margin: 0;
+    margin-top: 3px;
     padding: 0px 5px;
     color: var(--main-txt-color);
 
 }
 
 .fix-color {
-    height: 25px;
+    height: 30px;
     width: 3px;
     position: absolute;
     background-color: var(--main-bg-color);
-    left: 26px
+    left: 30px;
+    top: 0;
 }
 
 .hidden-ul {
@@ -797,12 +805,19 @@ nav a:hover {
     list-style-type: circle;
 }
 
+.li--current-page {
+    color:#ff9800;
+}
+.li--current-page>a {
+    color:#ff9800;
+}
+
 .appendice:hover .hidden-ul {
     display: block;
 }
 
 .decorative-angle {
-    height: 26px;
+    height: 30px;
 }
 
 .cls-1 {
@@ -1973,45 +1988,37 @@ textPath {
     flex-basis: 500px;
 }
 
-.post_text_button_centered {
-    margin: 20px 0px;
-    margin-bottom: 5px;
-    padding: 10px;
-    width: 100px;
-    height: 20px;
-    border-radius: 10px;
+.post-wrap {
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-    background-color: #fffffa;
-    border: #e48698 2px solid;
-    color: #b3001b;
 }
 
 .post_text_button_container a {
     text-decoration-line: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
 }
 
 .post_text_button_container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-}
-
-.post_text_button_centered:hover {
-
-    color: #fffffa;
-    background-color: #e48698;
-    border: #e48698 2px solid;
+    margin: 20px 20px 50px 20px;
+    align-items: center;
+    flex: 1;
 }
 
 
+.project-card__button-card--project {
+    padding: 10px;
+}
+
+.post-text-button-container__info {
+    margin-top: 5px;
+    color: var(--main-txt-color);
+}
 
 
 
