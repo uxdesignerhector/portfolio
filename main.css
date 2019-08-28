@@ -2071,7 +2071,9 @@ textPath {
     z-index: -1;
 }
 
-
+.svg-icon-download{
+    fill: var(--main-txt-color);
+}
 
 
 .project_post_card-circle_div_red {
