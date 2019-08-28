@@ -2013,6 +2013,14 @@ textPath {
 .title_h1_post {
     display: inline-block;
     color: var(--main-txt-color);
+    margin-bottom: 50px;
+}
+
+.title_h1_post--green {
+    color: var(--project-card-tittle-color--green);
+}
+.title_h1_post--pink {
+    color: var(--project-card-tittle-color--pink);
 }
 
 .project_post_card_container_green {
