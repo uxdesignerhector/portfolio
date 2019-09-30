@@ -2285,3 +2285,8 @@ footer {
 .legal {
     margin-left: 20px;
 }
+
+
+.error{
+    color: var(--main-txt-color);
+}
