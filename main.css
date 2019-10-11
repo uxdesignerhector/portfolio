@@ -224,11 +224,21 @@ h2,
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    color: #999999;
+    color: var(--main-txt-color);
 }
 
 .section-title__title--white {
     color: #fffffa
+}
+
+.section-title__title--blue{
+    color:#637ecf
+}
+.section-title__title--pink{
+    color:#e48698;
+}
+.section-title__title--green{
+    color:#4da27a
 }
 
 
@@ -397,8 +407,6 @@ body {
 
 .sd-card__header {
     border-radius: 10px 10px 0px 0px;
-    width: 70%;
-    min-width: 200.5px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -434,7 +442,7 @@ body {
 .sd-card__body {
     padding: 5%;
     box-sizing: border-box;
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
     min-height: 400px;
 }
 
@@ -585,12 +593,10 @@ body {
     flex-wrap: wrap;
 }
 
-.section-title__title::after {
-    content: " ///"
-}
+
 
 .section-title__breadcrumbs {
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
@@ -1189,10 +1195,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     -moz-text-decoration-line: none;
 }
 
-.:hover {
-    color: black;
 
-}
 
 .main-header__bottom-div{
     display: flex;
@@ -1202,20 +1205,24 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 }
 
 .main-header__bottom-button{
+    margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color:#373737;
+    background-color:#FAC145;
 }
 
+.main-header__bottom-button-text {
+    color: black;
 
+}
 
 
 .main-header__bottom-button:hover{
-    background-color: #FAC145;
+    background-color: #1F3E38;
 }
 
 .main-header__bottom-button:hover>.main-header__bottom-button-text {
-    color: black;
+    color: white;
 
 }
 
@@ -1254,6 +1261,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 .main-header-bottom-div {
     display: flex;
     justify-content: center;
+    
 }
 
 .main-header-bottom-div-arrow-icon-container {
@@ -1309,6 +1317,12 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     }
 }
 
+@media (max-width:400px) {
+    .main-header-flex-container-left-div {
+        background-image: none;
+    }
+}
+
 
 @media (max-width: 670px) {
     .main-header-flex-container-left-div-child-textbox {
@@ -1321,8 +1335,8 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 @media (max-width: 670px) {
 
-    .main-header-flex-container-left-div-child__text-title,
-    . {
+    .main-header-flex-container-left-div-child__text-title
+    {
         color: #fffffa;
     }
 }
@@ -1427,7 +1441,7 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
 
 .testimonial {
     width: 300px;
-    min-height: 300px;
+    min-height: 305px;
     margin: 15px 10px;
     font-size: 15px;
     box-shadow: 0px 5px 7px #6149b4;
@@ -2292,7 +2306,7 @@ footer {
 
 .contact-form__button--clear:hover,
 .contact-form__button--clear:focus {
-    background-color: #ff9800;
+    background-color: #b3001b;
     color: #fffffa;
 }
 
