@@ -225,7 +225,7 @@ var testimonialLang = {
 
     testimonialButtonText.innerText = 'Switch to Spanish';
     ruth.innerText = '"He faces projects with a lot of energy, creativity and searching for solutions, as well as, risky bets that makes proposals more attractive. He always faces work with a smile and a big effectiveness"';
-    alvaro.innerText = '“Héctor anticipates himself to possible errors and problems and knows how to put a solution to , he gets involved in projects and gives you a different point of view that you don’t expect, making you to face the project from other perspective”';
+    alvaro.innerText = '“Héctor anticipates himself to possible errors and problems and knows how to put a solution to them, he gets involved in projects and gives you a different point of view that you don’t expect, making you to face the project from other perspective”';
     mauri.innerText = '“I met Héctor at KSchool’s Master. The first day each one of us went up to the blackboard to introduce ourselves. Héctor was the first, and in 10 minutes of presentation he conquered us all. Without doubt he looks at things through a different lens.”';
     analia.innerText = '“I would like to highlight also his way of being, always gentle and with a smile, which makes the work team more pleasing and easy. Anyone that have the chance to know him will realise that Héctor always leaves a trace wherever he goes.”';
     nuria.innerText = '"I value positively his maturity, his know how to behave, his curiosity to learn and his culture, that it is above from the average of his generation. In addition, Héctor, has a keen sense of humour which makes coexistence with him very pleasant”';

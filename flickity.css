@@ -41,13 +41,13 @@
   
   .flickity-button {
     position: absolute;
-    background: #4da27a80;
+    background: #10143d80;
     border: none;
     color: #fff;
   }
   
   .flickity-button:hover {
-    background: #4da27a;
+    background: #10143d;
     cursor: pointer;
   }
   
