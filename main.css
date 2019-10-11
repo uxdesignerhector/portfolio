@@ -525,17 +525,6 @@ body {
 }
 
 
-.sd-card:hover .sd-card__header--grey,
-.sd-card:hover .sd-card__body--grey {
-    box-shadow: 0px 7px 7px #8c8ca0;
-}
-
-.sd-card:hover .sd-card__header--green,
-.sd-card:hover .sd-card__body--green {
-    box-shadow: 0px 5px 7px #4da27a;
-}
-
-
 /* _______________________________ */
 .item_container {
     margin: 10px 20px;
@@ -1188,8 +1177,46 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     color: #fffffa;
 }
 
-.main-header-flex-container-left-div-child__text-anchor {
-    color: #b3001b;
+
+.main-header__bottom-button-anchor {
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+}
+
+.main-header__bottom-button-text {
+    color: #fffffa;
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+}
+
+.:hover {
+    color: black;
+
+}
+
+.main-header__bottom-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.main-header__bottom-button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#373737;
+}
+
+
+
+
+.main-header__bottom-button:hover{
+    background-color: #ffffff;
+}
+
+.main-header__bottom-button:hover>.main-header__bottom-button-text {
+    color: black;
+
 }
 
 
@@ -1295,7 +1322,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 @media (max-width: 670px) {
 
     .main-header-flex-container-left-div-child__text-title,
-    .main-header-flex-container-left-div-child__text-anchor {
+    . {
         color: #fffffa;
     }
 }
