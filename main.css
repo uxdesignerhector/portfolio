@@ -380,6 +380,7 @@ body {
 
 .sd-card--two-sd-cards-inside {
     flex-basis: 400px;
+    box-shadow: none;
 }
 
 
