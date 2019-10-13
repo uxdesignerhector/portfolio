@@ -228,17 +228,22 @@ h2,
 }
 
 .section-title__title--white {
-    color: #fffffa
+    color: #fffffa;
 }
 
-.section-title__title--blue{
-    color:#637ecf
+.section-title__title--blue {
+    color: #637ecf;
 }
-.section-title__title--pink{
-    color:#e48698;
+.section-title__title--orange {
+    color: #e29337
 }
-.section-title__title--green{
-    color:#4da27a
+
+.section-title__title--pink {
+    color: #e48698;
+}
+
+.section-title__title--green {
+    color: #4da27a;
 }
 
 
@@ -350,40 +355,7 @@ body {
     color: var(--main-a-outside-color);
 }
 
-/* 
-
-        .oooooo.         .o.       ooooooooo.   oooooooooo.    .oooooo..o
-       d8P'  `Y8b       .888.      `888   `Y88. `888'   `Y8b  d8P'    `Y8
-      888              .8"888.      888   .d88'  888      888 Y88bo.     
-      888             .8' `888.     888ooo88P'   888      888  `"Y8888o. 
-      888            .88ooo8888.    888`88b.     888      888      `"Y88b
-      `88b    ooo   .8'     `888.   888  `88b.   888     d88' oo     .d8P
-       `Y8bood8P'  o88o     o8888o o888o  o888o o888bood8P'   8""88888P'  
-
-*/
-
-
-/* There are two types of cards: 
-   - sd-cards: are used to display short info, preferably a list.
-   - Projects-cards: are used to display info about projects (Portfolio) and trajectory (places where I've worked)*/
-
-
-/* SD cards (looks like this):
-     _________________
-    | .sd-card__header|<---------------- h2 mod, width: 70%;
-    | . . . . . . .   |________
-    |                         |
-    |     .sd-card__body      | 
-    |                         |
-    |                         |
-    |                         |
-    |                         |
-    |                         |
-    |   ____________________  |
-    |  |____________________| |<-----At the bottom they have a decoration svg to simulate pins, absolute position.
-    |_________________________|
-                                 
- */
+/*  Mini cv */
 
 .flex-card-container {
     display: flex;
@@ -397,7 +369,13 @@ body {
     width: 100%;
     flex-basis: 250px;
     flex-grow: 1;
-    transition: 0.5s ease-in-out;
+    box-shadow: 0px 5px 7px #fb995e;
+    border-radius: 10px 10px 20px 20px;
+    background-color: var(--main-project-card-bg-color);
+}
+
+.sd-card .testimonial-polygon {
+    fill: #e29337;
 }
 
 .sd-card--two-sd-cards-inside {
@@ -406,23 +384,48 @@ body {
 
 
 .sd-card__header {
+	border-radius: 10px 10px 0px 0px;
+	box-sizing: border-box;
+	background-color: #2e4052;
+	color: white;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	height: 65px;
+	align-items: center;
+}
+
+.sd-card__header-gradient{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgb(0, 0, 0) 2%, rgb(61, 46, 31) 81%, rgb(166, 83, 25) 100%);
     border-radius: 10px 10px 0px 0px;
-    padding: 10px;
-    box-sizing: border-box;
+}
+.sd-card__upper-title {
+    z-index: 1;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: #e29337;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    align-items: center;
 }
 
-
-.sd-card__header--grey {
-    background-color: #343e3d;
-    background-image: url(img/blue_card_background.png);
-}
-
-.sd-card__header--green {
-    background-color: #4da27a;
-    background-image: url(img/green_card_background.png);
+.sd-card--white{
+    flex-grow: 1;
+    margin: 30px 30px 30px 10px;
+    width: 100%;
+    box-shadow: none;
 }
 
 .sd-card__header--white {
+    background-color: transparent;
     border: var(--main-txt-color) 1px dashed;
     color: var(--main-txt-color);
     border-bottom: none;
@@ -438,7 +441,6 @@ body {
 }
 
 
-
 .sd-card__body {
     padding: 5%;
     box-sizing: border-box;
@@ -446,16 +448,6 @@ body {
     min-height: 400px;
 }
 
-
-.sd-card__body--grey {
-    background-color: #343e3d;
-    background-image: url(img/blue_card_background.png);
-}
-
-.sd-card__body--green {
-    background-color: #4da27a;
-    background-image: url(img/green_card_background.png);
-}
 
 .sd-card__body--white {
     background-color: var(--main-bg-color);
@@ -475,12 +467,10 @@ body {
     border-radius: 50%;
 }
 
-.sd-card__body-text {
+.sd-card__body-text,
+.sd-card__body-text-anchor {
     margin-bottom: 40px;
-}
-
-.sd-card__body-text--white {
-    color: #fff
+    color: var(--main-txt-color)
 }
 
 .sd-card__body-text ul {
@@ -495,42 +485,12 @@ body {
     line-height: 1.4;
 }
 
-.sd-card__body-text-anchor--black {
-    color: #000;
-    text-decoration-line: underline
+
+
+.sd-card__body-text-anchor:hover {
+    color: #ff9800;
 }
 
-
-.sd-card__bottom-flex-container-svg {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    position: relative;
-    top: 0px;
-    height: 30px;
-    width: auto;
-    top: -35px;
-}
-
-
-
-.sd-card__bottom-svg-decoration {
-    background-size: 30px 32px;
-    background-repeat: repeat-x;
-    height: 95%;
-    width: 90%;
-}
-
-.sd-card__bottom-svg-decoration--black {
-    background-color: #000011;
-    background-image: url("svg/sd_decoration.svg");
-}
-
-.sd-card__bottom-svg-decoration--green {
-    background-color: #122619;
-    background-image: url("svg/sd_decoration_green.svg");
-}
 
 
 /* _______________________________ */
@@ -745,11 +705,13 @@ nav a:hover {
     justify-content: flex-end;
     background-color: #e48698;
 }
-.menu-2 + section {
-margin-top: 50px;
+
+.menu-2+section {
+    margin-top: 50px;
 }
-.menu-2 + .main-header {
-margin-top: 0px;
+
+.menu-2+.main-header {
+    margin-top: 0px;
 }
 
 
@@ -801,10 +763,11 @@ margin-top: 0px;
 }
 
 .li--current-page {
-    color:#ff9800;
+    color: #ff9800;
 }
+
 .li--current-page>a {
-    color:#ff9800;
+    color: #ff9800;
 }
 
 .appendice:hover .hidden-ul {
@@ -1197,18 +1160,18 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 
 
-.main-header__bottom-div{
+.main-header__bottom-div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
 }
 
-.main-header__bottom-button{
+.main-header__bottom-button {
     margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color:#FAC145;
+    background-color: #FAC145;
 }
 
 .main-header__bottom-button-text {
@@ -1217,7 +1180,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 }
 
 
-.main-header__bottom-button:hover{
+.main-header__bottom-button:hover {
     background-color: #1F3E38;
 }
 
@@ -1261,7 +1224,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 .main-header-bottom-div {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .main-header-bottom-div-arrow-icon-container {
@@ -1335,8 +1298,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 @media (max-width: 670px) {
 
-    .main-header-flex-container-left-div-child__text-title
-    {
+    .main-header-flex-container-left-div-child__text-title {
         color: #fffffa;
     }
 }
@@ -1470,8 +1432,8 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     color: #000;
 }
 
-.testimonial-polygon{
-    fill:#637ecf;
+.testimonial-polygon {
+    fill: #637ecf;
 }
 
 .testimonial-header-container__gradient-background {
@@ -1483,19 +1445,19 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     width: 42%;
     border-top-right-radius: 10px;
 
-    background: rgba(99,126,207,1);
-    background: -moz-linear-gradient(-45deg, rgba(99,126,207,1) 0%, rgba(99,126,207,1) 42%, rgba(3,6,66,1) 44%, rgba(3,6,66,1) 46%, rgba(3,6,66,1) 48%, rgba(77,97,161,1) 56%, rgba(99,126,207,1) 58%, rgba(3,6,66,1) 61%, rgba(3,6,66,1) 63%, rgba(3,6,66,1) 66%, rgba(77,97,161,1) 76%, rgba(99,126,207,1) 77%, rgba(3,6,66,1) 79%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 83%, rgba(65,82,135,1) 88%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(99,126,207,1)), color-stop(42%, rgba(99,126,207,1)), color-stop(44%, rgba(3,6,66,1)), color-stop(46%, rgba(3,6,66,1)), color-stop(48%, rgba(3,6,66,1)), color-stop(56%, rgba(77,97,161,1)), color-stop(58%, rgba(99,126,207,1)), color-stop(61%, rgba(3,6,66,1)), color-stop(63%, rgba(3,6,66,1)), color-stop(66%, rgba(3,6,66,1)), color-stop(76%, rgba(77,97,161,1)), color-stop(77%, rgba(99,126,207,1)), color-stop(79%, rgba(3,6,66,1)), color-stop(80%, rgba(3,6,66,1)), color-stop(80%, rgba(3,6,66,1)), color-stop(83%, rgba(3,6,66,1)), color-stop(88%, rgba(65,82,135,1)), color-stop(89%, rgba(99,126,207,1)), color-stop(89%, rgba(99,126,207,1)), color-stop(100%, rgba(99,126,207,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(99,126,207,1) 0%, rgba(99,126,207,1) 42%, rgba(3,6,66,1) 44%, rgba(3,6,66,1) 46%, rgba(3,6,66,1) 48%, rgba(77,97,161,1) 56%, rgba(99,126,207,1) 58%, rgba(3,6,66,1) 61%, rgba(3,6,66,1) 63%, rgba(3,6,66,1) 66%, rgba(77,97,161,1) 76%, rgba(99,126,207,1) 77%, rgba(3,6,66,1) 79%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 83%, rgba(65,82,135,1) 88%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(99,126,207,1) 0%, rgba(99,126,207,1) 42%, rgba(3,6,66,1) 44%, rgba(3,6,66,1) 46%, rgba(3,6,66,1) 48%, rgba(77,97,161,1) 56%, rgba(99,126,207,1) 58%, rgba(3,6,66,1) 61%, rgba(3,6,66,1) 63%, rgba(3,6,66,1) 66%, rgba(77,97,161,1) 76%, rgba(99,126,207,1) 77%, rgba(3,6,66,1) 79%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 83%, rgba(65,82,135,1) 88%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(99,126,207,1) 0%, rgba(99,126,207,1) 42%, rgba(3,6,66,1) 44%, rgba(3,6,66,1) 46%, rgba(3,6,66,1) 48%, rgba(77,97,161,1) 56%, rgba(99,126,207,1) 58%, rgba(3,6,66,1) 61%, rgba(3,6,66,1) 63%, rgba(3,6,66,1) 66%, rgba(77,97,161,1) 76%, rgba(99,126,207,1) 77%, rgba(3,6,66,1) 79%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 83%, rgba(65,82,135,1) 88%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 100%);
-    background: linear-gradient(135deg, rgba(99,126,207,1) 0%, rgba(99,126,207,1) 42%, rgba(3,6,66,1) 44%, rgba(3,6,66,1) 46%, rgba(3,6,66,1) 48%, rgba(77,97,161,1) 56%, rgba(99,126,207,1) 58%, rgba(3,6,66,1) 61%, rgba(3,6,66,1) 63%, rgba(3,6,66,1) 66%, rgba(77,97,161,1) 76%, rgba(99,126,207,1) 77%, rgba(3,6,66,1) 79%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 80%, rgba(3,6,66,1) 83%, rgba(65,82,135,1) 88%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 89%, rgba(99,126,207,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#637ecf', endColorstr='#637ecf', GradientType=1 );
-    
-    
-    
-    
-    
+    background: rgba(99, 126, 207, 1);
+    background: -moz-linear-gradient(-45deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(99, 126, 207, 1)), color-stop(42%, rgba(99, 126, 207, 1)), color-stop(44%, rgba(3, 6, 66, 1)), color-stop(46%, rgba(3, 6, 66, 1)), color-stop(48%, rgba(3, 6, 66, 1)), color-stop(56%, rgba(77, 97, 161, 1)), color-stop(58%, rgba(99, 126, 207, 1)), color-stop(61%, rgba(3, 6, 66, 1)), color-stop(63%, rgba(3, 6, 66, 1)), color-stop(66%, rgba(3, 6, 66, 1)), color-stop(76%, rgba(77, 97, 161, 1)), color-stop(77%, rgba(99, 126, 207, 1)), color-stop(79%, rgba(3, 6, 66, 1)), color-stop(80%, rgba(3, 6, 66, 1)), color-stop(80%, rgba(3, 6, 66, 1)), color-stop(83%, rgba(3, 6, 66, 1)), color-stop(88%, rgba(65, 82, 135, 1)), color-stop(89%, rgba(99, 126, 207, 1)), color-stop(89%, rgba(99, 126, 207, 1)), color-stop(100%, rgba(99, 126, 207, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
+    background: linear-gradient(135deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#637ecf', endColorstr='#637ecf', GradientType=1);
+
+
+
+
+
 
 }
 
@@ -2076,6 +2038,7 @@ textPath {
 .title_h1_post--green {
     color: var(--project-card-tittle-color--green);
 }
+
 .title_h1_post--pink {
     color: var(--project-card-tittle-color--pink);
 }
@@ -2128,7 +2091,7 @@ textPath {
     z-index: -1;
 }
 
-.svg-icon-download{
+.svg-icon-download {
     fill: var(--main-txt-color);
 }
 
@@ -2344,6 +2307,6 @@ footer {
 }
 
 
-.error{
+.error {
     color: var(--main-txt-color);
 }
