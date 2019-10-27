@@ -1793,7 +1793,7 @@ textPath {
 
 @media (max-width:1035px) {
     .project-card__body-text {
-        margin-top: 0px;
+        margin-top: 10px;
         box-sizing: border-box;
         min-width: 250px;
     }
@@ -1940,7 +1940,13 @@ textPath {
 .project-card__body-text-title--no-active {
     cursor: not-allowed;
 }
+.project-card__body-text-url--no-active ~ p {
+    opacity: 50%;
+}
 
+.project-card__body-text-url--no-active ~ p b {
+    color: var(--main-txt-color) !important;
+}
 
 
 
