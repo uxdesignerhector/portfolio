@@ -1244,11 +1244,11 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 @keyframes bounce {
     from {
-        transform: translate3d(0, -35px, 0);
+        transform: translate3d(0, -25px, 0);
     }
 
     to {
-        transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -12px, 0);
     }
 }
 
