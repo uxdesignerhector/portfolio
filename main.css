@@ -1129,7 +1129,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 .main-header-flex-container-left-div-child-textbox {
     border: #b3001b 3px inset;
-    background-color: #00000010;
+    background-color: #00000025;
     border-radius: 10px;
     padding: 5%;
     box-sizing: border-box;
@@ -1726,8 +1726,6 @@ textPath {
     animation: pulse 3s infinite both;
 }
 
-
-
 @-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(0.0);
@@ -1768,16 +1766,10 @@ textPath {
     }
 }
 
-
-
 .project-card__header-cover-text {
     font-size: 17px;
     color: white;
 }
-
-
-
-
 
 .project-card__body-text {
     max-width: 250px;
@@ -1785,6 +1777,17 @@ textPath {
     padding: 0% 10% 5% 10%;
     box-sizing: border-box;
 
+}
+.project-card-container--pink .project-card__body-text :nth-child(3){
+    margin-bottom: 7px;
+}
+
+.project-card__body-text p b{
+    color:#4e74cf;
+}
+
+.project-card-container .project-card__button-card{
+    margin: 3px 0px 10px 0px;
 }
 
 
@@ -1816,12 +1819,14 @@ textPath {
         justify-content: flex-start;
         margin-top: 0px;
     }
-}
 
-@media (max-width:1035px) and (min-width:550px) {
     .project-card__arrow-down-container-for-rotation {
         transform: rotate(-90deg);
         margin-left: -16px;
+    }
+
+    .project-card-container .project-card__button-card{
+        margin: 8px 0px 0px 0px;
     }
 }
 
@@ -1901,7 +1906,7 @@ textPath {
 
 }
 
-.project-card__body-text-url--no-active:hover {
+.project-card__body-text-url--no-active {
     color: #000;
 }
 
@@ -1909,9 +1914,10 @@ textPath {
     cursor: not-allowed;
 }
 
-.project-card__button-card--no-active:hover,
-.project-card__button-card--no-active:active {
+.project-card__button-card--no-active,
+.project-card__button-card--no-active:hover {
     background-color: #7a7a7a;
+    color: white;
 }
 
 .project-card-container--green .project-card__body-text-title h3 {
@@ -1927,9 +1933,13 @@ textPath {
 }
 
 
-
+.project-card__body-text-title--no-active h3,
 .project-card__body-text-title--no-active:hover h3 {
-    color: #3a3a3a;
+    color: #3a3a3a !important;
+}
+
+.project-card__body-text-title--no-active {
+    cursor: not-allowed;
 }
 
 
