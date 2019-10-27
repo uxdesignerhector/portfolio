@@ -1855,7 +1855,10 @@ textPath {
     align-content: center;
     justify-content: center;
     background-color: var(--main-project-button-bg-color);
+    transition: linear 0.2s;
+    transition-property: transform;
 }
+
 
 
 .project-card__button-card--pink {
@@ -1948,6 +1951,10 @@ textPath {
     color: var(--main-txt-color) !important;
 }
 
+.project-card__button-card--pink:active,
+.project-card__button-card--green:active{
+    transform:scale(0.9,0.9)
+}
 
 
 
