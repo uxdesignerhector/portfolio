@@ -1915,7 +1915,7 @@ textPath {
 
 .project-card__button-card--no-active,
 .project-card__button-card--no-active:hover {
-    background-color: #7a7a7a;
+    background-color: #7f7f7f;
     color: white;
 }
 
@@ -1934,7 +1934,7 @@ textPath {
 
 .project-card__body-text-title--no-active h3,
 .project-card__body-text-title--no-active:hover h3 {
-    color: #3a3a3a !important;
+    color: #7f7f7f !important;
 }
 
 .project-card__body-text-title--no-active {
