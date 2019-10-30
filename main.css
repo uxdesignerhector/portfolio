@@ -603,7 +603,7 @@ body {
     background-color: #ff9800;
 }
 
-small {
+ small {
     color: #fffffa;
 }
 
@@ -993,7 +993,7 @@ nav a:hover {
 } */
 
 
-/* Contact icon displayed on small screen */
+/* Contact icon displayed on  screen */
 .main-nav-menu__level-1-contact-icon-svg {
     display: none;
 }
@@ -1515,14 +1515,14 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     box-sizing: border-box;
 }
 
-.testimonial-fix-for-prev-next-button-on-small-screen {
+.testimonial-fix-for-prev-next-button-on--screen {
     height: 9vh;
     display: none;
 }
 
 
 @media (max-width:500px) {
-    .testimonial-fix-for-prev-next-button-on-small-screen {
+    .testimonial-fix-for-prev-next-button-on--screen {
         display: block;
     }
 }
@@ -1827,6 +1827,9 @@ textPath {
     .project-card-container .project-card__button-card{
         margin: 8px 0px 0px 0px;
     }
+    .project-card__body-text{
+    padding: 0% 10% 2% 10%;
+    }
 }
 
 .project-card__body-flex-container {
@@ -1995,11 +1998,46 @@ textPath {
     border-radius: 10px;
 }
 
-@media (min-width:700px) and (max-width:995px) {
+.post_text_column .post-img--default{
+    width: 353px;
+}
+
+.post-img--353px{
+    width: 353px !important;
+}
+
+@media screen and (max-width:450px) {
+    .post-img--353px,
+    .post_text_column .post-img--default{
+        width: 100% !important;
+    }
+    .post_text_column img{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:450px) and (max-width:700px) {
+    .post-img--353px,
+    .post_text_column .post-img--default{
+        width: 60% !important;
+    }
+    .post_text_column img{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:995px) {
+    .post_text_column .post-img--default{
+        width: 45% !important;
+    }
     .post_text_column img {
         width: 80%;
     }
+
 }
+
+
+
 
 .flex_container_for_project_and_downloable_archive {
     display: flex;
