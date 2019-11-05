@@ -2002,6 +2002,9 @@ textPath {
     width: 353px;
 }
 
+.post-img--smartphone-screen{
+border-radius: 0px !important;
+}
 .post-img--353px{
     width: 353px !important;
 }
@@ -2021,6 +2024,10 @@ textPath {
     .post_text_column .post-img--default{
         width: 60% !important;
     }
+    .post_text_column .post-img--smartphone-screen{
+        width: none;
+    }
+
     .post_text_column img{
         width: 100%;
     }
@@ -2030,6 +2037,10 @@ textPath {
     .post_text_column .post-img--default{
         width: 45% !important;
     }
+    .post_text_column .post-img--smartphone-screen{
+        width: none !important;
+    }
+
     .post_text_column img {
         width: 80%;
     }
