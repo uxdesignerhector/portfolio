@@ -2020,13 +2020,15 @@ border-radius: 0px !important;
 
 #asos-app-gamification-txt,
 #asos-app-linking-screen,
-#asos-app-looks-txt{
+#asos-app-looks-txt,
+#asos-app-shopper-screen{
     order: 1;
 }
 
 #asos-app-gamification-screen,
 #asos-app-linking-txt,
-#asos-app-looks-screen{
+#asos-app-looks-screen,
+#asos-app-shopper-txt{
     order: 2;
 }
 
@@ -2074,13 +2076,15 @@ border-radius: 0px !important;
     
     #asos-app-gamification-txt,
     #asos-app-linking-txt,
-    #asos-app-looks-txt{
+    #asos-app-looks-txt,
+    #asos-app-shopper-txt{
         order: 1;
     }
 
     #asos-app-gamification-screen,
     #asos-app-linking-screen,
-    #asos-app-looks-screen{
+    #asos-app-looks-screen,
+    #asos-app-shopper-screen{
         order: 2;
     }
 
