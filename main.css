@@ -1978,6 +1978,15 @@ textPath {
     flex: 1;
     flex-basis: 400px;
 }
+.post_text_column--middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post_text_column--smart{
+    position: relative;
+}
 
 .post_text_column p {
     margin-bottom: 15px;
@@ -2008,6 +2017,20 @@ border-radius: 0px !important;
 .post-img--353px{
     width: 353px !important;
 }
+
+#asos-app-gamification-txt,
+#asos-app-linking-screen,
+#asos-app-looks-txt{
+    order: 1;
+}
+
+#asos-app-gamification-screen,
+#asos-app-linking-txt,
+#asos-app-looks-screen{
+    order: 2;
+}
+
+
 
 @media screen and (max-width:450px) {
     .post-img--353px,
@@ -2044,6 +2067,24 @@ border-radius: 0px !important;
     .post_text_column img {
         width: 80%;
     }
+
+}
+
+@media screen and (max-width:995px) {
+    
+    #asos-app-gamification-txt,
+    #asos-app-linking-txt,
+    #asos-app-looks-txt{
+        order: 1;
+    }
+
+    #asos-app-gamification-screen,
+    #asos-app-linking-screen,
+    #asos-app-looks-screen{
+        order: 2;
+    }
+
+  
 
 }
 
