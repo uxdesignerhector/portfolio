@@ -1988,6 +1988,12 @@ textPath {
     position: relative;
 }
 
+.post_text_column--horizontal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .post_text_column p {
     margin-bottom: 15px;
 }
@@ -2018,13 +2024,14 @@ border-radius: 0px !important;
     width: 353px !important;
 }
 
+.order-left,
 #asos-app-gamification-txt,
 #asos-app-linking-screen,
 #asos-app-looks-txt,
 #asos-app-shopper-screen{
     order: 1;
 }
-
+.order-right,
 #asos-app-gamification-screen,
 #asos-app-linking-txt,
 #asos-app-looks-screen,
@@ -2074,13 +2081,14 @@ border-radius: 0px !important;
 
 @media screen and (max-width:995px) {
     
+    .order-right,
     #asos-app-gamification-txt,
     #asos-app-linking-txt,
     #asos-app-looks-txt,
     #asos-app-shopper-txt{
         order: 1;
     }
-
+    .order-left,
     #asos-app-gamification-screen,
     #asos-app-linking-screen,
     #asos-app-looks-screen,
