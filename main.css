@@ -1963,6 +1963,7 @@ textPath {
 
 
 
+
 /* Post column section */
 
 
@@ -2038,7 +2039,9 @@ border-radius: 0px !important;
 #asos-app-shopper-txt{
     order: 2;
 }
-
+.summary-post{
+    margin:0px 15px;
+}
 
 
 @media screen and (max-width:450px) {
@@ -2048,6 +2051,9 @@ border-radius: 0px !important;
     }
     .post_text_column img{
         width: 100%;
+    }
+    .summary-post{
+        margin:0px 0px;
     }
 }
 
