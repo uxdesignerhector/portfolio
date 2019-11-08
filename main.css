@@ -1,9 +1,8 @@
 @charset "UTF-8";
-
 @font-face {
     font-family: 'Roboto';
     src: local("Roboto"), local("Roboto-Regular"), url('/portfolio/fonts/Roboto-Regular.woff2') format('woff2'),
-        url('/portfolio/fonts/Roboto-Regular.woff') format('woff'),
+        url('/portfolio/fonts/Roboto-Regular.woff') format('woff'), 
         url('/portfolio/fonts/Roboto-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
@@ -14,132 +13,43 @@
     /*     --main-bg-color: #100e17; */
     --main-txt-color: black;
     /*     --main-txt-color: #fffffa; */
-
     --main-icon-color: black;
     /*     --main-icon-color: #fffffa; */
-
-
     --main-footer-bg-color: #2e4052;
     /*     --main-footer-bg-color: #09080d; */
-
     --main-footer-txt-color: #fffffa;
-
     --main-section-title-color: #999999;
-
     --main-project-card-bg-color: #fffffa;
     /*     --main-project-card-bg-color:#17141d; */
-
     --main-project-button-bg-color: #fffffa;
     /*     --main-project-button-bg-color:#281d25; */
-
     --project-button-color--pink: #b3001b;
     /*     --project-button-color--pink: #e48698; */
-
     --project-button-color--green: #343e3d;
     /*     --project-button-color--green: #4da27a; */
-
     --main-nav-border-transprarent: #00000000;
-
     --main-a-color: black;
     --main-a-color--hover: #b3001b;
-
     --main-a-outside-color: #ff9800;
-
     --h3-main-color: #3a3a3a;
     /*    --h3-main-color:#7c7c7c; */
-
     --submenu-anchor-color: white;
-
-
-
     --project-card-tittle-color--green: #64b194;
-
     --project-card-tittle-color--pink: #f58e8f;
-
     --main-wraper-color: black;
-
-
 }
 
-
-
-
 /* reset css */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-footer,
-header,
-hgroup,
-menu,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd,
+q, s, samp, small, strike, strong, sub,
+sup, tt, var, u, i, center, dl, dt, dd, fieldset,
+form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details,
+embed, figure, footer, header, hgroup, menu, output,
+ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -149,17 +59,8 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-g footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -169,15 +70,12 @@ body {
     /* color: var(--main-txt-color); */
 }
 
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
     content: '';
     content: none;
 }
@@ -188,15 +86,7 @@ table {
 }
 
 /*final reset css*/
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-label,
-figcaption {
-
+h1, h2, h3, h4, p, li, label, figcaption {
     line-height: 1.4;
 }
 
@@ -218,9 +108,7 @@ a:hover {
     color: var(--main-a-outside-color);
 }
 
-
-h2,
-.section-title__title {
+h2, .section-title__title {
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -246,9 +134,8 @@ h2,
     color: #4da27a;
 }
 
-
 h3 {
-
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     color: var(--h3-main-color);
@@ -264,11 +151,6 @@ h3 {
     }
 }
 
-
-h3 {
-    font-size: 20px;
-}
-
 p {
     font-size: 15px;
 }
@@ -282,6 +164,7 @@ figcaption {
     font-size: 14px;
 }
 
+/* This is for youtube container */
 .embed-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -303,17 +186,13 @@ html {
     scroll-behavior: smooth;
 }
 
-
-nav,
-section,
-footer {
+nav, section, footer {
 
     padding: 0% 5% 0% 5%;
     box-sizing: border-box;
 }
 
-nav,
-section {
+nav, section {
     margin-bottom: 0px;
 }
 
@@ -337,7 +216,6 @@ img {
     white-space: pre
 }
 
-
 body {
     background-color: var(--main-bg-color);
 }
@@ -345,7 +223,6 @@ body {
 .post_text_section_two_column {
     color: var(--main-txt-color);
 }
-
 
 .very-important-anchor {
     color: #b3001b;
@@ -356,7 +233,6 @@ body {
 }
 
 /*  Mini cv */
-
 .flex-card-container {
     display: flex;
     flex-direction: row;
@@ -383,7 +259,6 @@ body {
     box-shadow: none;
 }
 
-
 .sd-card__header {
 	border-radius: 10px 10px 0px 0px;
 	box-sizing: border-box;
@@ -397,7 +272,6 @@ body {
 }
 
 .sd-card__header-gradient{
-
     position: absolute;
     width: 100%;
     height: 100%;
@@ -407,6 +281,7 @@ body {
     background: radial-gradient(circle, rgb(0, 0, 0) 2%, rgb(61, 46, 31) 81%, rgb(166, 83, 25) 100%);
     border-radius: 10px 10px 0px 0px;
 }
+
 .sd-card__upper-title {
     z-index: 1;
     width: 80%;
@@ -441,7 +316,6 @@ body {
     color: var(--main-txt-color);
 }
 
-
 .sd-card__body {
     padding: 5%;
     box-sizing: border-box;
@@ -449,13 +323,11 @@ body {
     min-height: 400px;
 }
 
-
 .sd-card__body--white {
     background-color: var(--main-bg-color);
     border: var(--main-txt-color) 1px dashed;
     color: var(--main-txt-color);
 }
-
 
 .sd-card__body-img-container {
     display: flex;
@@ -468,8 +340,7 @@ body {
     border-radius: 50%;
 }
 
-.sd-card__body-text,
-.sd-card__body-text-anchor {
+.sd-card__body-text, .sd-card__body-text-anchor {
     margin-bottom: 40px;
     color: var(--main-txt-color)
 }
@@ -486,13 +357,9 @@ body {
     line-height: 1.4;
 }
 
-
-
 .sd-card__body-text-anchor:hover {
     color: #ff9800;
 }
-
-
 
 /* _______________________________ */
 .item_container {
@@ -535,26 +402,12 @@ body {
     margin-left: 0px;
 }
 
-
-
-
-
-
-
-/* Section__title 
-   It has got a breadcrumbs next to it.
-   
-   It looks like this --------->    SectionTitle |  / Previous section
-                                                 |   Next section /   
-*/
-
+/* Section__title  */
 .section-title {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
-
 
 .section-title__breadcrumbs {
     display: none;
@@ -569,10 +422,7 @@ body {
     text-decoration-line: none;
 }
 
-
-
 /* ---------------------------------------------------------------------------------------- */
-
 .button-absolute {
     display: none;
     position: fixed;
@@ -603,20 +453,11 @@ body {
     background-color: #ff9800;
 }
 
- small {
+small {
     color: #fffffa;
 }
 
-
-/*       ooooo      ooo       .o.       oooooo     oooo
-         `888b.     `8'      .888.       `888.     .8' 
-          8 `88b.    8      .8"888.       `888.   .8'  
-          8   `88b.  8     .8' `888.       `888. .8'   
-          8     `88b.8    .88ooo8888.       `888.8'    
-          8       `888   .8'     `888.       `888'     
-         o8o        `8  o88o     o8888o       `8'  
-
- */
+/* navegador*/
 nav li {
     list-style: none;
 }
@@ -667,7 +508,6 @@ nav a:hover {
     stroke: #ff9800;
 }
 
-
 .main-nav-logo-flex-container:hover path {
     fill: #ff9800;
 }
@@ -686,8 +526,6 @@ nav a:hover {
     fill: var(--main-icon-color);
 
 }
-
-
 
 .main-nav-logo__text-container {
     display: inline-block;
@@ -715,12 +553,10 @@ nav a:hover {
     margin-top: 0px;
 }
 
-
 .appendice {
     background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--main-txt-color);
     border-left: 1px solid var(--main-txt-color);
-
     height: 30px;
     width: 100%;
 }
@@ -817,13 +653,11 @@ nav a:hover {
     transition: ease-in 0.25s;
 }
 
-
 @media (max-width: 642px) {
     .main-nav-logo__text-p {
         display: none;
     }
 }
-
 
 @media (max-width: 325px) {
     .main-nav-logo__icon-svg {
@@ -843,50 +677,16 @@ nav a:hover {
 }
 
 /* Main nav menu*/
-
-/* Arrow icon below anchor text projects */
-.main-nav-menu__level-1-li-icon-below-projects {
-    position: absolute;
-    z-index: 99999;
-    bottom: 10px;
-    left: 20px;
-}
-
-.main-nav-menu__level-1-li:hover .main-nav-menu__level-1-li-icon-below-projects {
-    transition: 250ms ease-in;
-    bottom: 5px;
-}
-
-.main-nav-menu__level-1-li-icon-below-projects-svg-path {
-    fill: var(--main-icon-color);
-}
-
-.main-nav-menu__level-1-li:hover .main-nav-menu__level-1-li-icon-below-projects-svg-path {
-    fill: #ff9800;
-}
-
 .main-nav-menu__level-1-ul {
     display: flex;
     flex-basis: 390px;
     flex-direction: row;
     position: relative;
-
 }
-
-/* Needed to display correctly the icon >> below projects anchor*/
-.main-nav-menu__level-1-ul {
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav-menu__level-1-li-anchor:hover {
-    color: #ff9800;
-}
-
+/* Borrar y reparar esta linea, afecta a about me cambiar por li--current*/
 .main-nav-menu__level-1-li-anchor--current-page {
     color: #ff9800;
 }
-
 
 /* Da una altura de 90px y centra todo el contenido */
 .main-nav-menu__level-1-ul {
@@ -905,23 +705,13 @@ nav a:hover {
     padding-right: 10px;
     padding-left: 10px;
     box-sizing: border-box;
-
 }
 
 /* Hides level-2-ul  */
 .main-nav-menu__level-2-ul {
     display: none;
     position: absolute;
-
 }
-
-/* Hides level-2-submenu-ul */
-.main-nav-menu__level-2-sub-menu-ul {
-    display: none;
-    position: absolute;
-
-}
-
 
 /* Mouse hover level-1-li shows level-2-ul */
 .main-nav-menu__level-1-li:hover>ul {
@@ -932,11 +722,9 @@ nav a:hover {
     border: #ff9800 1px solid;
     border-top-color: var(--main-bg-color);
     box-shadow: 0px 7px 10px -3px;
-
 }
 
-
-/* Cuando se posiciona el mouse encima de un level-1-li otorga una altura y un ancho a los anchor */
+/* Cuando se posiciona el mouse encima de un level-1-li otorga una altura y un ancho a los anchor*/
 .main-nav-menu__level-1-li:hover>ul>li>a {
     float: left;
     width: 130px;
@@ -947,51 +735,6 @@ nav a:hover {
     background: var(--main-bg-color);
 
 }
-
-
-/* Cuando se posiciona el mouse encima de un level-2-li se muestra el sub-menu-ul */
-.main-nav-menu__level-2-li:hover>ul {
-    display: inline-block;
-    box-sizing: border-box;
-    border: #ff9800 3px solid;
-
-
-}
-
-
-/* Cuando se posiciona el mouse encima de un level-2-li se muestra el sub-menu-ul y se le otorga a los anchor apariencia */
-/* .main-nav-menu__level-2-li:hover>ul>li>a {
-    display: block;
-    width: 150px;
-    height: auto;
-    line-height: 1.4;
-    box-sizing: border-box;
-    padding: 5px;
-    background-color: #ff9800;
-    color: black;
-}
-
-.main-nav-menu__level-1-li:hover>ul>li:hover>a {
-    background-color: #ff9800;
-    color: #ffffff;
-}
-
-
-.main-nav-menu__level-2-sub-menu-li:hover>a:hover {
-    color: var(--submenu-anchor-color);
-}
-
-
-.main-nav-menu__level-2-li-animated-arrow {
-    position: relative;
-    left: 6px;
-    transition: left 250ms ease-in;
-}
-
-.main-nav-menu__level-2-li:hover .main-nav-menu__level-2-li-animated-arrow {
-    left: 20px;
-} */
-
 
 /* Contact icon displayed on  screen */
 .main-nav-menu__level-1-contact-icon-svg {
@@ -1022,87 +765,7 @@ nav a:hover {
     color: var(--main-a-outside-color);
 }
 
-
-/* _________________________________________________________________________________ */
-
-
-/* .oooooo.                                    .o8   o8o              
-            d'     `b                                   "888   `"'            
-           d' .d"bd  8 ooo. .oo.  .oo.    .ooooo.   .oooo888  oooo   .oooo.   
-           8  8. 8  .d `888P"Y88bP"Y88b  d88' `88b d88' `888  `888  `P  )88b  
-           Y.  YoP"b'   888   888   888  888ooo888 888   888   888   .oP"888  
-            8.      .8  888   888   888  888    .o 888   888   888  d8(  888  
-             YooooooP  o888o o888o o888o `Y8bod8P' `Y8bod88P" o888o `Y888""8o  */
-
-
-
-
-@media (max-width: 550px) {
-    .main-nav-menu__level-1-li:hover>ul {
-        width: 100px;
-    }
-}
-
-@media (max-width: 550px) {
-    .main-nav-menu__level-1-li:hover>ul>li>a {
-        width: 100px;
-    }
-}
-
-@media (max-width: 550px) {
-    .main-nav-menu__level-2-li:hover .main-nav-menu__level-2-li-animated-arrow {
-        left: 6px;
-        transition: none;
-    }
-}
-
-@media (max-width: 550px) {
-    .main-nav-menu__level-2-li:hover>ul>li>a {
-        width: 100px;
-    }
-}
-
-
-
 /* ___A_new_section_starts_____________________________________________________________________________________ */
-/* ___________________________________________________________________________________________________________ */
-/* __________________________________________________________________________________________________________ */
-
-
-
-/* MAIN
-ooooo   ooooo oooooooooooo       .o.       oooooooooo.   oooooooooooo ooooooooo.  
-`888'   `888' `888'     `8      .888.      `888'   `Y8b  `888'     `8 `888   `Y88.
- 888     888   888             .8"888.      888      888  888          888   .d88'
- 888ooooo888   888oooo8       .8' `888.     888      888  888oooo8     888ooo88P' 
- 888     888   888    "      .88ooo8888.    888      888  888    "     888`88b.   
- 888     888   888       o  .8'     `888.   888     d88'  888       o  888  `88b. 
-o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o888o
-*/
-
-/* 
- _____.main-header-flex-container____________________________________________________________________
-|                                                 |                            |                    |
-|       .main_header_left_div                     |  .main-header-center-div   |.main-header-right-div 
-|                                                 |                            |                    |
-|    -.main-header-flex-container-left-div-child_child-introtext--             |                    |
-|    |                                         |  |                            |                    |
-|    |   H1-> UX DESIGNER PORTFOLIO            |  |                            |                    |
-|    |    p-> Hi! I expect that if you are     |  |      has a background      |                    |
-|    |        here you probably know me....    |  |      img;                  |                    |
-|    |                                         |  |                            |                    |
-|    |                                         |  |                            |                    |
-|    |                                         |  |                            |                    |
-|    -------------------------------------------  |                            |                    |
-|                                                 |                            |                    |
-|                                                 |                            |      has a logo    |
-|                                                 |           *>>              |      at bottom     |
-|___________________________________________________________________________________________________|
-|                                                                                                   |                       
-|            .main-header_bottom_div_icon  has a  svg *>> icon, animation; position absolute;       |
-|___________________________________________________________________________________________________|
-
- */
 .main-header {
     height: 430px;
     background-color: #e48698;
@@ -1112,10 +775,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     display: flex;
     flex-direction: row;
 }
-
-/* ________________________________ */
-
-
 
 .main-header-flex-container-left-div {
     flex: 1;
@@ -1147,7 +806,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     color: #fffffa;
 }
 
-
 .main-header__bottom-button-anchor {
     text-decoration-line: none;
     -moz-text-decoration-line: none;
@@ -1158,8 +816,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     text-decoration-line: none;
     -moz-text-decoration-line: none;
 }
-
-
 
 .main-header__bottom-div {
     display: flex;
@@ -1177,9 +833,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 .main-header__bottom-button-text {
     color: black;
-
 }
-
 
 .main-header__bottom-button:hover {
     background-color: #1F3E38;
@@ -1187,9 +841,7 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
 
 .main-header__bottom-button:hover>.main-header__bottom-button-text {
     color: white;
-
 }
-
 
 .main-header-center-div {
     background-image: url("img/home_header_background.jpg");
@@ -1219,8 +871,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     margin-bottom: 10px;
     border-radius: 10px 10px 10px 10px;
 }
-
-
 
 .main-header-bottom-div {
     display: flex;
@@ -1252,19 +902,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     }
 }
 
-/* _________________________________________________________________________________ */
-
-
-/* .oooooo.                                    .o8   o8o              
-            d'     `b                                   "888   `"'            
-           d' .d"bd  8 ooo. .oo.  .oo.    .ooooo.   .oooo888  oooo   .oooo.   
-           8  8. 8  .d `888P"Y88bP"Y88b  d88' `88b d88' `888  `888  `P  )88b  
-           Y.  YoP"b'   888   888   888  888ooo888 888   888   888   .oP"888  
-            8.      .8  888   888   888  888    .o 888   888   888  d8(  888  
-             YooooooP  o888o o888o o888o `Y8bod8P' `Y8bod88P" o888o `Y888""8o  */
-
-
-
 /*.main-header-left-div*/
 @media (max-width:649px) {
     .main-header {
@@ -1287,23 +924,18 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     }
 }
 
-
 @media (max-width: 670px) {
     .main-header-flex-container-left-div-child-textbox {
-
         background-color: #0000009b;
         box-sizing: border-box;
-
     }
 }
 
 @media (max-width: 670px) {
-
     .main-header-flex-container-left-div-child__text-title {
         color: #fffffa;
     }
 }
-
 
 /*.main-header-center-div*/
 @media (max-width:670px) {
@@ -1311,9 +943,6 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
         display: none;
     }
 }
-
-
-
 
 /*.main-header-right-div*/
 @media (max-width:842px) {
@@ -1328,43 +957,21 @@ o888o   o888o o888ooooood8 o88o     o8888o o888bood8P'   o888ooooood8 o888o  o88
     }
 }
 
-
 /*.main-header-bottom-div*/
-
 @media (max-width: 670px) {
     .main-header-bottom-div-arrow-icon--red-mobile-device {
         fill: #b3001b;
     }
 }
 
-/* ___A_new_section_starts_____________________________________________________________________________________ */
-/* ___________________________________________________________________________________________________________ */
-/* __________________________________________________________________________________________________________ */
-
-
-/* 
-ooooooooo.   ooooooooo.   oooooooooooo  .oooooo..o oooooooooooo ooooo      ooo ooooooooooooo
-`888   `Y88. `888   `Y88. `888'     `8 d8P'    `Y8 `888'     `8 `888b.     `8' 8'   888   `8
- 888   .d88'  888   .d88'  888         Y88bo.       888          8 `88b.    8       888     
- 888ooo88P'   888ooo88P'   888oooo8     `"Y8888o.   888oooo8     8   `88b.  8       888     
- 888          888`88b.     888    "         `"Y88b  888    "     8     `88b.8       888     
- 888          888  `88b.   888       o oo     .d8P  888       o  8       `888       888     
-o888o        o888o  o888o o888ooooood8 8""88888P'  o888ooooood8 o8o        `8      o888o    
-*/
 /* Intro section */
-
-
-
-
 @media (max-width: 644px) {
-
-    .sd-card__body--black,
+    .sd-card__body--black, 
     .sd-card__body--green,
     .sd-card__body--white {
         min-height: 0;
     }
 }
-
 
 @media (min-width: 967px) and (max-width: 1290px) {
     #info-sd-card .sd-card__body {
@@ -1385,19 +992,7 @@ o888o        o888o  o888o o888ooooood8 8""88888P'  o888ooooood8 o8o        `8   
     }
 }
 
-
-/* 
-ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .oooooo.  
-8'   888   `8 `888'     `8 d8P'    `Y8 8'   888   `8 `888' `88.       .888'  d8P'  `Y8b 
-     888       888         Y88bo.           888       888   888b     d'888  888      888
-     888       888oooo8     `"Y8888o.       888       888   8 Y88. .P  888  888      888
-     888       888    "         `"Y88b      888       888   8  `888'   888  888      888
-     888       888       o oo     .d8P      888       888   8    Y     888  `88b    d88'
-    o888o     o888ooooood8 8""88888P'      o888o     o888o o8o        o888o  `Y8bood8P' 
-*/
-
 /* Testimonials*/
-
 .main-gallery {
     height: auto;
 }
@@ -1420,7 +1015,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
         width: 80%;
         min-height: 370px;
     }
-
 }
 
 .testimonial-header-container {
@@ -1445,7 +1039,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     right: 0px;
     width: 42%;
     border-top-right-radius: 10px;
-
     background: rgba(99, 126, 207, 1);
     background: -moz-linear-gradient(-45deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(99, 126, 207, 1)), color-stop(42%, rgba(99, 126, 207, 1)), color-stop(44%, rgba(3, 6, 66, 1)), color-stop(46%, rgba(3, 6, 66, 1)), color-stop(48%, rgba(3, 6, 66, 1)), color-stop(56%, rgba(77, 97, 161, 1)), color-stop(58%, rgba(99, 126, 207, 1)), color-stop(61%, rgba(3, 6, 66, 1)), color-stop(63%, rgba(3, 6, 66, 1)), color-stop(66%, rgba(3, 6, 66, 1)), color-stop(76%, rgba(77, 97, 161, 1)), color-stop(77%, rgba(99, 126, 207, 1)), color-stop(79%, rgba(3, 6, 66, 1)), color-stop(80%, rgba(3, 6, 66, 1)), color-stop(80%, rgba(3, 6, 66, 1)), color-stop(83%, rgba(3, 6, 66, 1)), color-stop(88%, rgba(65, 82, 135, 1)), color-stop(89%, rgba(99, 126, 207, 1)), color-stop(89%, rgba(99, 126, 207, 1)), color-stop(100%, rgba(99, 126, 207, 1)));
@@ -1454,12 +1047,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     background: -ms-linear-gradient(-45deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
     background: linear-gradient(135deg, rgba(99, 126, 207, 1) 0%, rgba(99, 126, 207, 1) 42%, rgba(3, 6, 66, 1) 44%, rgba(3, 6, 66, 1) 46%, rgba(3, 6, 66, 1) 48%, rgba(77, 97, 161, 1) 56%, rgba(99, 126, 207, 1) 58%, rgba(3, 6, 66, 1) 61%, rgba(3, 6, 66, 1) 63%, rgba(3, 6, 66, 1) 66%, rgba(77, 97, 161, 1) 76%, rgba(99, 126, 207, 1) 77%, rgba(3, 6, 66, 1) 79%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 80%, rgba(3, 6, 66, 1) 83%, rgba(65, 82, 135, 1) 88%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 89%, rgba(99, 126, 207, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#637ecf', endColorstr='#637ecf', GradientType=1);
-
-
-
-
-
-
 }
 
 @media (max-width:400px) {
@@ -1497,14 +1084,12 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     text-shadow: #000 0px 2px 1px;
 }
 
-
 .testimonial-header-container__flex-container-arrow-down {
     display: flex;
     justify-content: center;
     position: relative;
     margin-top: -1px;
 }
-
 
 .testimonial-quote {
     font-size: 15pt;
@@ -1520,10 +1105,12 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     display: none;
 }
 
-
 @media (max-width:500px) {
     .testimonial-fix-for-prev-next-button-on--screen {
         display: block;
+    }
+    .testimonial-quote {
+        padding: 45px 20px 15px 20px;
     }
 }
 
@@ -1539,14 +1126,7 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     }
 }
 
-
-/* ___A_new_section_starts_____________________________________________________________________________________ */
-/* ___________________________________________________________________________________________________________ */
-/* __________________________________________________________________________________________________________ */
-
-
 /* UX PROJECTS */
-
 .project-cards-flex-container {
     display: flex;
     flex-direction: row;
@@ -1573,17 +1153,14 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     color: var(--main-txt-color);
 }
 
-
 .project-card-container--pink {
     box-shadow: 0px 5px 7px #f05d5e;
     border-radius: 20px 70px 20px 20px;
-
 }
 
 .project-card-container--green {
     box-shadow: 0px 5px 7px #38e4a3;
     border-radius: 20px 70px 20px 20px;
-
 }
 
 /* _____________________________________________________ */
@@ -1633,7 +1210,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     height: 150px;
 }
 
-
 .project-card__header-background-gradient {
     position: absolute;
     width: 100%;
@@ -1641,7 +1217,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     z-index: -1;
     border-radius: 20px 70px 70px 70px;
 }
-
 
 .project-card__header-background-gradient--pink {
 
@@ -1653,7 +1228,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     background: -ms-radial-gradient(center, ellipse cover, rgba(228, 134, 151, 1) 0%, rgba(228, 134, 151, 1) 65%, rgba(0, 0, 17, 1) 68%, rgba(228, 134, 151, 1) 87%, rgba(0, 0, 17, 1) 91%, rgba(0, 0, 17, 1) 100%);
     background: radial-gradient(ellipse at center, rgba(228, 134, 151, 1) 0%, rgba(228, 134, 151, 1) 65%, rgba(0, 0, 17, 1) 68%, rgba(228, 134, 151, 1) 87%, rgba(0, 0, 17, 1) 91%, rgba(0, 0, 17, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e48697', endColorstr='#000011', GradientType=1);
-
 }
 
 .project-card__header-background-gradient--green {
@@ -1666,7 +1240,6 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo ooooo ooo        ooooo   .o
     background: radial-gradient(ellipse at center, rgba(77, 162, 122, 1) 0%, rgba(77, 162, 122, 1) 65%, rgba(0, 0, 17, 1) 68%, rgba(77, 162, 122, 1) 87%, rgba(0, 0, 17, 1) 91%, rgba(0, 0, 17, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4da27a', endColorstr='#000011', GradientType=1);
 }
-
 
 .project-card__header-curved-text {
     width: 210px;
@@ -1681,7 +1254,6 @@ textPath {
     font-style: normal;
     font-weight: 200px;
 }
-
 
 .project-card__header-cover--active {
     position: absolute;
@@ -1698,8 +1270,6 @@ textPath {
 .project-card__header-cover--no-active {
     display: none
 }
-
-
 
 .project-card__header-cover--active--green {
     background-color: #4da27acc;
@@ -1790,7 +1360,6 @@ textPath {
     margin: 3px 0px 10px 0px;
 }
 
-
 @media (max-width:1035px) {
     .project-card__body-text {
         margin-top: 10px;
@@ -1799,11 +1368,9 @@ textPath {
     }
 }
 
-
-.project-card__arrow-down-container
-
 /* Remember that arrow down container has a svg with a polygon fill property at the html code */
-    {
+.project-card__arrow-down-container {
+
     display: flex;
     justify-content: center;
     position: relative;
@@ -1849,7 +1416,6 @@ textPath {
     margin: 10px 0px 10px 0px;
 }
 
-
 .project-card__button-card {
     padding: 5%;
     width: 100px;
@@ -1862,16 +1428,10 @@ textPath {
     transition-property: transform;
 }
 
-
-
 .project-card__button-card--pink {
     border: #e48698 2px solid;
     color: var(--project-button-color--pink);
 }
-
-
-
-
 
 .project-card__button-card--pink:hover {
     color: #fffffa;
@@ -1937,7 +1497,6 @@ textPath {
     color: var(--main-a-outside-color);
 }
 
-
 .project-card__body-text-title--no-active h3,
 .project-card__body-text-title--no-active:hover h3 {
     color: #7f7f7f !important;
@@ -1959,15 +1518,7 @@ textPath {
     transform:scale(0.9,0.9)
 }
 
-
-
-
-
-
 /* Post column section */
-
-
-
 .post_text_section_two_column {
     display: flex;
     flex-direction: row;
@@ -2002,7 +1553,6 @@ textPath {
 .post_text_column h3 {
     margin-bottom: 7px;
 }
-
 
 .post_text_column li {
     margin-bottom: 5px;
@@ -2042,7 +1592,6 @@ border-radius: 0px !important;
 .summary-post{
     margin:0px 15px;
 }
-
 
 @media screen and (max-width:450px) {
     .post-img--353px,
@@ -2101,9 +1650,6 @@ border-radius: 0px !important;
     #asos-app-shopper-screen{
         order: 2;
     }
-
-  
-
 }
 
 
@@ -2287,20 +1833,6 @@ border-radius: 0px !important;
 
 
 /* ___A_new_section_starts_____________________________________________________________________________________ */
-/* ___________________________________________________________________________________________________________ */
-/* __________________________________________________________________________________________________________ */
-
-
-/* 
-oooooooooooo   .oooooo.     .oooooo.   ooooooooooooo oooooooooooo ooooooooo.  
-`888'     `8  d8P'  `Y8b   d8P'  `Y8b  8'   888   `8 `888'     `8 `888   `Y88.
- 888         888      888 888      888      888       888          888   .d88'
- 888oooo8    888      888 888      888      888       888oooo8     888ooo88P' 
- 888    "    888      888 888      888      888       888    "     888`88b.   
- 888         `88b    d88' `88b    d88'      888       888       o  888  `88b. 
-o888o         `Y8bood8P'   `Y8bood8P'      o888o     o888ooooood8 o888o  o888o
-*/
-
 footer {
     background-color: var(--main-footer-bg-color);
     min-height: 400px;
@@ -2346,8 +1878,6 @@ footer {
 
 }
 
-
-
 .contact-form__label {
     display: block;
     color: white;
@@ -2370,7 +1900,6 @@ footer {
     border: #ffffff00 3px solid;
 }
 
-
 .contact-form__input:focus,
 .contact-form__textarea:focus {
     border: #ff9800 3px solid;
@@ -2388,7 +1917,6 @@ footer {
 
 .contact-form__button--send {
     border: 3px #ff9800 solid;
-
 }
 
 .contact-form__button--send:hover,
@@ -2396,7 +1924,6 @@ footer {
     background-color: #ff9800;
     color: #fffffa;
 }
-
 
 .contact-form__button--clear:hover,
 .contact-form__button--clear:focus {
@@ -2436,7 +1963,6 @@ footer {
 .legal {
     margin-left: 20px;
 }
-
 
 .error {
     color: var(--main-txt-color);
