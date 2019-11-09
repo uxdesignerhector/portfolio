@@ -10,42 +10,33 @@
 	<meta name="msapplication-TileColor" content="#4da27a">
 	<meta name="theme-color" content="#343e3d">
 	<link href="main.css" media="screen" rel="stylesheet" type="text/css">
-
-
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#4da27a">
 	<script src="main.js"></script>
-
 </head>
 
-
-
-
-
-
-
-
-
-
 <body class="container">
-	<button class="button-absolute" id="theme" onclick="theme.prepareButton()" title="Dark Mode" value="dark"><svg
-			id="light-dark-icon" style="width:24px;height:24px" viewBox="0 0 24 24">
-			<path fill="#000000"
-				d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z" />
-		</svg></button>
-	<button class="button-absolute" id="gototop" onclick="topFunction()" title="Go to top"><svg
-			style="width:24px;height:24px" viewbox="0 0 24 24">
-			<path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M17,14L12,9L7,14H17Z"
-				fill="#000"></path>
-		</svg></button>
-	<a href="#contact"><button class="button-absolute" id="contactButton" title="Goes to bottom and
-prepares you to write"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-				<path fill="#000000"
-					d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-			</svg></button></a>
+	<button class="button-absolute" id="theme" onclick="theme.prepareButton()" title="Dark Mode" value="dark">
+		<svg id="light-dark-icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+			<path fill="#000000" d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z" />
+		</svg>
+	</button>
+	<button class="button-absolute" id="gototop" onclick="topFunction()" title="Go to top">
+		<svg style="width:24px;height:24px" viewbox="0 0 24 24">
+			<path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M17,14L12,9L7,14H17Z" fill="#000"></path>
+		</svg>
+	</button>
+	<a href="#contact">
+		<button class="button-absolute" id="contactButton" title="Goes to bottom and 
+prepares you to write">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+				<path fill="#000000" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+			</svg>
+		</button>
+	</a>
 
 
 	<nav class="main-nav">
@@ -244,8 +235,8 @@ prepares you to write">CONTACT</a>
 						<ul>
 							<li>ASOS is a British online fashion and cosmetic retailer, it sells over 850 brands and ships to 196 countries.</li>
 							<li>Group was formed by designers, sociologist and art directors.</li>
-							<li>Initially we were 5 persons but at the middle of the project one new member joined us, she
-								helped us to redefine the project and gave us fresh ideas.</li>
+							<li>Initially we were 5 persons but at the middle of the project one new member joined us, we had to introduce her the whole project. She helped us to give more consistency to the overall
+									project and brought renewed ideas.</li>
 						</ul>
 					</span>
 
@@ -254,7 +245,28 @@ prepares you to write">CONTACT</a>
 		</div>
 
 	</section>
-
+	<section>
+		
+			<div class="post_text_section_two_column">
+				<div class="post_text_column">
+					<figure style="display: flex; justify-content:center;">
+						<img src="img/UX_Project_Asos_APP.jpg" style="width:70%;display: flex;justify-content:center;">
+					</figure>
+				</div>
+				<div class="post_text_column post_text_column--middle">
+					<h2 class="section-title__title">My role</h2>
+					<p>My role was <b>bigger at first stages than at the end</b>, this is because at final stages my team mates had more experience taking bussines decisions and also due to the fact that we used Sketch to design the prototype, and I didn´t have a Mac. *The screens I display here have been made by me, using Figma.</p>
+					<p>I participated in all user research  methods (also, I made instructions for my team about how to do an empathy map, since they were a bit lost with this tool). I made the Industry trend map, as well as, common research for bussines side. I took decissions in strategy. And finally supported my team mates at final stages and in design prototype decisions when they needed my help, while making all flow diagrams.</p>
+					<p>One role that I asummed on my own, was to take care of Google Drive's folder used for our project. At firts monts it was a mess, nobody was taking care of it. I did it and no more problems emerged when talking about specific files.</p>
+	
+				</div>
+	
+	
+	
+	
+			</div>
+	
+		</section>
 
 	<section>
 
@@ -351,9 +363,8 @@ prepares you to write">CONTACT</a>
 				<h3>ASOS bussines insights</h3>
 				<ul>
 					<li><b>ASOS doesn't invest in common advertisement media</b>.</li>
-					<li><b>Far culture from spanish culture</b>: photos of models corresponds to english market.</li>
-					<li><b>Brexit</b>: could be a potential risk for their sales.</li>
-					<li><b>ASOS is an online market</b>: to expand it to the physical world it's a risk.</li>
+					<li><b>Far culture from spanish culture</b>: photos of models corresponds to english market. <b>Brexit</b>: could be a potential risk for their sales.</li>
+					<li><b>Online market is their stronghold</b>: to expand ASOS to the physical world it's a risk.</li>
 					<li><b>Virtual mirros and chatbots</b>: are big tendencies in the Industry.</li>
 					<li><b>User demands more info</b>: from an ethical, ecological and chemical perspective.</li>
 					<li><b>Logistic</b>: big investment in robotics by the industry.</li>
@@ -362,51 +373,49 @@ prepares you to write">CONTACT</a>
 		</div>
 
 	</section>
+	<section>
+		
+			<div class="post_text_section_two_column">
+				<div class="post_text_column">
+						<h2 class="section-title__title">Strategy</h2>
+						<h3>How to choose the strategy</h3>
+						<p>Once we had our users and business insights we decided to approach to some solution. To achieve this
+							goal we did an insight map, a brainstorming and then an attractive/effort matrix to choose the
+							solution.</p>
+						<h3>How to measure the impact</h3>
+						<ul>
+							<li>Hashtags number using hashtag #AsosPoints</li>
+							<li>Traffic increasement at product card</li>
+							<li>Number of times personal shopper it's used</li>
+							<li>Asos Points used</li>
+							<li>App downloads</li>
+	
+				</div>
+				<div class="post_text_column post_text_column--middle">
+					<h2 class="section-title__title">Chanlenges faced</h2>
+					<h3>We were burnt out</h3>
+					<p>The truth is we were thinking about creating a social network but other professionals and even us didn't see it due to its complexity. We were fighting against this recurring idea which always appeared in every debate, as result we were lost and exhausted because each team member had an idea of what should be "ASOS World" and there was not a clear leadership.</p>
+					<h3>Value proposal and making mistakes</h3>
+					<p>At some point we started to center all our attention in users need while forgetting the
+						business side, this was clear when we developed the value proposal, after realising that we were wrong, we redefined the project. At this point we were still
+						diverging about the solution and burning out till one day we have a talk with one of the professioneals who visited our school.</p>
+				</div>
+	
+	
+	
+	
+			</div>
+	
+		</section>
 
 	<section>
-		<h2 class="section-title__title">Strategy</h2>
-		<div class="post_text_section_two_column">
-			<div class="post_text_column">
-				<h3>How to choose the strategy</h3>
-				<p>Once we had our users and business insights we decided to approach some solution. To achieve this
-					goal we did an insight map, a brainstorming and then an attractive effort matrix to choose the
-					solution.</p>
-				<H3>Value proposal and making mistakes</H3>
-				<p>We decided to base our decisions entirely on user's needs, this was a big error; since we forgot the
-					business side, after realising that we were wrong, we redefined it. At this point we were still
-					diverging about the solution, we knew the solution had to be social but we didn't know how to do it
-					yet, so we proposed "ASOS World" as our main objective that would focus on engaging young people and
-					making them feel exclusive.</p>
-				<h3>Receiving a new team member</h3>
-				<p>Due to some facts a new person of other team joined us. She provided us a lot of new
-					ideas and also helped us to redefine the project. When she came we introduced her to the
-					project and all the investigation we had done. She helped us to give more consistency to the overall
-					project and brought renewed fresh air.</p>
 
-			</div>
-			<div class="post_text_column">
-
-				<figure>
-					<img src="img/UX_Project_Asos_APP.jpg">
-				</figure>
-
-			</div>
-
-
-
-
-		</div>
-
-	</section>
-
-
-	<section>
-		<h2 class="section-title__title">Defining the solution</h2>
 		<div class="post_text_section_two_column">
 			<div class="post_text_column post_text_column--smart">
 				<figure style="display: flex; justify-content:center;">
 					<img src="svg/asos-looks.svg" style="width:250px;display: flex;justify-content:center;">
 				</figure>
+
 				<div class=""
 					style="position:absolute;top:0;width: 100%;display: flex; justify-content: center;align-items: center;height: 100%;">
 					<figure>
@@ -415,17 +424,11 @@ prepares you to write">CONTACT</a>
 					</figure>
 				</div>
 			</div>
-			<div class="post_text_column">
-				<h3>We were burnt out</h3>
-				<p>The truth is we were thinking about creating a social network but
-					other professionals and even us didn't see it due
-					to it complexity. We were fighting against this recurring idea that
-					always appeared in every debate, as result we were lost and exhausted
-					because each team member had an idea of what should be "ASOS World".</p>
+			<div class="post_text_column post_text_column--middle">
+		<h2 class="section-title__title">Defining the solution</h2>
 				<h3>Finally the solution</h3>
-				<p>One day, after one of our many debates, a professional of the sector gave us the key
-					"don't create another social network it requires time, a lot effort and luck ...
-					use what is done." So once we had this secret revealed, we saw everything with a different
+				<p>One day, after one of our many debates, a professional from the sector gave us the key
+					"don't create another social network it requires time, a lot effort and luck, use what is done." from this day we saw everything with a different
 					perspective.
 					Why not letting the users use their social networks to promote ourselves in exchange of points than
 					could be used in our shop. We would expand the image of ASOS while increasing the average ticket.
@@ -448,7 +451,7 @@ prepares you to write">CONTACT</a>
 					that would help us to control entries to new services and to prevent some possible collapses.</p>
 
 				<p><b>How can you earn points?</b> Uploading photos to instagram with the hashtag #AsosPoints and
-					finally tagging your clothes at the new section ASOS Looks.When someone buys an ASOS look or a
+					finally tagging your clothes at the new section ASOS Looks. When someone buys an ASOS look or a
 					product through your look. Buying products in ASOS.</p>
 			</div>
 			<div class="post_text_column post_text_column--smart" id="asos-app-gamification-screen">
