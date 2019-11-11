@@ -678,10 +678,10 @@ nav a:hover {
 
 /* Main nav menu*/
 .main-nav-menu__level-1-ul {
+   padding-left: 0px;
     display: flex;
     flex-basis: 390px;
     flex-direction: row;
-    position: relative;
 }
 /* Borrar y reparar esta linea, afecta a about me cambiar por li--current*/
 .main-nav-menu__level-1-li-anchor--current-page {
@@ -707,6 +707,13 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+@media screen and (max-width:350px){
+    
+    .main-nav-menu__level-1-li a{
+        font-size: 13px;
+}
+}
+
 /* Hides level-2-ul  */
 .main-nav-menu__level-2-ul {
     display: none;
@@ -724,7 +731,6 @@ nav a:hover {
     box-shadow: 0px 7px 10px -3px;
 }
 
-/* Cuando se posiciona el mouse encima de un level-1-li otorga una altura y un ancho a los anchor*/
 .main-nav-menu__level-1-li:hover>ul>li>a {
     float: left;
     width: 130px;
@@ -753,13 +759,11 @@ nav a:hover {
     .main-nav-menu__level-1-contact-icon-svg {
         display: block;
     }
-}
-
-@media (max-width: 550px) {
     .main-nav-menu__level-1-contact-anchor {
         display: none;
     }
 }
+
 
 .special-li a:hover {
     color: var(--main-a-outside-color);
