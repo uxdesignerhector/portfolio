@@ -488,9 +488,8 @@ nav a:hover {
     align-content: center;
     align-items: center;
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     box-shadow: 0px 1px 15px 1px;
-    text-transform: uppercase;
     transition: 1s;
     z-index: 9999;
 }
@@ -572,7 +571,7 @@ nav a:hover {
 }
 
 .special-ul {
-    margin-top: 3px;
+    margin-top: 4px;
     padding: 0px 5px;
     color: var(--main-txt-color);
 
@@ -653,13 +652,13 @@ nav a:hover {
     transition: ease-in 0.25s;
 }
 
-@media (max-width: 642px) {
+@media (max-width: 700px) {
     .main-nav-logo__text-p {
         display: none;
     }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 450px) {
     .main-nav-logo__icon-svg {
         width: 47px;
     }
@@ -742,24 +741,12 @@ nav a:hover {
 
 }
 
-/* Contact icon displayed on  screen */
-.main-nav-menu__level-1-contact-icon-svg {
-    display: none;
-}
-
-.main-nav-menu__level-1-contact-icon-svg>path {
-    fill: var(--main-icon-color);
-}
-
-.main-nav-menu__level-1-contact-icon-svg:hover>path {
+#contactMenuLink:hover path {
     fill: #ff9800;
 }
 
 @media (max-width: 550px) {
-    .main-nav-menu__level-1-contact-icon-svg {
-        display: block;
-    }
-    .main-nav-menu__level-1-contact-anchor {
+    .main-nav-menu__level-1-contact-anchor>span {
         display: none;
     }
 }
@@ -1971,3 +1958,54 @@ footer {
 .error {
     color: var(--main-txt-color);
 }
+
+.button{
+    padding: 7px 10px;
+    border-radius: 30px;
+    width: auto;
+    height: auto;
+    background-color: #637ecf;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    fill: #fff;
+}
+
+
+
+
+.button:hover{
+    background-color: #2e4052;
+}
+
+
+#contactMenuLink{
+    margin-left:10px;
+}
+
+#contactButtonMenuIcon{
+    margin-left: 10px;
+}
+@media screen and (max-width:550px){
+
+    #contactMenuLink{
+        margin-left:0px;
+    }
+
+    #contactButtonMenuIcon{
+        margin-left:0px;
+    }
+}
+
+@media screen and (max-width:450px){
+
+ .main-nav{
+     font-size: 15px;
+ }
+}
+
+::selection {
+    color: #fff;
+    background: #4da27a;
+  }
