@@ -555,14 +555,16 @@ nav a:hover {
     background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--main-txt-color);
     border-left: 1px solid var(--main-txt-color);
-    height: 30px;
+    height: 36px;
     width: 100%;
+    transition: height ease-in 0.1s;
+    -moz-transition: height ease-in 0.1s;
 }
 
 .appendice:hover {
-    height: 105px;
-    transition: ease-in 0.1s;
+    height: 120px;
     border-radius: 0px 0px 0px 10px;
+
 }
 
 .appendice:hover li {
@@ -570,26 +572,28 @@ nav a:hover {
 }
 
 .special-ul {
-    margin-top: 4px;
-    padding: 0px 5px;
+    margin-top: 7px;
+    padding: 0px 8px;
     color: var(--main-txt-color);
 
 }
 
 .fix-color {
-    height: 30px;
+    height: 36px;
     width: 3px;
     position: absolute;
     background-color: var(--main-bg-color);
-    left: 30px;
+    left: 37px;
     top: 0;
 }
 
 .hidden-ul {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
-    margin-top: 5px;
-
+    margin-top: 7px;
+    transition: visibility 0.1s, opacity 0.2s linear;
+    -moz-transition: visibility 0.1s, opacity 0.2s linear;
 }
 
 .special-li {
@@ -606,11 +610,12 @@ nav a:hover {
 }
 
 .appendice:hover .hidden-ul {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .decorative-angle {
-    height: 30px;
+    height: 37px;
 }
 
 .cls-1 {
@@ -671,6 +676,11 @@ nav a:hover {
 
     .angle-wraper-2 {
         left: calc(100% - 230px)
+    }
+
+    .special-ul {
+        margin-top: 7px;
+        padding: 0px 1px;
     }
 }
 
