@@ -16,9 +16,39 @@ document.addEventListener("DOMContentLoaded", function () {
   browser();
 
   menu2.handler();
+  let botonContacto = document.getElementById('contactButton');
+  botonContacto.onclick = function () {
+    replaceHistory('#contact')
+  }
+  let botonContactoMenu = document.getElementById('contactMenuLink');
+  botonContactoMenu.onclick = function () {
+    replaceHistory('#contact')
+  }
+  try {
+    var botonSkipToUxProjects = document.getElementById('skipToUxProjectsButton');
+    botonSkipToUxProjects.onclick = function () {
+      replaceHistory('#ux_projects')
+    }
+  } catch {
+    if (botonSkipToUxProjects == null) {
+      return false
+    } else {
+      console.log(err);
+    }
+  }
 
-
-
+  try {
+    let botonIconSkipToIntro = document.getElementById('iconSkipToIntro');
+    botonIconSkipToIntro.onclick = function () {
+      replaceHistory('#intro')
+    }
+  } catch {
+    if (botonIconSkipToIntro == null) {
+      return false
+    } else {
+      console.log(err)
+    }
+  }
 });
 
 function topFunction() {
@@ -141,7 +171,6 @@ var contactForm = {
   setFocusCallback: function () {
     setTimeout(function () {
       contactForm.setFocusOnInputEmail();
-      console.log("stop")
     }, 0);
     false;
   },
@@ -359,6 +388,12 @@ function browser() {
 function callbackBannerBackground() {
   bannerBackground.prepare();
 
+}
+
+/* Get the links and prevents them setting the url hash at the history */
+
+function replaceHistory(urlHash) {
+  window.location.replace(urlHash);
 }
 
 theme.setUpInterface();
