@@ -10,6 +10,7 @@ window.onresize = function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+  checkProject.init();
   projectCardCoverActivateTool.checker();
   contactForm.setUpEventListener();
   testimonialLang.getTestimonialText();
@@ -73,16 +74,16 @@ function scrollFunction() {
     document.getElementById("theme").style.display = "none";
   }
 }
-
-
+var indexFileName = location.pathname;
 var fileName = location.pathname.split("/").slice(-1);
 var urlProjectCard = document.getElementsByClassName("project-card__body-text-url");
+var viewedCheck = document.getElementsByClassName("project-card__check--no-active");
 
 var projectCardCoverActivateTool = {
   checker: function () {
     for (i = 0; i < urlProjectCard.length; i++) {
       if (fileName == urlProjectCard[i].getAttribute("href")) {
-        var projectCardHeaderCoverDiv = urlProjectCard[i].parentElement.parentElement.parentElement.children[0].children[0];
+        var projectCardHeaderCoverDiv = urlProjectCard[i].parentElement.parentElement.parentElement.children[0].children[1];
         var projectCArdHeaderCoverWave = urlProjectCard[i].parentElement.parentElement.parentElement.firstElementChild.children[1];
         var idAttributeSection = urlProjectCard[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
         if (idAttributeSection == "ux_projects") {
@@ -110,6 +111,70 @@ var projectCardCoverActivateTool = {
     urlProjectCard[i + 1].firstElementChild.classList.add("project-card__button-card--no-active");
   }
 }
+
+var checkProject = {
+
+  init: function () {
+    debugger;
+    if (viewedCheck.length > 0) {
+      if (indexFileName == "/portfolio/") {
+        this.setUpChecks()
+      } else {
+        this.setCookie();
+      }
+    }
+  },
+
+  setCookie: function () {
+    
+    var alreadyViewed = this.getCookieArray();
+    if (alreadyViewed.length == 0) {
+      document.cookie = "viewed=" + fileName + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+      this.setUpChecks();
+    } else {
+      if (alreadyViewed.includes(fileName)) {
+        this.setUpChecks();
+      } else {
+        document.cookie = "viewed=" + alreadyViewed.toString() + "," + fileName + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+        this.setUpChecks();
+      }
+    }
+  },
+
+
+  getCookieArray: function () {
+    var ca = document.cookie.split(';');
+    var visited = "";
+    for (var i = 0; i < ca.length; i++) {
+      ca[i] = ca[i].trim();
+      if (ca[i].includes("viewed")) {
+        visited = ca[i]
+        visited = visited.split("=").pop()
+      }
+    }
+    return visited
+
+  },
+
+  setUpChecks: function () {
+    var alreadyViewed = this.getCookieArray();
+    if (alreadyViewed.length == 0) {
+      console.log("Nothing to display")
+    } else {
+      var pat = alreadyViewed.split(",")
+      var otherUrlProjectCard = ["asos_app_case_study.html", "asos_web_case_study.html", "ux-area-6.html", "working_at_f10.html", "LNL.html", "working_at_magma.html"];
+      for (var infer = 0; infer < otherUrlProjectCard.length; infer++) {
+        var href = otherUrlProjectCard[infer];
+        for (var i = 0; i < pat.length; i++) {
+          if (pat[i] == href) {
+            viewedCheck[infer].classList.add("project-card__check--active");
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 var contactForm = {
@@ -277,7 +342,6 @@ var testimonialLang = {
 
 }
 
-
 var theme = {
 
   prepareButton: function () {
@@ -320,7 +384,6 @@ var theme = {
       themebutton = document.getElementById("theme");
       themebutton.value = "dark";
       themebutton.title = "Changes theme to Dark mode";
-
     }
   },
 

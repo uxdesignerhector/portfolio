@@ -1147,6 +1147,7 @@ nav a:hover {
     background-color: var(--main-project-card-bg-color);
     color: var(--main-txt-color);
     z-index: 0;
+    position:relative;
 }
 
 .project-card-container a {
@@ -1253,6 +1254,18 @@ textPath {
     fill: #fffffa;
     font-style: normal;
     font-weight: 200px;
+}
+
+.project-card__check--no-active{
+    display:none;
+    position:absolute;
+    width: 34px;
+    height: 34px;
+    left: 8px;
+    top: 8px;
+}
+.project-card__check--active{
+    display:block;
 }
 
 .project-card__header-cover--active {
