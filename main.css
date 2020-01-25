@@ -1263,6 +1263,7 @@ textPath {
     height: 34px;
     left: 8px;
     top: 8px;
+    z-index: 9999;
 }
 .project-card__check--active{
     display:block;

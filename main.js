@@ -115,7 +115,6 @@ var projectCardCoverActivateTool = {
 var checkProject = {
 
   init: function () {
-    debugger;
     if (viewedCheck.length > 0) {
       if (indexFileName == "/portfolio/") {
         this.setUpChecks()
@@ -126,7 +125,7 @@ var checkProject = {
   },
 
   setCookie: function () {
-    
+
     var alreadyViewed = this.getCookieArray();
     if (alreadyViewed.length == 0) {
       document.cookie = "viewed=" + fileName + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
@@ -346,15 +345,12 @@ var theme = {
 
   prepareButton: function () {
     themebutton = document.getElementById("theme");
-    var theme = document.cookie.split("=")
-    if (theme[1] == "") {
-      this.setDark();
-    } else if (theme[1] == "dark") {
+    var theme = document.cookie.includes("dark");
+    if (theme) {
       this.setLight();
     } else {
       this.setDark();
     }
-
   },
 
 
@@ -372,18 +368,25 @@ var theme = {
   },
 
   setUpInterface: function () {
-    var theme = document.cookie.split("=")
-    if (theme[1] == 'dark') {
-      this.darkMode();
-      themebutton = document.getElementById("theme");
-      themebutton.value = "light";
-      themebutton.title = "Changes theme to Light mode";
-    } else {
-      this.lightMode();
 
-      themebutton = document.getElementById("theme");
-      themebutton.value = "dark";
-      themebutton.title = "Changes theme to Dark mode";
+    var theme = document.cookie.split(";");
+    for (var i = 0; i < theme.length; i++) {
+      if (theme[i].trim().includes("theme")) {
+        if (theme[i].includes("dark")) {
+          this.darkMode();
+          themebutton = document.getElementById("theme");
+          themebutton.value = "light";
+          themebutton.title = "Changes theme to Light mode";
+        } else {
+          this.lightMode();
+          themebutton = document.getElementById("theme");
+          themebutton.value = "dark";
+          themebutton.title = "Changes theme to Dark mode";
+        }
+      } else {
+        
+      }
+
     }
   },
 
