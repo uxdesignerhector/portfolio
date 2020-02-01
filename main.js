@@ -84,8 +84,11 @@ var projectCardCoverActivateTool = {
     for (i = 0; i < urlProjectCard.length; i++) {
       if (fileName == urlProjectCard[i].getAttribute("href")) {
         var projectCardHeaderCoverDiv = urlProjectCard[i].parentElement.parentElement.parentElement.children[0].children[1];
-        var projectCArdHeaderCoverWave = urlProjectCard[i].parentElement.parentElement.parentElement.firstElementChild.children[1];
+        var projectCArdHeaderCoverWave = urlProjectCard[i].parentElement.parentElement.parentElement.firstElementChild.children[2];
         var idAttributeSection = urlProjectCard[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
+        var projectCardHeaderImage = urlProjectCard[i].parentElement.parentElement.parentElement.children[0].children[3].firstChild;
+        projectCardHeaderImage.className = "project-card__header-img project-card__header-img--inactive"
+
         if (idAttributeSection == "ux_projects") {
           projectCArdHeaderCoverWave.className = "project-card__header-cover-wave--active";
           projectCardHeaderCoverDiv.className = "project-card__header-cover--active project-card__header-cover--active--pink";

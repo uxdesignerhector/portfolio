@@ -1164,6 +1164,50 @@ nav a:hover {
     border-radius: 20px 70px 20px 20px;
 }
 
+.project-card-container:hover .project-card__header-img {
+    transition: border-color 1s, transform 0.5s;
+    transform: rotate(2deg);
+}
+
+.project-card-container:hover .project-card__header-curved-text {
+    transform: rotate(7deg);
+    transition: 0.8s;
+}
+
+.project-card-container:hover .project-card__header-img--inactive {
+    transform: none;
+    transition: none;
+}
+
+
+.project-card-container:hover .project-card__header--pink .project-card__header-img {
+    border-color: #ffc4c4;
+}
+.project-card-container:hover .project-card__header--green .project-card__header-img {
+    border-color: #b3ffc6;
+}
+
+.project-card-container:hover .project-card__header-background-gradient--green{
+    background: rgba(77,162,122,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(77,162,122,1) 0%, rgba(77,162,122,1) 65%, rgba(0,6,38,1) 68%, rgba(27,166,99,1) 80%, rgba(27,166,99,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(77,162,122,1)), color-stop(65%, rgba(77,162,122,1)), color-stop(68%, rgba(0,6,38,1)), color-stop(80%, rgba(27,166,99,1)), color-stop(87%, rgba(27,166,99,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(77,162,122,1) 0%, rgba(77,162,122,1) 65%, rgba(0,6,38,1) 68%, rgba(27,166,99,1) 80%, rgba(27,166,99,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(77,162,122,1) 0%, rgba(77,162,122,1) 65%, rgba(0,6,38,1) 68%, rgba(27,166,99,1) 80%, rgba(27,166,99,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(77,162,122,1) 0%, rgba(77,162,122,1) 65%, rgba(0,6,38,1) 68%, rgba(27,166,99,1) 80%, rgba(27,166,99,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(77,162,122,1) 0%, rgba(77,162,122,1) 65%, rgba(0,6,38,1) 68%, rgba(27,166,99,1) 80%, rgba(27,166,99,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4da27a', endColorstr='#000011', GradientType=1 );
+}
+.project-card-container:hover .project-card__header-background-gradient--pink{
+    background: rgba(228,134,151,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(228,134,151,1) 0%, rgba(228,134,151,1) 65%, rgba(64,0,17,1) 68%, rgba(240,93,94,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(228,134,151,1)), color-stop(65%, rgba(228,134,151,1)), color-stop(68%, rgba(64,0,17,1)), color-stop(87%, rgba(240,93,94,1)), color-stop(91%, rgba(0,0,17,1)), color-stop(100%, rgba(0,0,17,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(228,134,151,1) 0%, rgba(228,134,151,1) 65%, rgba(64,0,17,1) 68%, rgba(240,93,94,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(228,134,151,1) 0%, rgba(228,134,151,1) 65%, rgba(64,0,17,1) 68%, rgba(240,93,94,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(228,134,151,1) 0%, rgba(228,134,151,1) 65%, rgba(64,0,17,1) 68%, rgba(240,93,94,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(228,134,151,1) 0%, rgba(228,134,151,1) 65%, rgba(64,0,17,1) 68%, rgba(240,93,94,1) 87%, rgba(0,0,17,1) 91%, rgba(0,0,17,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e48697', endColorstr='#000011', GradientType=1 );
+}
+
 /* _____________________________________________________ */
 @media (max-width:1035px) and (min-width:550px) {
 
@@ -1277,8 +1321,7 @@ textPath {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 43px;
-
+    top: 44px;
 }
 
 .project-card__header-cover--no-active {
@@ -1287,13 +1330,10 @@ textPath {
 
 .project-card__header-cover--active--green {
     background-color: #4da27acc;
-    border: solid #fffffa 1px;
 }
 
 .project-card__header-cover--active--pink {
     background-color: #e48697cc;
-    border: solid #fffffa 1px;
-
 }
 
 .project-card__header-cover-wave--no-active {
