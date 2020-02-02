@@ -322,6 +322,9 @@ body {
     border-radius: 0px 0px 10px 10px;
     min-height: 400px;
 }
+#comfort-card .sd-card__body {
+    padding: 0%;
+}
 
 .sd-card__body--white {
     background-color: var(--main-bg-color);
@@ -973,12 +976,21 @@ nav a:hover {
     }
 }
 
-@media (min-width: 967px) and (max-width: 1290px) {
-    #info-sd-card .sd-card__body {
+@media (min-width: 984px) and (max-width: 1331px) {
+    #comfort-card .sd-card__body {
         min-height: 0px;
         padding: 2%;
+        display: flex;
+        justify-content: center;
     }
+    #comfort-card .sd-card__body-text > ul {
+        position: relative;
+        left: -45px;
+        display: flex;
+    }
+
 }
+
 
 @media (max-width: 994px) {
     #about_me .sd-card__body {
@@ -991,6 +1003,14 @@ nav a:hover {
         min-height: 330px;
     }
 }
+
+
+@media (max-width: 690px) {
+    .sd-card__body {
+        min-height: 0px;
+    }
+}
+
 
 /* Testimonials*/
 .main-gallery {
