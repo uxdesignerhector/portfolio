@@ -31,8 +31,6 @@
     --main-a-color: black;
     --main-a-color--hover: #b3001b;
     --main-a-outside-color: #ff9800;
-    --h3-main-color: #3a3a3a;
-    /*    --h3-main-color:#7c7c7c; */
     --submenu-anchor-color: white;
     --project-card-tittle-color--green: #64b194;
     --project-card-tittle-color--pink: #f58e8f;
@@ -138,7 +136,7 @@ h3 {
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    color: var(--h3-main-color);
+    color: var(--main-txt-color);
 }
 
 .section-title__title {
