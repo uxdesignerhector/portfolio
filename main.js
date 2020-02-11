@@ -177,7 +177,10 @@ var checkProject = {
           if (pat[i] == href) {
             if (typeof InstallTrigger !== 'undefined'){
               viewedMenu[infer].classList.add("li--visited");
+            } else{
+              viewedMenu[infer].classList.add("li--visited-not-moz");
             }
+            
             if (viewedCheck[infer] != null) {
               viewedCheck[infer].classList.add("project-card__check--active");
             }
