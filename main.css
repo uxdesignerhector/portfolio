@@ -599,6 +599,9 @@ nav a:hover {
     margin-left: 25px;
     list-style-type: circle;
 }
+.special-li a {
+    margin-left: 3px;
+}
 
 .li--current-page {
     color: #ff9800;
@@ -608,6 +611,9 @@ nav a:hover {
     color: #ff9800;
 }
 
+.li--visited::marker{
+    content: "\2714 ";
+}
 .appendice:hover .hidden-ul {
     visibility: visible;
     opacity: 1;

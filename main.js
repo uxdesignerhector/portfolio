@@ -78,6 +78,9 @@ var indexFileName = location.pathname;
 var fileName = location.pathname.split("/").slice(-1);
 var urlProjectCard = document.getElementsByClassName("project-card__body-text-url");
 var viewedCheck = document.getElementsByClassName("project-card__check--no-active");
+var viewedMenu = document.getElementsByClassName("special-li");
+
+
 
 var projectCardCoverActivateTool = {
   checker: function () {
@@ -118,12 +121,15 @@ var projectCardCoverActivateTool = {
 var checkProject = {
 
   init: function () {
+    debugger;
     if (viewedCheck.length > 0) {
       if (indexFileName == "/portfolio/") {
         this.setUpChecks()
       } else {
         this.setCookie();
       }
+    } else if (fileName == "aboutme.html" || this.getCookieArray > 0) {
+      this.setUpChecks();
     }
   },
 
@@ -160,22 +166,27 @@ var checkProject = {
 
   setUpChecks: function () {
     var alreadyViewed = this.getCookieArray();
+    var pat = alreadyViewed.split(",")
+    var otherUrlProjectCard = ["asos_app_case_study.html", "asos_web_case_study.html", "ux-area-6.html", "working_at_f10.html", "LNL.html", "working_at_magma.html"];
     if (alreadyViewed.length == 0) {
-      console.log("Nothing to display")
+      console.log("Nothing to display");
     } else {
-      var pat = alreadyViewed.split(",")
-      var otherUrlProjectCard = ["asos_app_case_study.html", "asos_web_case_study.html", "ux-area-6.html", "working_at_f10.html", "LNL.html", "working_at_magma.html"];
       for (var infer = 0; infer < otherUrlProjectCard.length; infer++) {
         var href = otherUrlProjectCard[infer];
         for (var i = 0; i < pat.length; i++) {
           if (pat[i] == href) {
-            viewedCheck[infer].classList.add("project-card__check--active");
+            viewedMenu[infer].classList.add("li--visited");
+            if (viewedCheck[infer] != null) {
+              viewedCheck[infer].classList.add("project-card__check--active");
+            }
+
           }
         }
       }
     }
   }
 }
+
 
 
 
@@ -387,7 +398,7 @@ var theme = {
           themebutton.title = "Changes theme to Dark mode";
         }
       } else {
-        
+
       }
 
     }
