@@ -614,6 +614,12 @@ nav a:hover {
 .li--visited::marker{
     content: "\2714 ";
 }
+
+.li--visited-not-moz::before{
+    list-style-type: none;
+    content: "\2714 "
+}
+
 .appendice:hover .hidden-ul {
     visibility: visible;
     opacity: 1;

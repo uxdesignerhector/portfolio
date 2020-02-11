@@ -175,7 +175,9 @@ var checkProject = {
         var href = otherUrlProjectCard[infer];
         for (var i = 0; i < pat.length; i++) {
           if (pat[i] == href) {
-            viewedMenu[infer].classList.add("li--visited");
+            if (typeof InstallTrigger !== 'undefined'){
+              viewedMenu[infer].classList.add("li--visited");
+            }
             if (viewedCheck[infer] != null) {
               viewedCheck[infer].classList.add("project-card__check--active");
             }
