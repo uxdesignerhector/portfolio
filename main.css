@@ -615,8 +615,12 @@ nav a:hover {
     content: "\2714 ";
 }
 
-.li--visited-not-moz::before{
+.li--visited-not-moz{
     list-style-type: none;
+}
+
+
+.li--visited-not-moz::before{
     content: "\2714 "
 }
 
