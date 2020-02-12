@@ -617,6 +617,7 @@ nav a:hover {
 
 .li--visited-not-moz{
     list-style-type: none;
+    margin-left: 5px;
 }
 
 
