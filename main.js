@@ -121,7 +121,6 @@ var projectCardCoverActivateTool = {
 var checkProject = {
 
   init: function () {
-    debugger;
     if (viewedCheck.length > 0) {
       if (indexFileName == "/portfolio/") {
         this.setUpChecks()
