@@ -1162,9 +1162,15 @@ nav a:hover {
 }
 
 .testimonial-contact-container {
-	display: flex;
-	align-content: flex-end;
-    justify-content: right;
+    
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    align-content: flex-end;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
     position: absolute;
     width: 100%;
     bottom: 0;
