@@ -1034,7 +1034,7 @@ nav a:hover {
 
 .testimonial {
     width: 300px;
-    min-height: 305px;
+    min-height: 320px;
     margin: 15px 10px;
     font-size: 15px;
     box-shadow: 0px 5px 7px #6149b4;
@@ -1161,6 +1161,35 @@ nav a:hover {
     }
 }
 
+.testimonial-contact-container {
+	display: flex;
+	align-content: flex-end;
+    justify-content: right;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.testimonial-contact-anchor{
+    padding-right: 15px;
+    padding-bottom: 17px;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--main-txt-color);
+}
+
+.testimonial-contact-anchor:hover{
+    color: var(--main-a-outside-color);
+}
+
+.testimonial-contact-anchor::after{
+    content: "⤤";
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 20px
+}
 /* UX PROJECTS */
 .project-cards-flex-container {
     display: flex;
