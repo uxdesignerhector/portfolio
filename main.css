@@ -852,12 +852,14 @@ nav a:hover {
 }
 
 .main-header__bottom-button:hover {
-    background-color: #FAC145;
+    transform: scale(1.05);
+    transition:0.2s ease-in;
+    background-color: black;
 }
 
-.main-header__bottom-button:hover>.main-header__bottom-button-text {
+/* .main-header__bottom-button:hover>.main-header__bottom-button-text {
     color: black;
-}
+} */
 
 .main-header-center-div {
     background-image: url("img/home_header_background.jpg");
