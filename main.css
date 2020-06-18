@@ -844,19 +844,19 @@ nav a:hover {
     margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #FAC145;
-}
-
-.main-header__bottom-button-text {
-    color: black;
-}
-
-.main-header__bottom-button:hover {
     background-color: #1F3E38;
 }
 
-.main-header__bottom-button:hover>.main-header__bottom-button-text {
+.main-header__bottom-button-text {
     color: white;
+}
+
+.main-header__bottom-button:hover {
+    background-color: #FAC145;
+}
+
+.main-header__bottom-button:hover>.main-header__bottom-button-text {
+    color: black;
 }
 
 .main-header-center-div {
@@ -896,7 +896,7 @@ nav a:hover {
 
 .main-header-bottom-div-arrow-icon-container {
     position: absolute;
-    margin-top: -40px;
+    margin-top: -50px;
     animation: bounce 1s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(1, 0.5, 0.5, 1);
@@ -927,10 +927,7 @@ nav a:hover {
 
 @media (max-width:670px) {
     .main-header-flex-container-left-div {
-        background-image: url("img/home_header_background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: transparent;
+        background-image: none;
     }
 }
 
@@ -942,14 +939,13 @@ nav a:hover {
 
 @media (max-width: 670px) {
     .main-header-flex-container-left-div-child-textbox {
-        background-color: #0000009b;
         box-sizing: border-box;
     }
 }
 
 @media (max-width: 670px) {
     .main-header-flex-container-left-div-child__text-title {
-        color: #fffffa;
+        font-size: 25px;
     }
 }
 
@@ -973,12 +969,7 @@ nav a:hover {
     }
 }
 
-/*.main-header-bottom-div*/
-@media (max-width: 670px) {
-    .main-header-bottom-div-arrow-icon--red-mobile-device {
-        fill: #b3001b;
-    }
-}
+
 
 /* Intro section */
 @media (max-width: 644px) {
