@@ -266,32 +266,6 @@ var contactForm = {
 
 }
 
-function callBack() {
-  bannerBackground.changer();
-}
-
-var imgSet = ['url("img/home_header_background.jpg")', 'url("img/home_header_background1.jpg")'];
-
-var bannerBackground = {
-
-  prepare: function () {
-    background = document.getElementById('img-banner-div').style;
-    background.backgroundImage = imgSet[0];
-    this.changer();
-  },
-
-  changer: function () {
-
-    if (background.backgroundImage == imgSet[0]) {
-      background.backgroundImage = imgSet[1];
-      setTimeout(callBack, 15000);
-    } else {
-      background.backgroundImage = imgSet[0];
-      setTimeout(callBack, 15000);
-    }
-  }
-
-}
 
 
 
@@ -467,10 +441,6 @@ function browser() {
   }
 }
 
-function callbackBannerBackground() {
-  bannerBackground.prepare();
-
-}
 
 /* Get the links and prevents them setting the url hash at the history */
 
