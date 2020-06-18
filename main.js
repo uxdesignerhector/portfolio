@@ -62,9 +62,7 @@ function scrollFunction() {
   scrollBarLowerPosition = window.pageYOffset + window.innerHeight - 70;
   footerTopPosition = document.getElementById("footer").offsetTop;
 
-  if (scrollBarLowerPosition > footerTopPosition) {
-    document.getElementById("contactButton").style.display = "none";
-  } else if (window.pageYOffset > 100) {
+  if (window.pageYOffset > 100) {
     document.getElementById("gototop").style.display = "block";
     document.getElementById("contactButton").style.display = "block";
     document.getElementById("theme").style.display = "block";
