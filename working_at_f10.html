@@ -31,26 +31,28 @@
 
 
 <body class="container">
-	<button class="button-absolute" id="theme" onclick="theme.prepareButton()" title="Dark Mode" value="dark"><svg
-			id="light-dark-icon" style="width:24px;height:24px" viewBox="0 0 24 24">
-			<path fill="#000000"
-				d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z" />
-		</svg></button>
-	<button class="button-absolute" id="gototop" onclick="topFunction()" title="Go to top"><svg
-			style="width:24px;height:24px" viewbox="0 0 24 24">
-			<path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M17,14L12,9L7,14H17Z"
-				fill="#000"></path>
-		</svg></button>
-	<a href="#contact"><button class="button-absolute" id="contactButton" title="Goes to bottom and
-prepares you to write"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-				<path fill="#000000"
-					d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-			</svg></button></a>
-
+	<div class="button-container">
+		<button class="button-container__button" id="theme" onclick="theme.prepareButton()" title="Dark Mode" value="dark">
+			<svg id="light-dark-icon" viewBox="0 0 24 24">
+				<path d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z" />
+			</svg>
+		</button>
+		<button class="button-container__button" id="gototop" onclick="topFunction()" title="Go to top">
+			<svg viewbox="0 0 24 24">
+				<path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M17,14L12,9L7,14H17Z">
+			</svg>
+		</button>
+		<button class="button-container__button" id="contactButton" title="Goes to bottom and prepares you to write">
+			<a href="#contact"></a>
+				<svg viewBox="0 0 24 24">
+					<path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+				</svg>
+		</button>
+	</div>
 	<nav class="main-nav">
-		<div class="main-nav-logo-flex-container">
+		<div class="main-nav__logo-flex-container">
 			<a href="https://uxdesignerhector.github.io/portfolio/">
-				<div class="main-nav-logo__icon-container">
+				<div class="main-nav__logo-icon-container">
 					<svg class="main-nav-logo__icon-svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					viewBox="0 0 46.7 46.7" style="enable-background:new 0 0 46.7 46.7;" xml:space="preserve">
 			   <g>
@@ -64,27 +66,27 @@ prepares you to write"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
 			   </g>
 			   </svg>
 				</div>
-				<div class="main-nav-logo__text-container">
-					<p class="main-nav-logo__text-p">Héctor</p>
-					<p class="main-nav-logo__text-p">Herradura de las Heras</p>
-					<p class="main-nav-logo__text-p">////////////// UX Designer</p>
+				<div class="main-nav__logo-text-container">
+					<p class="main-nav__logo-text-p">Héctor</p>
+					<p class="main-nav__logo-text-p">Herradura de las Heras</p>
+					<p class="main-nav__logo-text-p">////////////// UX Designer</p>
 				</div>
 			</a>
 		</div>
-		<div class="main-nav-menu__container">
-			<ul class="main-nav-menu__level-1-ul">
+		<div class="main-nav__menu-container">
+			<ul class="main-nav__menu-ul">
 
-				<li class="main-nav-menu__level-1-li" id="home">
+				<li class="main-nav__menu-item" id="home">
 					<a href="https://uxdesignerhector.github.io/portfolio/"
-						class="main-nav-menu__level-1-li-anchor">Home</a>
+						class="main-nav__menu-item-anchor">Home</a>
 				</li>
-				<li class="main-nav-menu__level-1-li" id="about_me">
+				<li class="main-nav__menu-item" id="about_me">
 					<a href="aboutme.html">About me</a>
 				</li>
-				<li class="main-nav-menu__level-1-li" id="blog">
+				<li class="main-nav__menu-item" id="blog">
 					<a href="https://medium.com/@uxdesignerhector" target="_blank">Blog</a>
 				</li>
-				<li class="main-nav-menu__level-1-li">
+				<li class="main-nav__menu-item">
 					<a class=" button main-nav-menu__level-1-contact-anchor" id="contactMenuLink" href="#contact" title="Goes to bottom and
 prepares you to write"><span>Contact me</span>
 						<svg id="contactButtonMenuIcon" class="main-nav-menu__level-1-contact-icon-svg"
@@ -100,55 +102,55 @@ prepares you to write"><span>Contact me</span>
 		</div>
 	</nav>
 
-	<nav class="menu-2">
-		<div class="angle-wraper" id="menuUX">
+	<nav class="main-nav-submenu">
+		<div class="main-nav-submenu__container" id="menuUX">
 
 
 			<div>
-				<svg class="decorative-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-					<polygon class="cls-1" points="26 26 0 0 26 0 28 0 28 26 26 26" />
-					<line id="Line" class="cls-3" x1="0.35" y1="0.35" x2="25.35" y2="25.35" />
+				<svg class="main-nav-submenu__decorative-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+					<polygon class="main-nav-submenu__decorative-svg-polygon" points="26 26 0 0 26 0 28 0 28 26 26 26" />
+					<line id="Line" class="main-nav-submenu__decorative-svg-line" x1="0.35" y1="0.35" x2="25.35" y2="25.35" />
 				</svg>
 			</div>
-			<div class="appendice">
-				<ul class="special-ul">
-					<div class="fix-color""></div>
+			<div class="main-nav-submenu__container-ul">
+				<ul class="main-nav-submenu__list">
+					<div class="main-nav-submenu__fix-color""></div>
 					<li>UX Projects</li>
-						<ul class=" hidden-ul">
-						<li class="main-nav-menu__level-2-sub-menu-li special-li">
+						<ul class=" main-nav-submenu__hidden-sub-list">
+						<li class="main-nav-submenu__item">
 							<a href="asos_app_case_study.html">ASOS App case study</a>
 						</li>
-						<li class="main-nav-menu__level-2-sub-menu-li special-li">
+						<li class="main-nav-submenu__item">
 							<a href="asos_web_case_study.html">ASOS web case study</a>
 						</li>
-						<li class="main-nav-menu__level-2-sub-menu-li special-li">
+						<li class="main-nav-submenu__item">
 							<a href="ux-area-6.html">AREASeys</a>
 						</li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="angle-wraper angle-wraper-2" id="menuProjects">
+		<div class="main-nav-submenu__container main-nav-submenu__container-2" id="menuProjects">
 
 
 			<div>
-				<svg class="decorative-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-					<polygon class="cls-1" points="26 26 0 0 26 0 28 0 28 26 26 26" />
-					<line id="Line" class="cls-3" x1="0.35" y1="0.35" x2="25.35" y2="25.35" />
+				<svg class="main-nav-submenu__decorative-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+					<polygon class="main-nav-submenu__decorative-svg-polygon" points="26 26 0 0 26 0 28 0 28 26 26 26" />
+					<line id="Line" class="main-nav-submenu__decorative-svg-line" x1="0.35" y1="0.35" x2="25.35" y2="25.35" />
 				</svg>
 			</div>
-			<div class="appendice appendice-2">
-				<ul class="special-ul">
-					<div class="fix-color""></div>
-					<li class=" li--current-page">Other projects</li>
-						<ul class="hidden-ul">
-							<li class="main-nav-menu__level-2-sub-menu-li special-li li--current-page">
+			<div class="main-nav-submenu__container-ul main-nav-submenu__container-ul-2">
+				<ul class="main-nav-submenu__list">
+					<div class="main-nav-submenu__fix-color""></div>
+					<li class=" main-nav-submenu__item--current-page">Other projects</li>
+						<ul class="main-nav-submenu__hidden-sub-list">
+							<li class="main-nav-submenu__item  main-nav-submenu__item--current-page">
 								<a href="working_at_f10.html">Working at F10</a>
 							</li>
-							<li class="main-nav-menu__level-2-sub-menu-li special-li">
+							<li class="main-nav-submenu__item">
 								<a href="LNL.html">La Noche de los Libros</a>
 							</li>
-							<li class="main-nav-menu__level-2-sub-menu-li special-li">
+							<li class="main-nav-submenu__item">
 								<a href="working_at_magma.html">Working at Magma</a>
 							</li>
 						</ul>
@@ -179,7 +181,7 @@ prepares you to write"><span>Contact me</span>
 					<h1 class="title_h1_post--green">Working at F10</h1>
 					<p>2017 July - September (3 months)</p>
 					<p>Main role: Graphic Designer</p>
-					<p><a class="testimonial-contact-anchor" style="padding: 0;" href="https://www.fisioterapia10.com/" target="_blank">Website</a> (web not made by me)</p>
+					<p><a class="testimonial__contact-anchor" style="padding: 0;" href="https://www.fisioterapia10.com/" target="_blank">Website</a> (web not made by me)</p>
 				</div>
 			</div>
 		</div>
@@ -188,8 +190,8 @@ prepares you to write"><span>Contact me</span>
 	</section>
 	<section>
 
-		<div class="post_text_section_two_column" style="margin-bottom: 60px;">
-			<div class="post_text_column post_text_column--horizontal">
+		<div class="project-text" style="margin-bottom: 60px;">
+			<div class="project-text__column project-text__column--horizontal">
 
 				<span style="flex:1; min-width: 250px;" class="summary-post">
 					<h2 class="section-title__title">Tasks</h2>
@@ -226,13 +228,13 @@ prepares you to write"><span>Contact me</span>
 
 
 	<section>
-		<div class="post_text_section_two_column">
-			<div class="post_text_column">
+		<div class="project-text">
+			<div class="project-text__column">
 				<figure style="display: flex; justify-content:center;">
 					<img style="width: 80%;" src="img/F10_Int_Building.jpg" alt="Interior of F10">
 				</figure>
 			</div>
-			<div class="post_text_column post_text_column--middle">
+			<div class="project-text__column project-text__column--middle">
 				<h2 class="section-title__title--green">My role</h2>
 				<h3>Freelance designer</h3>
 				<ul>
@@ -255,9 +257,9 @@ prepares you to write"><span>Contact me</span>
 
 	<section>
 
-		<div class="post_text_section_two_column">
+		<div class="project-text">
 
-			<div class="post_text_column post_text_column--middle">
+			<div class="project-text__column project-text__column--middle">
 				<h2 class="section-title__title--green">Creativities</h2>
 				<h3>Logo, the first delivery</h3>
 				<ul>
@@ -269,7 +271,7 @@ prepares you to write"><span>Contact me</span>
 				</ul>
 
 			</div>
-			<div class="post_text_column post_text_column--smart post_text_column--middle">
+			<div class="project-text__column project-text__column--smart project-text__column--middle">
 				<figure style="display: flex; justify-content:center;">
 					<img src="img/F10_logos.gif" alt="Logos for f10"
 						style="width:100%;display: flex;justify-content:center;">
@@ -279,15 +281,15 @@ prepares you to write"><span>Contact me</span>
 		</div>
 	</section>
 	<section>
-		<div class="post_text_section_two_column">
-			<div class="post_text_column post_text_column--smart post_text_column--middle order-left">
+		<div class="project-text">
+			<div class="project-text__column project-text__column--smart project-text__column--middle order-left">
 				<figure style="display: flex; justify-content:center;">
 
 					<img src="img/F10_icons.gif" style="width:100%;display: flex;justify-content:center;">
 				</figure>
 
 			</div>
-			<div class="post_text_column post_text_column--middle order-right">
+			<div class="project-text__column project-text__column--middle order-right">
 				<h2 class="section-title__title--green">Icons package</h2>
 				<ul>
 					<li>Tool: Illustrator</li>
@@ -301,9 +303,9 @@ prepares you to write"><span>Contact me</span>
 	</section>
 	<section>
 
-		<div class="post_text_section_two_column">
+		<div class="project-text">
 
-			<div style="flex:1;min-width: 300px;" class="post_text_column post_text_column--middle">
+			<div style="flex:1;min-width: 300px;" class="project-text__column project-text__column--middle">
 				<h2 class="section-title__title--green">Vinyls & automation</h2>
 				<ul>
 					<li>To see how vinyls were working in space I made automated mock-ups</li>
@@ -314,7 +316,7 @@ prepares you to write"><span>Contact me</span>
 				</ul>
 
 			</div>
-			<div class="post_text_column post_text_column--smart post_text_column--middle">
+			<div class="project-text__column project-text__column--smart project-text__column--middle">
 				<figure style="display: flex; justify-content:center;">
 					<img src="img/F10_automation.gif" alt="Photoshop automation"
 						style="width:100%;display: flex;justify-content:center;">
@@ -325,15 +327,15 @@ prepares you to write"><span>Contact me</span>
 	</section>
 	</section>
 	<section>
-		<div class="post_text_section_two_column">
-			<div class="post_text_column post_text_column--smart post_text_column--middle order-left">
+		<div class="project-text">
+			<div class="project-text__column project-text__column--smart project-text__column--middle order-left">
 				<figure style="display: flex; justify-content:center;">
 
 					<img src="img/F10_Card.png" style="width:100%;display: flex;justify-content:center;">
 				</figure>
 
 			</div>
-			<div class="post_text_column post_text_column--middle order-right">
+			<div class="project-text__column project-text__column--middle order-right">
 				<h2 class="section-title__title--green">Design decisions</h2>
 				<ul>
 					<li>Blue color to calm people when they were meeting difficulties</li>
@@ -351,8 +353,8 @@ prepares you to write"><span>Contact me</span>
 
 
 	<section>
-		<div class="post_text_section_two_column">
-			<div class="post_text_column">
+		<div class="project-text">
+			<div class="project-text__column">
 				<h2 class="section-title__title--green">Facing problems</h2>
 				<h3>Some vinyls were not placed</h3>
 				<ul>
@@ -365,7 +367,7 @@ prepares you to write"><span>Contact me</span>
 						I was sad at first, but now I'm glad because I learnt a lot from the project.</li>
 				</ul>
 			</div>
-			<div class="post_text_column">
+			<div class="project-text__column">
 				<h2 class="section-title__title--green">Conclusions</h2>
 				<h3>About the project</h3>
 				<ul>
@@ -759,7 +761,7 @@ prepares you to write"><span>Contact me</span>
 		</div>
 		<div class="footer-flex-container">
 			<div class="footer-flex-container__left-div">
-				<div class="contact_form">
+				<div class="contact-form">
 					<form accept-charset="UTF-8" action="https://usebasin.com/f/117193f636dc" method="POST">
 						<label class="contact-form__label">E-Mail: *</label>
 						<input class="contact-form__input contactFormInput" name="email" id="email" type="email"
@@ -808,7 +810,7 @@ prepares you to write"><span>Contact me</span>
 							</svg></a>
 					</div>
 
-					<div class="legal">
+					<div class="footer__legal-container">
 						<p class="footer__body-text footer__body-text--right-align"><small>Copyright 2019 Héctor
 								Herradura © All Rights Reserved</small></p>
 					</div>

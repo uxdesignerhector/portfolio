@@ -76,7 +76,7 @@ var indexFileName = location.pathname;
 var fileName = location.pathname.split("/").slice(-1);
 var urlProjectCard = document.getElementsByClassName("project-card__body-text-url");
 var viewedCheck = document.getElementsByClassName("project-card__check--no-active");
-var viewedMenu = document.getElementsByClassName("special-li");
+var viewedMenu = document.getElementsByClassName("main-nav-submenu__item");
 
 
 
