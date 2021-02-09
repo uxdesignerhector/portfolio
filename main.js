@@ -134,13 +134,13 @@ var checkProject = {
 
     var alreadyViewed = this.getCookieArray();
     if (alreadyViewed.length == 0) {
-      document.cookie = "viewed=" + fileName + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+      document.cookie = "viewed=" + fileName + "; expires=Thu, 28 Dec 2023 12:00:00 UTC";
       this.setUpChecks();
     } else {
       if (alreadyViewed.includes(fileName)) {
         this.setUpChecks();
       } else {
-        document.cookie = "viewed=" + alreadyViewed.toString() + "," + fileName + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+        document.cookie = "viewed=" + alreadyViewed.toString() + "," + fileName + "; expires=Thu, 28 Dec 2023 12:00:00 UTC";
         this.setUpChecks();
       }
     }
@@ -164,10 +164,8 @@ var checkProject = {
   setUpChecks: function () {
     var alreadyViewed = this.getCookieArray();
     var pat = alreadyViewed.split(",")
-    var otherUrlProjectCard = ["asos_app_case_study.html", "asos_web_case_study.html", "ux-area-6.html", "working_at_f10.html", "LNL.html", "working_at_magma.html"];
-    if (alreadyViewed.length == 0) {
-      console.log("Nothing to display");
-    } else {
+    var otherUrlProjectCard = ["asos_app_case_study.html", "ux_mudanza.html", "ux-area-6.html", "working_at_f10.html", "LNL.html", "working_at_magma.html"];
+    if (!alreadyViewed.length == 0) {
       for (var infer = 0; infer < otherUrlProjectCard.length; infer++) {
         var href = otherUrlProjectCard[infer];
         for (var i = 0; i < pat.length; i++) {
@@ -345,14 +343,14 @@ var theme = {
 
 
   setDark: function () {
-    document.cookie = "theme=dark; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+    document.cookie = "theme=dark; expires=Thu, 28 Dec 2023 12:00:00 UTC";
     this.setUpInterface();
 
 
   },
 
   setLight: function () {
-    document.cookie = "theme=light; expires=Thu, 18 Dec 2020 12:00:00 UTC";
+    document.cookie = "theme=light; expires=Thu, 28 Dec 2023 12:00:00 UTC";
     this.setUpInterface();
 
   },
