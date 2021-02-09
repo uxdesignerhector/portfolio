@@ -1343,7 +1343,7 @@ nav a:hover {
 .project-card__header-img {
     border-radius: 50%;
     border: #fffffa 10px solid;
-    background-color: #fffffa;
+    background-color: #ececec;
     width: 150px;
     height: 150px;
 }
@@ -1898,7 +1898,7 @@ border-radius: 0px !important;
 .project_post_card-circle_div_red>div>img {
     border-radius: 50%;
     border: #fffffa 10px solid;
-    background-color: #fffffa;
+    background-color: #ececec;
 }
 
 
